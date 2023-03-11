@@ -18,7 +18,7 @@ class _BodyState extends State<Body> {
           children: [
             Center(
                 child: Text(
-              'Events',
+              'Events page',
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             )),
