@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/gallery/widgets/gallery_grid.dart';
 import '../../../../../shared/layout/layout_screen.dart';
 import '../../../../../shared/widgets/search_bar.dart';
 import '../../../../../shared/widgets/text.dart';
@@ -15,12 +16,10 @@ class GalleryScreen extends StatelessWidget {
     return Layout(
       text: 'Gallery',
       currentTab: 4,
-      body: Body(),
-
-      // body: const SingleChildScrollView(
-      //   scrollDirection: Axis.vertical,
-      //   child: Body(),
-      // ),
+      body: const SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Body(),
+      ),
     );
   }
 }

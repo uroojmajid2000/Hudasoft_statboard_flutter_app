@@ -10,19 +10,29 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return GridView.count(
-      primary: false,
-      crossAxisSpacing: 0,
-      mainAxisSpacing: 0,
-      crossAxisCount: 2,
-      children: <Widget>[
-        Image.asset('assets/images/image.png', fit: BoxFit.fill),
-        Image.asset('assets/images/imagetwo.png', fit: BoxFit.fill),
-        Image.asset('assets/images/imagethree.png', fit: BoxFit.fill),
-        Image.asset('assets/images/imagefour.png', fit: BoxFit.fill),
-        Image.asset('assets/images/imagefive.png', fit: BoxFit.fill),
-        Image.asset('assets/images/imagesix.png', fit: BoxFit.fill),
-        Image.asset('assets/images/imageseven.png', fit: BoxFit.fill),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const SizedBox(height: 25),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          child: MySearchBar(
+            hintText: 'Search gallery',
+            onChange: () {},
+            prefixIcon: 'assets/icons/search.png',
+            suffixIcon: 'assets/icons/filter.png',
+          ),
+        ),
+        const SizedBox(height: 25),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          child: MyText.HeadingText(
+            "All Media",
+          ),
+        ),
+        const SizedBox(height: 20),
+        GalleryGrid(),
       ],
     );
   }
