@@ -10,22 +10,48 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return
-        
-        Expanded(
-      child: Container(
-        height: 650,
-        color: Colors.green[100],
-        child: Column(
-          children: [
-            Center(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 14),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 25),
+          MySearchBar(
+            hintText: 'Search gallery',
+            onChange: () {},
+            prefixIcon: 'assets/icons/search.png',
+            suffixIcon: 'assets/icons/filter.png',
+          ),
+          const SizedBox(height: 25),
+          MyText.HeadingText(
+            "All ",
+          ),
+          const SizedBox(height: 20),
+          GestureDetector(
+              onTap: () {
+                Navigate.next(context, AllTeams.id);
+              },
+              child: TeamsContainer()),
+          const SizedBox(height: 18),
+          TeamsContainer(),
+          const SizedBox(height: 50),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              FloatingActionButton(
+                backgroundColor: kPrimaryColor,
                 child: Text(
-              'Teams',
-              style:
-                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-            )),
-          ],
-        ),
+                  '+',
+                  style: TextStyle(color: Colors.white, fontSize: 45),
+                ),
+                onPressed: () {
+                  Navigate.next(context, TeamsDetails.id);
+                },
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

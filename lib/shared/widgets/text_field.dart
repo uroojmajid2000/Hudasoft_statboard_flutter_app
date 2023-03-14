@@ -38,6 +38,7 @@ class _MyTextFieldState extends State<MyTextField> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
             color: Color(0x26000000),
@@ -46,7 +47,6 @@ class _MyTextFieldState extends State<MyTextField> {
           ),
         ],
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
       ),
       child: TextFormField(
         controller: widget.controller,
@@ -90,10 +90,11 @@ class _MyTextFieldState extends State<MyTextField> {
               : null,
 
           border: InputBorder.none,
+         
           // focusedBorder: InputBorder.none,
           // errorBorder: InputBorder.none,
           // disabledBorder: InputBorder.none,
-          // contentPadding: const EdgeInsets.symmetric(horizontal: 16),
+
           suffixIcon: widget.obscureText
               ? (show
                   ? IconButton(

@@ -33,6 +33,7 @@ class _BodyState extends State<Body> {
         ),
         const SizedBox(height: 20),
         GalleryGrid(),
+ 
       ],
     );
   }
