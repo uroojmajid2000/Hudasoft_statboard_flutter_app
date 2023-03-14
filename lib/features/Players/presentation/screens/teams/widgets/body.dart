@@ -18,7 +18,7 @@ class _BodyState extends State<Body> {
         children: [
           const SizedBox(height: 25),
           MySearchBar(
-            hintText: 'Search gallery',
+            hintText: 'Search teams',
             onChange: () {},
             prefixIcon: 'assets/icons/search.png',
             suffixIcon: 'assets/icons/filter.png',
@@ -34,7 +34,11 @@ class _BodyState extends State<Body> {
               },
               child: TeamsContainer()),
           const SizedBox(height: 18),
-          TeamsContainer(),
+          GestureDetector(
+              onTap: () {
+                Navigate.next(context, AllTeams.id);
+              },
+              child: TeamsContainer()),
           const SizedBox(height: 50),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,

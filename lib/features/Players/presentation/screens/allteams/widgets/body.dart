@@ -11,8 +11,40 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-        child: Column(children: [
-      Text('all teams'),
-    ]));
+        scrollDirection: Axis.vertical,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 8,
+                ),
+                DetailsTeams(),
+                SizedBox(
+                  height: 14,
+                ),
+                AllTeamsContainer(),
+                SizedBox(
+                  height: 14,
+                ),
+                Filters(),
+                SizedBox(
+                  height: 20,
+                ),
+                MyText.HeadingText(
+                  'Matches',
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                RecentMatchesItem(),
+                SizedBox(height: 18),
+                RecentMatchesItem(),
+                SizedBox(height: 18),
+                RecentMatchesItem(),
+              ]),
+        ));
   }
 }
