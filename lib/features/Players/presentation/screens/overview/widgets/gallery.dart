@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Gallery extends StatelessWidget {
   const Gallery({super.key});
@@ -21,9 +22,7 @@ class Gallery extends StatelessWidget {
       ),
       child: Image.asset(
         'assets/images/media.png',
-        width: 250,
-        height: 150,
-        fit: BoxFit.cover, // add fit property
+        fit: BoxFit.fill,
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/teamsdetails/widgets/text_field_team.dart';
 import '../../../../../shared/layout/layout_screen.dart';
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
@@ -18,7 +19,7 @@ class TeamsDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Layout(
-      text: 'Create Teams',
+      text: 'Create Team',
       currentTab: 3,
       body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,

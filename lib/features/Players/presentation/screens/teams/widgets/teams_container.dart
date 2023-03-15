@@ -59,11 +59,24 @@ class TeamsContainer extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    SvgPicture.asset('assets/icons/person.svg'),
+                    SvgPicture.asset(
+                      'assets/icons/person.svg',
+                      width: 16,
+                      height: 16,
+                    ),
                     SizedBox(
                       width: 5,
                     ),
-                    MyText.simpleblueText("15"),
+                    // MyText.simpleblueText("15"),
+                    Text(
+                      "15",
+                      style: TextStyle(
+                        color: Color(0xff00b0f0),
+                        fontSize: 14,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.w700,
+                      ),
+                    )
                   ],
                 )
               ],

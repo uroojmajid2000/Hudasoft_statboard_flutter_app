@@ -42,9 +42,9 @@ class _BodyState extends State<Body> {
                         ],
                       ),
                       const SizedBox(height: 13),
-                      MyTextField(
+                      MyTextFieldTeam(
                         controller: _name,
-                        hintText: '  Tornado',
+                        hintText: 'Tornado',
                         onChange: (value) {},
                       ),
                       const SizedBox(height: 18),

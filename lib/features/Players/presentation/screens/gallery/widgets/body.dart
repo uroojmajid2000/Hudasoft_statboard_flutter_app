@@ -19,7 +19,7 @@ class _BodyState extends State<Body> {
           padding: const EdgeInsets.symmetric(horizontal: 14),
           child: MySearchBar(
             hintText: 'Search gallery',
-            onChange: () {},
+            onChange: (value) {},
             prefixIcon: 'assets/icons/search.png',
             suffixIcon: 'assets/icons/filter.png',
           ),
@@ -33,7 +33,6 @@ class _BodyState extends State<Body> {
         ),
         const SizedBox(height: 20),
         GalleryGrid(),
- 
       ],
     );
   }

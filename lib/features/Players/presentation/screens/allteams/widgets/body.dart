@@ -19,7 +19,7 @@ class _BodyState extends State<Body> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 8,
+                  height: 10,
                 ),
                 DetailsTeams(),
                 SizedBox(
