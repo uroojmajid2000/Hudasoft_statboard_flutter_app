@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Filters extends StatelessWidget {
   final String text;
   final bool isSelected;
+  
   final Function(bool) onChanged;
 
   Filters({

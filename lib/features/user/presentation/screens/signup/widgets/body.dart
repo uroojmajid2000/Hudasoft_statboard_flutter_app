@@ -140,6 +140,7 @@ void _CreateAccountBottomSheet(context) {
     ),
     context: context,
     builder: (BuildContext bc) {
+      String selectedContainer = '';
       return Container(
           height: 500,
           child: Padding(
@@ -195,6 +196,7 @@ void _CreateAccountBottomSheet(context) {
                       text: 'BUSINESS',
                       contentText: "You want to join an event",
                     ),
+              
                   ],
                 ),
                 SizedBox(
@@ -206,6 +208,7 @@ void _CreateAccountBottomSheet(context) {
                       text: 'SCOUT',
                       contentText: 'You are searching for talent',
                     )
+                  
                   ],
                 ),
                 SizedBox(
@@ -223,3 +226,5 @@ void _CreateAccountBottomSheet(context) {
     },
   );
 }
+
+ 
