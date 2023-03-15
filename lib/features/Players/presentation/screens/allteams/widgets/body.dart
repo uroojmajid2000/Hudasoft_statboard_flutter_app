@@ -8,6 +8,11 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+
+ bool _recentMatchesSelected = false;
+  bool _playersSelected = false;
+
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -29,7 +34,39 @@ class _BodyState extends State<Body> {
                 SizedBox(
                   height: 14,
                 ),
-                Filters(),
+                Row(
+                  children: [
+                    // Filters(
+                    //   text: 'Recent Matches',
+                    // ),
+                    // Filters(
+                    //   text: 'Players',
+                    // ),
+           Filters(
+          text: 'Recent Matches',
+          isSelected: _recentMatchesSelected,
+          onChanged: (value) {
+            setState(() {
+              _recentMatchesSelected = value;
+              _playersSelected = false;
+            });
+          },
+        ),
+        SizedBox(
+          width: 6,
+        ),
+        Filters(
+          text: 'Players',
+          isSelected: _playersSelected,
+          onChanged: (value) {
+            setState(() {
+              _playersSelected = value;
+              _recentMatchesSelected = false;
+            });
+          },
+        ),
+                  ],
+                ),
                 SizedBox(
                   height: 20,
                 ),

@@ -1,74 +1,53 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Filters extends StatelessWidget {
-  const Filters({super.key});
+  final String text;
+  final bool isSelected;
+  final Function(bool) onChanged;
+
+  Filters({
+    Key? key,
+    required this.text,
+    required this.isSelected,
+    required this.onChanged,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Container(
-          height: 33,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: Color(0xff00b0f0),
+    return GestureDetector(
+      onTap: () {
+        onChanged(!isSelected);
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          color: isSelected ? Color(0xff00b0f0) : Colors.white,
+          border: Border.all(
+            color: isSelected ? Color(0xff00b0f0) : Color(0xff8e8e8e),
+            width: 1,
           ),
-          padding: const EdgeInsets.symmetric(
-            horizontal: 18,
-            vertical: 8,
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Recent Matches",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xfff7fcf8),
-                  fontSize: 14,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w600,
-                ),
+        ),
+        padding: const EdgeInsets.symmetric(
+          horizontal: 13,
+          vertical: 6,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: isSelected ? Colors.white : Color(0xff8e8e8e),
+                fontSize: 14,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w600,
               ),
-            ],
-          ),
-        ),
-        SizedBox(
-          width: 6,
-        ),
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: Color(0xff8e8e8e),
-              width: 1,
             ),
-          ),
-          padding: const EdgeInsets.symmetric(
-            horizontal: 13,
-            vertical: 6,
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                "Players",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xff8e8e8e),
-                  fontSize: 14,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ],
-          ),
-        )
-      ],
+          ],
+        ),
+      ),
     );
   }
 }
