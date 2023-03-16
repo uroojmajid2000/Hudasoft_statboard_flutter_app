@@ -1,14 +1,16 @@
 part of '../all_teams.dart';
 
 class Body extends StatefulWidget {
-  const Body({super.key});
+  Body({
+    super.key,
+  });
 
   @override
   State<Body> createState() => _BodyState();
 }
 
 class _BodyState extends State<Body> {
-  bool _recentMatchesSelected = true; // Set to true by default
+  bool _recentMatchesSelected = true;
   bool _playersSelected = false;
 
   @override
@@ -22,7 +24,7 @@ class _BodyState extends State<Body> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: 10,
+                  height: 15,
                 ),
                 DetailsTeams(),
                 SizedBox(
@@ -30,16 +32,10 @@ class _BodyState extends State<Body> {
                 ),
                 AllTeamsContainer(),
                 SizedBox(
-                  height: 14,
+                  height: 20,
                 ),
                 Row(
                   children: [
-                    // Filters(
-                    //   text: 'Recent Matches',
-                    // ),
-                    // Filters(
-                    //   text: 'Players',
-                    // ),
                     Filters(
                       text: 'Recent Matches',
                       isSelected: _recentMatchesSelected,
@@ -79,11 +75,27 @@ class _BodyState extends State<Body> {
                       SizedBox(
                         height: 10,
                       ),
-                      RecentMatchesItem(),
-                      SizedBox(height: 18),
-                      RecentMatchesItem(),
-                      SizedBox(height: 18),
-                      RecentMatchesItem(),
+                      GridView.builder(
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                        itemCount: 3,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 1,
+                          mainAxisSpacing: 20,
+                          childAspectRatio: 5 / 2,
+                        ),
+                        itemBuilder: (BuildContext context, int index) {
+                          return GestureDetector(
+                            onTap: () {
+                              // Navigate.next(context, AllTeams.id);
+                            },
+                            child: GridTile(
+                              child: RecentMatchesItem(),
+                            ),
+                          );
+                        },
+                      ),
                     ],
                   ),
                 if (_playersSelected)

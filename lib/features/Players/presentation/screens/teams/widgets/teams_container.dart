@@ -3,13 +3,22 @@ import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/teams/widgets/matches.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/teams/widgets/vertical_line.dart';
 
-import '../../../../../../shared/widgets/text.dart';
+import 'dart:math';
 
 class TeamsContainer extends StatelessWidget {
-  const TeamsContainer({super.key});
+  final String teamName;
+  const TeamsContainer({super.key, required this.teamName});
 
   @override
   Widget build(BuildContext context) {
+    final random = Random();
+    final color = Color.fromARGB(
+      255,
+      random.nextInt(256),
+      random.nextInt(256),
+      random.nextInt(256),
+    );
+
     return Container(
       width: double.infinity,
       height: 154,
@@ -32,10 +41,11 @@ class TeamsContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 CircleAvatar(
-                    backgroundColor: Color(0xff5642a9),
+                    // backgroundColor: Color(0xff5642a9),
+                    backgroundColor: color,
                     radius: 20,
                     child: Text(
-                      "T",
+                      teamName.substring(0, 1),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,
@@ -48,7 +58,7 @@ class TeamsContainer extends StatelessWidget {
                 ),
                 Expanded(
                   child: Text(
-                    "Tornado",
+                    teamName,
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 15,

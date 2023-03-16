@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -36,7 +35,6 @@ class MySearchBar extends StatefulWidget {
 
 class _MySearchBarState extends State<MySearchBar> {
   bool show = true;
-
   @override
   Widget build(BuildContext context) {
     return Container(
