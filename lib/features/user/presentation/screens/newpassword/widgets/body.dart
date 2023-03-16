@@ -77,7 +77,8 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 30),
                       Button(
                           child: MyText.buttonText('Continue'),
-                          onPressed: () => {_settingModalBottomSheet(context)}),
+                          onPressed: () => {_settingModalBottomSheet(context)}
+                          ),
                     ],
                   ),
                 ),

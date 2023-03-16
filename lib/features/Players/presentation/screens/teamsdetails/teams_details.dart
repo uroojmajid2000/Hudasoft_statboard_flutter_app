@@ -6,7 +6,6 @@ import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/dropdown.dart';
 import '../../../../../shared/widgets/text.dart';
-import '../../../../../shared/widgets/text_field.dart';
 import '../Teams/teams_screen.dart';
 
 part 'widgets/body.dart';
