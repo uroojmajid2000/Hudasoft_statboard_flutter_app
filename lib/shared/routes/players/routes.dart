@@ -7,6 +7,7 @@ import '../../../features/Players/presentation/screens/gallery/gallery_screen.da
 import '../../../features/Players/presentation/screens/imageDetails/imagedetails.dart';
 import '../../../features/Players/presentation/screens/notification/notification_screen.dart';
 import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
+import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
 import '../../../features/Players/presentation/screens/uploadMediaDetails/uploadmedia_details.dart';
 import '../../../features/Players/presentation/screens/uploadmedia/upload_media.dart';
@@ -23,5 +24,6 @@ class PlayersRoutes {
     UploadMediaDetailsScreen.id: (context) => const UploadMediaDetailsScreen(),
     ImageDetailsScreen.id: (context) => const ImageDetailsScreen(),
     NotificationScreen.id: (context) => const NotificationScreen(),
+    ProfileScreen.id: (context) => const ProfileScreen(),
   };
 }
