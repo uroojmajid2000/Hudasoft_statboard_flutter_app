@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
+import '../../../features/Players/presentation/screens/notification/notification_screen.dart';
+import '../../routes/navigate.dart';
 
 class BuildAppbar extends StatelessWidget with PreferredSizeWidget {
   final String text;
@@ -29,6 +34,21 @@ class BuildAppbar extends StatelessWidget with PreferredSizeWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
+              Row(
+                children: [
+                  GestureDetector(
+                      onTap: () => Navigate.to(context, NotificationScreen.id),
+                      child: SvgPicture.asset(
+                          'assets/icons/notification_icons.svg')),
+                  SizedBox(width: 12),
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                      'assets/images/avatarimage.png',
+                    ),
+                    radius: 13,
+                  ),
+                ],
+              )
             ],
           ),
         ),
