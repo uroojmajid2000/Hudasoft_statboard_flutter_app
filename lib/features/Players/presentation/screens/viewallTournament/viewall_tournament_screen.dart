@@ -28,7 +28,7 @@ class ViewallTornamentScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: GestureDetector(
-          onTap: () => Navigator.pop(context),
+          // onTap: () => Navigator.pop(context),
           child: SizedBox(
             width: 10,
             height: 18,

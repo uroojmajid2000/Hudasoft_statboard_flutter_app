@@ -9,6 +9,7 @@ import '../../../features/Players/presentation/screens/notification/notification
 import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
 import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
+import '../../../features/Players/presentation/screens/tournament/tournament_screen.dart';
 import '../../../features/Players/presentation/screens/uploadMediaDetails/uploadmedia_details.dart';
 import '../../../features/Players/presentation/screens/uploadmedia/upload_media.dart';
 import '../../../features/Players/presentation/screens/viewallTournament/viewall_tournament_screen.dart';
@@ -26,6 +27,7 @@ class PlayersRoutes {
     ImageDetailsScreen.id: (context) => const ImageDetailsScreen(),
     NotificationScreen.id: (context) => const NotificationScreen(),
     ViewallTornamentScreen.id: (context) => const ViewallTornamentScreen(),
+    TornamentScreen.id: (context) => const TornamentScreen(),
     ProfileScreen.id: (context) => const ProfileScreen(),
   };
 }
