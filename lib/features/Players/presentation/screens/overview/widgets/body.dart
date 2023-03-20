@@ -29,8 +29,12 @@ class _BodyState extends State<Body> {
                   MyText.HeadingText(
                     "Upcoming Tournaments",
                   ),
-                  MyText.viewText(
-                    "View all",
+                  GestureDetector(
+                    onTap: () =>
+                        Navigate.next(context, ViewallTornamentScreen.id),
+                    child: MyText.viewText(
+                      "View all",
+                    ),
                   ),
                 ],
               ),
@@ -153,9 +157,9 @@ class _BodyState extends State<Body> {
               child: Row(
                 children: [
                   Gallery(),
-                  SizedBox(width: 18),
+                  SizedBox(width: 10),
                   Gallery(),
-                  SizedBox(width: 18),
+                  SizedBox(width: 10),
                   Gallery(),
                 ],
               ),

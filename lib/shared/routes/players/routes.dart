@@ -11,6 +11,7 @@ import '../../../features/Players/presentation/screens/profile/profile_screen.da
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
 import '../../../features/Players/presentation/screens/uploadMediaDetails/uploadmedia_details.dart';
 import '../../../features/Players/presentation/screens/uploadmedia/upload_media.dart';
+import '../../../features/Players/presentation/screens/viewallTournament/viewall_tournament_screen.dart';
 
 class PlayersRoutes {
   static Map<String, Widget Function(BuildContext)> routes = {
@@ -24,6 +25,7 @@ class PlayersRoutes {
     UploadMediaDetailsScreen.id: (context) => const UploadMediaDetailsScreen(),
     ImageDetailsScreen.id: (context) => const ImageDetailsScreen(),
     NotificationScreen.id: (context) => const NotificationScreen(),
+    ViewallTornamentScreen.id: (context) => const ViewallTornamentScreen(),
     ProfileScreen.id: (context) => const ProfileScreen(),
   };
 }

@@ -5,7 +5,9 @@ import 'package:statboard_flutter_app/features/Players/presentation/screens/over
 import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/widgets/upcoming_tournaments.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/widgets/gallery.dart';
 import '../../../../../shared/layout/layout_screen.dart';
+import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/text.dart';
+import '../viewallTournament/viewall_tournament_screen.dart';
 
 part 'widgets/body.dart';
 

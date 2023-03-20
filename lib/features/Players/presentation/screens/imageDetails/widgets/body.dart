@@ -64,6 +64,18 @@ class _BodyState extends State<Body> {
               padding: const EdgeInsets.symmetric(horizontal: 14),
               child: Row(
                 children: [
+                  Text(
+                    "Tags:",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 14,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 6,
+                  ),
                   TagsImage(tagname: 'Football'),
                   SizedBox(
                     width: 6,
@@ -76,7 +88,43 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      SvgPicture.asset('assets/icons/stadium.svg'),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      MyText.simpleText("California Stadium"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      SvgPicture.asset('assets/icons/venue.svg'),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      MyText.simpleText("Football"),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      SvgPicture.asset('assets/icons/vs.svg'),
+                      SizedBox(
+                        height: 3,
+                      ),
+                      MyText.simpleText("Tornado VS Stalion"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 25),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               child: MyText.HeadingText(

@@ -7,12 +7,9 @@ class UpcomingTournaments extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-
-    Container(
+    return Container(
       width: 329.33,
       height: 157.75,
-
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
@@ -121,6 +118,34 @@ class UpcomingTournaments extends StatelessWidget {
                         ]),
                   ),
                 ),
+                Container(
+                  width: 98,
+                  height: 27,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: Color(0xffffc035),
+                      width: 1,
+                    ),
+                    color: Color(0x19ffc035),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      SvgPicture.asset('assets/icons/arrow.svg'),
+                      Text(
+                        "Upcoming",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Color(0xffffc035),
+                          fontSize: 10,
+                          fontFamily: "Montserrat",
+                          fontWeight: FontWeight.w600,
+                        ),
+                      )
+                    ],
+                  ),
+                )
               ],
             ),
           ],

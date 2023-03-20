@@ -8,7 +8,7 @@ class RecentMatches extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
+      width: 329.33,
       height: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
@@ -47,15 +47,23 @@ class RecentMatches extends StatelessWidget {
                         ]),
                   ),
                 ),
-                Text(
-                  "WIN",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color(0xff00a22d),
-                    fontSize: 12,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.w600,
-                  ),
+                Column(
+                  children: [
+                    SvgPicture.asset('assets/icons/award.svg'),
+                    SizedBox(
+                      height: 2,
+                    ),
+                    Text(
+                      "WIN",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xff00a22d),
+                        fontSize: 12,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 )
               ],
             ),

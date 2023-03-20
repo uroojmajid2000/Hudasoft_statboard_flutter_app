@@ -64,6 +64,17 @@ class MyText {
         ),
       );
 
+  //fontsize 12 w600
+  static Widget simpleText(String text) => Text(
+        text,
+         style: TextStyle(
+        color: Colors.black,
+        fontSize: 12,
+        fontFamily: "Montserrat",
+        fontWeight: FontWeight.w600,
+    ),
+      );
+
   static Widget buttonText(String text) => Text(
         text,
         style: TextStyle(

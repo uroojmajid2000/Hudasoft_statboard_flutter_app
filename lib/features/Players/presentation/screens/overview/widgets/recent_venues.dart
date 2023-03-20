@@ -8,7 +8,7 @@ class RecentVenues extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
+      width: 329.33,
       height: 150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
