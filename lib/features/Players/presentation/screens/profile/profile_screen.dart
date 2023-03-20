@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../shared/widgets/button.dart';
+import '../../../../../shared/widgets/text.dart';
+import '../allteams/widgets/filters.dart';
+import '../allteams/widgets/profile_container.dart';
+import '../allteams/widgets/recent_matches.dart';
+
 part 'widgets/body.dart';
 
 class ProfileScreen extends StatelessWidget {

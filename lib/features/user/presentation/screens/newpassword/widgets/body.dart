@@ -77,8 +77,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 30),
                       Button(
                           child: MyText.buttonText('Continue'),
-                          onPressed: () => {_settingModalBottomSheet(context)}
-                          ),
+                          onPressed: () => {_settingModalBottomSheet(context)}),
                     ],
                   ),
                 ),
@@ -160,7 +159,7 @@ void _settingModalBottomSheet(context) {
                       ),
                     ),
                     onPressed: () => {
-                          Navigate.next(context, SignupScreen.id),
+                          Navigate.next(context, SigninScreen.id),
                         }
                     // _onSubmit(_onSuccess),
                     ),

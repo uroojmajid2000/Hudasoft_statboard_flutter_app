@@ -4,6 +4,7 @@ import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/text.dart';
 import '../../../../../shared/widgets/text_field.dart';
+import '../signin/signin_screen.dart';
 import '../signup/signup_screen.dart';
 
 part 'widgets/body.dart';

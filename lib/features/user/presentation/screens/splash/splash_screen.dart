@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:statboard_flutter_app/resources/colors.dart';
 
 import '../../../../../shared/routes/navigate.dart';
+import '../onboarding/onboarding_screen.dart';
 import '../signup/signup_screen.dart';
 
 class SplashScreen extends HookWidget {
@@ -19,7 +20,8 @@ class SplashScreen extends HookWidget {
       // if (context.read<UserCubit>().isLoggedIn()) {
       //   Navigate.next(context, HomeScreen.id);
       // } else {
-      Navigate.next(context, SignupScreen.id);
+      // Navigate.next(context, SignupScreen.id);
+      Navigate.next(context, OnboardingScreen.id);
       // }
     }
 
