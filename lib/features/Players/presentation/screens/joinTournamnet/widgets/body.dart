@@ -1,4 +1,4 @@
-part of '../tournament_screen.dart';
+part of '../jointournament_screen.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -12,7 +12,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 6, vsync: this);
   }
 
   @override
@@ -86,11 +86,37 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                       height: 15,
                     ),
                     GestureDetector(
-                        onTap: () =>
-                            Navigate.next(context, RequestJoiningTournament.id),
-                        child: ContainerButton(
-                          text: "Request to Join",
-                        ))
+                        // onTap: () =>
+                        //     Navigate.next(context, RequestJoiningTournament.id),
+                        child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color: Color(0xffef4c53),
+                          width: 2,
+                        ),
+                      ),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 14,
+                        vertical: 11,
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Leave Tournament",
+                            style: TextStyle(
+                              color: Color(0xffef4c53),
+                              fontSize: 14,
+                              fontFamily: "Montserrat",
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ))
                   ]),
             ),
             SizedBox(
@@ -128,7 +154,16 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                       text: 'Teams',
                     ),
                     Tab(
+                      text: 'Season',
+                    ),
+                    Tab(
+                      text: 'Play Off',
+                    ),
+                    Tab(
                       text: 'Prize',
+                    ),
+                    Tab(
+                      text: 'Results',
                     ),
                   ],
                 ),
@@ -138,7 +173,14 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
               fit: FlexFit.loose,
               child: TabBarView(
                 controller: _tabController,
-                children: [Info(), Teams(), Prize()],
+                children: [
+                  Info(),
+                  Teams(),
+                  Seasons(),
+                  PlayOff(),
+                  Prize(),
+                  Results()
+                ],
               ),
             ),
           ],

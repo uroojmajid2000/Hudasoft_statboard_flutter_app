@@ -3,8 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContainerButton extends StatelessWidget {
+  final String text;
   const ContainerButton({
-    super.key,
+    super.key, required this.text,
   });
 
   @override
@@ -25,7 +26,8 @@ class ContainerButton extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            "Request to Join",
+            // "Request to Join",
+            text,
             style: TextStyle(
               color: Colors.white,
               fontSize: 14,

@@ -5,10 +5,12 @@ import '../../../features/Players/presentation/screens/allteams/all_teams.dart';
 import '../../../features/Players/presentation/screens/events/events_screen.dart';
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
 import '../../../features/Players/presentation/screens/imageDetails/imagedetails.dart';
+import '../../../features/Players/presentation/screens/joinTournamnet/jointournament_screen.dart';
 import '../../../features/Players/presentation/screens/notification/notification_screen.dart';
 import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
 import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
 import '../../../features/Players/presentation/screens/requestjoinin_tournament/requesttojoin_tournament.dart';
+import '../../../features/Players/presentation/screens/stats/stats_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
 import '../../../features/Players/presentation/screens/tournament/tournament_screen.dart';
 import '../../../features/Players/presentation/screens/uploadMediaDetails/uploadmedia_details.dart';
@@ -31,5 +33,7 @@ class PlayersRoutes {
     TornamentScreen.id: (context) => const TornamentScreen(),
     ProfileScreen.id: (context) => const ProfileScreen(),
     RequestJoiningTournament.id: (context) => const RequestJoiningTournament(),
+    JoinTornamentScreen.id: (context) => const JoinTornamentScreen(),
+    StatsScreen.id: (context) => const StatsScreen(),
   };
 }

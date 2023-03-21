@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/widgets/upcommingContainer.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 import '../../../../../../shared/routes/navigate.dart';
+import '../../joinTournamnet/jointournament_screen.dart';
 import '../../tournament/tournament_screen.dart';
 
-class UpcomingTournaments extends StatelessWidget {
-  const UpcomingTournaments({super.key});
+class JoiningTournaments extends StatelessWidget {
+  const JoiningTournaments({super.key});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.next(context, TornamentScreen.id),
+      onTap: () => Navigate.next(context, JoinTornamentScreen.id),
       child: Container(
         width: 329.33,
         height: 157.75,
@@ -98,7 +98,7 @@ class UpcomingTournaments extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 5,
+                height: 6,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,7 +124,33 @@ class UpcomingTournaments extends StatelessWidget {
                           ]),
                     ),
                   ),
-                  UpcommingContainer()
+                  Container(
+                    width: 98,
+                    height: 27,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: Color(0xff00b0f0),
+                        width: 1,
+                      ),
+                      color: Color(0x1900b0f0),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "Joined",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color(0xff00b0f0),
+                            fontSize: 10,
+                            fontFamily: "Montserrat",
+                            fontWeight: FontWeight.w600,
+                          ),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ],

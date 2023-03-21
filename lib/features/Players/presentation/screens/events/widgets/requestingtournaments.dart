@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/widgets/upcommingContainer.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 import '../../../../../../shared/routes/navigate.dart';
 import '../../tournament/tournament_screen.dart';
 
-class UpcomingTournaments extends StatelessWidget {
-  const UpcomingTournaments({super.key});
+class RequestingTournaments extends StatelessWidget {
+  const RequestingTournaments({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +97,7 @@ class UpcomingTournaments extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 5,
+                height: 6,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -124,7 +123,33 @@ class UpcomingTournaments extends StatelessWidget {
                           ]),
                     ),
                   ),
-                  UpcommingContainer()
+                  Container(
+                    width: 98,
+                    height: 27,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        color: Color(0xff03c038),
+                        width: 1,
+                      ),
+                      color: Color(0x1904c038),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text(
+                          "Requested to Join",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Color(0xff03c038),
+                            fontSize: 10,
+                            fontFamily: "Montserrat",
+                            fontWeight: FontWeight.w600,
+                          ),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ],

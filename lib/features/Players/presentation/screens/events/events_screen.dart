@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/eventsfilters.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/matchesview.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/tournamentsview.dart';
+import 'package:statboard_flutter_app/shared/widgets/search_bar.dart';
 import '../../../../../shared/layout/layout_screen.dart';
+import '../allteams/widgets/filters.dart';
 
 part 'widgets/body.dart';
 
