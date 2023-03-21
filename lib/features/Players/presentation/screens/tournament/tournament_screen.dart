@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/tournament/widgets/container_button.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/tournament/widgets/info.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/tournament/widgets/prize.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/tournament/widgets/teams.dart';
+
+import '../../../../../shared/routes/navigate.dart';
+import '../../../../../shared/widgets/text.dart';
+import '../requestjoinin_tournament/requesttojoin_tournament.dart';
 part 'widgets/body.dart';
 
 class TornamentScreen extends StatelessWidget {

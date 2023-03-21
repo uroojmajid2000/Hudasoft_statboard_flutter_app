@@ -117,4 +117,14 @@ class MyText {
           fontWeight: FontWeight.w700,
         ),
       );
+      //tournament heading
+  static Widget TournamentHeadingText(String text) => Text(
+        text,
+       style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontFamily: "Montserrat",
+                          fontWeight: FontWeight.w700,
+                        ),
+      );
 }
