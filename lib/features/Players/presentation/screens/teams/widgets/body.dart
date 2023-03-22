@@ -27,7 +27,7 @@ class _BodyState extends State<Body> {
             style: TextStyle(color: Colors.white, fontSize: 45),
           ),
           onPressed: () {
-            Navigate.next(context, TeamsDetails.id);
+            Navigate.to(context, TeamsDetails.id);
           },
         ),
       ),
@@ -64,7 +64,7 @@ class _BodyState extends State<Body> {
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      Navigate.next(context, AllTeams.id);
+                      Navigate.to(context, AllTeams.id);
                     },
                     child: GridTile(
                       child: TeamsContainer(teamName: _teamNames[index]),

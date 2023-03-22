@@ -11,7 +11,7 @@ class MatchesContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.next(context, StatsScreen.id),
+      onTap: () => Navigate.to(context, StatsScreen.id),
       child: Container(
         width: double.infinity,
         height: 138,

@@ -147,7 +147,7 @@ void _settingModalBottomSheet(context) {
                       ),
                     ),
                     onPressed: () => {
-                          Navigate.next(context, TeamsScreen.id),
+                          Navigate.to(context, TeamsScreen.id),
                         }
                     // _onSubmit(_onSuccess),
                     ),

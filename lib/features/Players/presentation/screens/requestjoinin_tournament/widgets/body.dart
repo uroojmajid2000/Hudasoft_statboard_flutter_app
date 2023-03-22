@@ -82,7 +82,7 @@ class _BodyState extends State<Body> {
                       message:
                           "Your request to join the tournament \nhas been successfully sent.",
                       onPressed: () {
-                        Navigate.next(context, OverviewScreen.id);
+                        Navigate.to(context, OverviewScreen.id);
                       });
                 })
           ],

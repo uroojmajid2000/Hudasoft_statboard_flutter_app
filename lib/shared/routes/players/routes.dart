@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../features/Players/presentation/screens/Teams/teams_screen.dart';
+import '../../../features/Players/presentation/screens/addteams/addteams_screen.dart';
 import '../../../features/Players/presentation/screens/allteams/all_teams.dart';
 import '../../../features/Players/presentation/screens/events/events_screen.dart';
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
@@ -35,5 +36,7 @@ class PlayersRoutes {
     RequestJoiningTournament.id: (context) => const RequestJoiningTournament(),
     JoinTornamentScreen.id: (context) => const JoinTornamentScreen(),
     StatsScreen.id: (context) => const StatsScreen(),
+    AddTeamsScreen.id: (context) => const AddTeamsScreen(),
+
   };
 }

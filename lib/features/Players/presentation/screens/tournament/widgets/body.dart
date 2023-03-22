@@ -87,7 +87,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                     ),
                     GestureDetector(
                         onTap: () =>
-                            Navigate.next(context, RequestJoiningTournament.id),
+                            Navigate.to(context, RequestJoiningTournament.id),
                         child: ContainerButton(
                           text: "Request to Join",
                         ))

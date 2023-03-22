@@ -11,7 +11,7 @@ class RecentTeams extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.next(context, AllTeams.id),
+      onTap: () => Navigate.to(context, AllTeams.id),
       child: Container(
         width: 329.33,
         height: 150,

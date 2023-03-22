@@ -31,7 +31,7 @@ class _BodyState extends State<Body> {
                   ),
                   GestureDetector(
                     onTap: () =>
-                        Navigate.next(context, ViewallTornamentScreen.id),
+                        Navigate.to(context, ViewallTornamentScreen.id),
                     child: MyText.viewText(
                       "View all",
                     ),

@@ -12,7 +12,7 @@ class JoiningTournaments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.next(context, JoinTornamentScreen.id),
+      onTap: () => Navigate.to(context, JoinTornamentScreen.id),
       child: Container(
         width: 329.33,
         height: 157.75,

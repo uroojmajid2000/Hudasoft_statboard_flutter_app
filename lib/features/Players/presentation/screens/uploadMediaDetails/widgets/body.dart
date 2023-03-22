@@ -40,7 +40,7 @@ class _BodyState extends State<Body> {
                         message:
                             'Media successfully uploaded to the \n gallery.',
                         onPressed: () {
-                          Navigate.next(context, GalleryScreen.id);
+                          Navigate.to(context, GalleryScreen.id);
                         },
                       ),
                     }),

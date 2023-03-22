@@ -32,7 +32,7 @@ class _BodyState extends State<Body> {
                 ),
               ),
               onPressed: () {
-                Navigate.next(context, UploadMediaDetailsScreen.id);
+                Navigate.to(context, UploadMediaDetailsScreen.id);
               },
             ),
           ),

@@ -21,7 +21,7 @@ class _BodyState extends State<Body> {
             style: TextStyle(color: Colors.white, fontSize: 45),
           ),
           onPressed: () {
-            Navigate.next(context, UploadMediaScreen.id);
+            Navigate.to(context, UploadMediaScreen.id);
           },
         ),
       ),

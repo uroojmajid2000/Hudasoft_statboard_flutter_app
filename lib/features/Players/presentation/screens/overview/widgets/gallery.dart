@@ -41,7 +41,7 @@ class Gallery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.next(context, ImageDetailsScreen.id),
+      onTap: () => Navigate.to(context, ImageDetailsScreen.id),
       child: Container(
         width: 329.33,
         height: 150,
