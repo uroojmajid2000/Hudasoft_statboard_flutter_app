@@ -21,7 +21,7 @@ class _BodyState extends State<Body> {
             style: TextStyle(color: Colors.white, fontSize: 45),
           ),
           onPressed: () {
-            Navigate.next(context, UploadMediaScreen.id);
+            Navigate.to(context, UploadMediaScreen.id);
           },
         ),
       ),
@@ -51,7 +51,7 @@ class _BodyState extends State<Body> {
             const SizedBox(height: 20),
             GestureDetector(
                 onTap: () {
-                  Navigate.next(context, ImageDetailsScreen.id);
+                  Navigate.to(context, ImageDetailsScreen.id);
                 },
                 child: GalleryGrid()),
           ],

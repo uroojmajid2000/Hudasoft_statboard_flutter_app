@@ -38,8 +38,11 @@ class _BodyState extends State<Body> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SvgPicture.asset(
-                            'assets/icons/backicon.svg',
+                          GestureDetector(
+                            onTap: () => Navigator.pop(context),
+                            child: SvgPicture.asset(
+                              'assets/icons/backicon.svg',
+                            ),
                           ),
                         ],
                       ),
@@ -171,7 +174,7 @@ class _BodyState extends State<Body> {
                       Button(
                           child: MyText.buttonText('Continue'),
                           onPressed: () => {
-                                Navigate.next(context, NewPasswordScreen.id),
+                                Navigate.to(context, NewPasswordScreen.id),
                               }),
                     ],
                   ),

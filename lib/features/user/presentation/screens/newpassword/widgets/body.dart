@@ -33,8 +33,11 @@ class _BodyState extends State<Body> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SvgPicture.asset(
-                            'assets/icons/backicon.svg',
+                        GestureDetector(
+                            onTap: () => Navigator.pop(context),
+                            child: SvgPicture.asset(
+                              'assets/icons/backicon.svg',
+                            ),
                           ),
                         ],
                       ),
@@ -159,7 +162,7 @@ void _settingModalBottomSheet(context) {
                       ),
                     ),
                     onPressed: () => {
-                          Navigate.next(context, SigninScreen.id),
+                          Navigate.to(context, SigninScreen.id),
                         }
                     // _onSubmit(_onSuccess),
                     ),

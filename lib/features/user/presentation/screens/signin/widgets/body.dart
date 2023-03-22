@@ -81,8 +81,8 @@ class _BodyState extends State<Body> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           GestureDetector(
-                              onTap: () => Navigate.next(
-                                  context, ForgetpasswordScreen.id),
+                              onTap: () =>
+                                  Navigate.to(context, ForgetpasswordScreen.id),
                               child: MyText.forgetPassword("Forgot Password?")),
                         ],
                       ),
@@ -91,7 +91,6 @@ class _BodyState extends State<Body> {
                           child: MyText.buttonText('Sign In'),
                           onPressed: () => {
                                 Navigate.next(context, OverviewScreen.id),
-                                // Navigate.next(context, HomeScreen.id),
                               }),
                       const SizedBox(height: 20),
                       Row(
@@ -215,7 +214,7 @@ void _CreateAccountBottomSheet(context) {
                 Button(
                     child: MyText.buttonText('Continue'),
                     onPressed: () => {
-                          Navigate.next(context, SigninScreen.id),
+                          Navigate.to(context, SigninScreen.id),
                         }),
                 Spacer()
               ],

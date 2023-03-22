@@ -5,7 +5,6 @@ import 'package:statboard_flutter_app/resources/colors.dart';
 
 import '../../../../../shared/routes/navigate.dart';
 import '../onboarding/onboarding_screen.dart';
-import '../signup/signup_screen.dart';
 
 class SplashScreen extends HookWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -17,12 +16,9 @@ class SplashScreen extends HookWidget {
     Size size = MediaQuery.of(context).size;
 
     void _onSuccess() {
-      // if (context.read<UserCubit>().isLoggedIn()) {
-      //   Navigate.next(context, HomeScreen.id);
-      // } else {
-      // Navigate.next(context, SignupScreen.id);
+     
       Navigate.next(context, OnboardingScreen.id);
-      // }
+     
     }
 
     void _navigateToNextScreen(VoidCallback onSuccess) async {
