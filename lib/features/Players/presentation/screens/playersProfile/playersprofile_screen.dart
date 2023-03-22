@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/statsdetails.dart';
 
-import '../../../../../shared/layout/layout_screen.dart';
 import '../../../../../shared/routes/navigate.dart';
+import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/text.dart';
-import '../../../../user/presentation/screens/forgetpassword/forgetpassword_screen.dart';
-import '../events/widgets/matchescontainer.dart';
+import '../allteams/widgets/filters.dart';
+import '../allteams/widgets/profile_container.dart';
+import '../allteams/widgets/recent_matches.dart';
 import '../notification/notification_screen.dart';
+import '../overview/widgets/recent_matches.dart';
 import '../profile/profile_screen.dart';
 
 part 'widgets/body.dart';
 
-class StatsScreen extends StatelessWidget {
-  const StatsScreen({Key? key}) : super(key: key);
+class PlayersProfileScreen extends StatelessWidget {
+  const PlayersProfileScreen({Key? key}) : super(key: key);
 
-  static String id = "stats_screen";
+  static String id = "playersprofile_screen";
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +54,7 @@ class StatsScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Stats",
+          "Teams",
           style: TextStyle(
             color: Colors.black,
             fontSize: 25,
@@ -64,15 +65,5 @@ class StatsScreen extends StatelessWidget {
       ),
       body: Body(),
     );
-    // Layout(
-    //   text: 'Stats',
-    //   currentTab: 3,
-    //   body:
-    //   //  const SingleChildScrollView(
-    //   //   scrollDirection: Axis.vertical,
-    //   //   child:
-    //     Body(),
-    //   // ),
-    // );
   }
 }
