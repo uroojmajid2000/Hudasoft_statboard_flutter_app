@@ -10,6 +10,7 @@ import '../../../../../shared/layout/layout_screen.dart';
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/text.dart';
 import '../addteams/addteams_screen.dart';
+import '../editteams/editteams_screen.dart';
 
 part 'widgets/body.dart';
 

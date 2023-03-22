@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../features/Players/presentation/screens/Teams/teams_screen.dart';
 import '../../../features/Players/presentation/screens/addteams/addteams_screen.dart';
 import '../../../features/Players/presentation/screens/allteams/all_teams.dart';
+import '../../../features/Players/presentation/screens/editteams/editteams_screen.dart';
 import '../../../features/Players/presentation/screens/events/events_screen.dart';
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
 import '../../../features/Players/presentation/screens/imageDetails/imagedetails.dart';
@@ -37,6 +38,6 @@ class PlayersRoutes {
     JoinTornamentScreen.id: (context) => const JoinTornamentScreen(),
     StatsScreen.id: (context) => const StatsScreen(),
     AddTeamsScreen.id: (context) => const AddTeamsScreen(),
-
+    EditTeamsScreen.id: (context) => const EditTeamsScreen(),
   };
 }
