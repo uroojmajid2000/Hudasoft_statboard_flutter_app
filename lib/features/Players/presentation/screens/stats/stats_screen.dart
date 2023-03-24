@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/statsdetails.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/tablelist.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/teamcontainer.dart';
 
 import '../../../../../shared/layout/layout_screen.dart';
 import '../../../../../shared/routes/navigate.dart';
@@ -41,6 +43,7 @@ class StatsScreen extends StatelessWidget {
                   radius: 13,
                 ),
               ),
+              SizedBox(width: 5),
             ],
           )
         ],

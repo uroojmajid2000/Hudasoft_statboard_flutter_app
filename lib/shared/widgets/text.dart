@@ -137,4 +137,14 @@ class MyText {
         fontWeight: FontWeight.w700,
     ),
   );
+  static Widget tableRow(String text) => Text(
+
+   text,
+    style: TextStyle(
+        color: Colors.black,
+        fontSize: 13,
+        fontFamily: "Montserrat",
+        fontWeight: FontWeight.w600,
+    ),
+  );
 }

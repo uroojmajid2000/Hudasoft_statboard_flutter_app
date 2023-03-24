@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -18,18 +17,21 @@ class StatsDetails extends StatelessWidget {
           height: 140,
         ),
         SvgPicture.asset('assets/images/football.svg'),
+        SizedBox(
+          height: 13,
+        ),
         MyText.simplegreyText(
           "CALIFORNIA STADIUM 25 SEP 10 AM",
         ),
         SizedBox(
-          height: 30,
+          height: 20,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
           child: TornadoVsStalion(),
         ),
         SizedBox(
-          height: 30,
+          height: 20,
         ),
         Text(
           "MATCH SUMMARY - Tornado won the match. ",
@@ -41,7 +43,7 @@ class StatsDetails extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 10,
+          height: 20,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -74,4 +76,5 @@ class StatsDetails extends StatelessWidget {
         ),
       ],
     );
-  }}
+  }
+}

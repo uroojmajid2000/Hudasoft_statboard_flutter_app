@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 import '../../../../../../shared/routes/navigate.dart';
+import '../../joinTournamnet/jointournament_screen.dart';
 import '../../tournament/tournament_screen.dart';
 
 class RequestingTournaments extends StatelessWidget {
@@ -11,7 +12,8 @@ class RequestingTournaments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.to(context, TornamentScreen.id),
+      // onTap: () => Navigate.to(context, TornamentScreen.id),
+      onTap: () => Navigate.to(context, JoinTornamentScreen.id),
       child: Container(
         width: 329.33,
         height: 157.75,
@@ -124,8 +126,8 @@ class RequestingTournaments extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 98,
-                    height: 27,
+                    width: 100,
+                    height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       border: Border.all(
@@ -138,7 +140,7 @@ class RequestingTournaments extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Requested to Join",
+                          "Requested Join",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Color(0xff03c038),
