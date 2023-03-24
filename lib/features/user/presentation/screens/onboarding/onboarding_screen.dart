@@ -72,7 +72,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
-            child: Button(child: Text('SignUp'), onPressed: () {}),
+            child: Button(child: Text('Sign Up'), onPressed: () {}),
           ),
           SizedBox(
             height: 10,
