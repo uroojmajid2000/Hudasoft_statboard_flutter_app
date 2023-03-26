@@ -105,7 +105,14 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 20),
                       OutlineButtonCustom(
-                          onPressed: () => {_CreateAccountBottomSheet(context)},
+                          onPressed: () => {
+                                CustomCreateAccountModal.show(
+                                  context: context,
+                                  onPressed: () {
+                                    Navigate.to(context, SigninScreen.id);
+                                  },
+                                )
+                              },
                           child: Text(
                             "Create Account",
                             textAlign: TextAlign.center,
@@ -126,100 +133,4 @@ class _BodyState extends State<Body> {
       ),
     );
   }
-}
-
-void _CreateAccountBottomSheet(context) {
-  showModalBottomSheet(
-    backgroundColor: Colors.white,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.only(
-        topLeft: Radius.circular(20.0),
-        topRight: Radius.circular(20.0),
-      ),
-    ),
-    context: context,
-    builder: (BuildContext bc) {
-      String selectedContainer = '';
-      return Container(
-          height: 500,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: 7,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Flexible(
-                      child: Center(
-                        child: Text(
-                          "Select Role",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontFamily: "Montserrat",
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    ),
-                    GestureDetector(
-                      child: Text(
-                        'X',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Color(0xff535353),
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      onTap: () => Navigator.pop(context),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CreatAccountContainer(
-                      text: "PLAYER",
-                      contentText: "You want to host an event",
-                    ),
-                    CreatAccountContainer(
-                      text: 'BUSINESS',
-                      contentText: "You want to join an event",
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  children: [
-                    CreatAccountContainer(
-                      text: 'SCOUT',
-                      contentText: 'You are searching for talent',
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-                Button(
-                    child: MyText.buttonText('Continue'),
-                    onPressed: () => {
-                          Navigate.to(context, SigninScreen.id),
-                        }),
-                Spacer()
-              ],
-            ),
-          ));
-    },
-  );
 }

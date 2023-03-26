@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 import '../../../../../../shared/widgets/text.dart';
 
 class TeamsCard extends StatelessWidget {
-  const TeamsCard({super.key});
+  final String alphabet;
+  final String text;
+  final Color color;
+  const TeamsCard({super.key, required this.text, required this.color, required this.alphabet});
 
   @override
   Widget build(BuildContext context) {
@@ -27,10 +30,12 @@ class TeamsCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CircleAvatar(
-              backgroundColor: Color(0xff5642a9),
+              // backgroundColor: Color(0xff5642a9),
+              backgroundColor:color,
               radius: 20,
               child: Text(
-                "T",
+                // "T",
+           alphabet,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
@@ -42,7 +47,8 @@ class TeamsCard extends StatelessWidget {
             height: 8,
           ),
           MyText.labelText(
-            "Tornado",
+            // "Tornado",
+            text,
           ),
         ],
       ),

@@ -1,18 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/gallery/widgets/gallery_grid.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/imageDetails/widgets/tags.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/notification/widgets/notification_container.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/notification/widgets/notification_event.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/widgets/upcoming_tournaments.dart';
-import '../../../../../resources/colors.dart';
-import '../../../../../shared/layout/layout_screen.dart';
-import '../../../../../shared/routes/navigate.dart';
-import '../../../../../shared/widgets/search_bar.dart';
-import '../../../../../shared/widgets/text.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/viewallTournament/widgets/viewall_tournaments.dart';
 
-import '../allteams/widgets/filters.dart';
-import '../uploadmedia/upload_media.dart';
+import '../../../../../shared/widgets/search_bar.dart';
 
 part 'widgets/body.dart';
 
@@ -28,7 +17,7 @@ class ViewallTornamentScreen extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: GestureDetector(
-          // onTap: () => Navigator.pop(context),
+          onTap: () => Navigator.pop(context),
           child: SizedBox(
             width: 10,
             height: 18,

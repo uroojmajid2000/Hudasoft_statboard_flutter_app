@@ -114,11 +114,17 @@ class _BodyState extends State<Body> {
                   SizedBox(height: 12),
                   Row(
                     children: [
-                      Tags(),
+                      Tags(
+                        text: "Football",
+                      ),
                       SizedBox(width: 5),
-                      Tags(),
+                      Tags(
+                        text: "Basketball",
+                      ),
                       SizedBox(width: 5),
-                      Tags(),
+                      Tags(
+                        text: "Football",
+                      ),
                     ],
                   ),
                 ],

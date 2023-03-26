@@ -20,7 +20,7 @@ class _PrizeState extends State<Prize> {
           ),
           PrizeCard(
               rank: "1st Place",
-              prize: "4000",
+              prize: "\$4000",
               grdientcolorOne: Color(0xff67075f),
               grdientcolorTwo: Color(0xff9d366f)),
           SizedBox(
@@ -28,7 +28,7 @@ class _PrizeState extends State<Prize> {
           ),
           PrizeCard(
               rank: "2nd Place",
-              prize: "2000",
+              prize: "\$2000",
               grdientcolorOne: Color(0xffff0361),
               grdientcolorTwo: Color(0xffcd004c)),
           SizedBox(
@@ -36,7 +36,7 @@ class _PrizeState extends State<Prize> {
           ),
           PrizeCard(
               rank: "3rd Place",
-              prize: "1000",
+              prize: "\$1000",
               grdientcolorOne: Color(0xff964cdd),
               grdientcolorTwo: Color(0xff5702ac)),
           SizedBox(

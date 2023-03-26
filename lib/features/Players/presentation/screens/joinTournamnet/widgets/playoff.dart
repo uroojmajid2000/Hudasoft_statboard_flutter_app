@@ -21,8 +21,16 @@ class _PlayOffState extends State<PlayOff> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TeamsCard(),
-              TeamsCard(),
+              TeamsCard(
+                alphabet: 'T',
+                color: Color(0xff5642a9),
+                text: "Tornado",
+              ),
+              TeamsCard(
+                alphabet: 'S',
+                color: Color(0xffEF4C53),
+                text: "Stallion",
+              ),
             ],
           ),
           SizedBox(
@@ -31,8 +39,16 @@ class _PlayOffState extends State<PlayOff> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TeamsCard(),
-              TeamsCard(),
+              TeamsCard(
+                alphabet: 'T',
+                color: Color(0xff5642a9),
+                text: "Tornado",
+              ),
+              TeamsCard(
+                alphabet: 'S',
+                color: Color(0xffEF4C53),
+                text: "Stallion",
+              ),
             ],
           ),
           SizedBox(
@@ -41,8 +57,16 @@ class _PlayOffState extends State<PlayOff> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TeamsCard(),
-              TeamsCard(),
+              TeamsCard(
+                alphabet: 'T',
+                color: Color(0xff5642a9),
+                text: "Tornado",
+              ),
+              TeamsCard(
+                alphabet: 'S',
+                color: Color(0xffEF4C53),
+                text: "Stallion",
+              ),
             ],
           ),
           SizedBox(

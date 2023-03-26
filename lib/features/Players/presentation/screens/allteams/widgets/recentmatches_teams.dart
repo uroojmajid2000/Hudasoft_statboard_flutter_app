@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
-class RecentMatchesItem extends StatelessWidget {
-
-  const RecentMatchesItem({super.key, });
+class RecentMatchesTeams extends StatelessWidget {
+  const RecentMatchesTeams({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,6 @@ class RecentMatchesItem extends StatelessWidget {
                           ),
                           MyText.simpleblackText(
                             "Football",
-                      
                           ),
                         ]),
                   ),

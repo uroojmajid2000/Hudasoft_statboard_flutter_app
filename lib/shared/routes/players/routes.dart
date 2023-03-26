@@ -8,13 +8,16 @@ import '../../../features/Players/presentation/screens/events/events_screen.dart
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
 import '../../../features/Players/presentation/screens/imageDetails/imagedetails.dart';
 import '../../../features/Players/presentation/screens/joinTournamnet/jointournament_screen.dart';
+import '../../../features/Players/presentation/screens/matchstats/matchstats_screen.dart';
 import '../../../features/Players/presentation/screens/notification/notification_screen.dart';
 import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
 import '../../../features/Players/presentation/screens/playersProfile/playersprofile_screen.dart';
 import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
+import '../../../features/Players/presentation/screens/recentvenues/recentvenues_screen.dart';
 import '../../../features/Players/presentation/screens/requestjoinin_tournament/requesttojoin_tournament.dart';
 import '../../../features/Players/presentation/screens/stats/stats_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
+import '../../../features/Players/presentation/screens/teamsprofile/teamsprofile_screen.dart';
 import '../../../features/Players/presentation/screens/tournament/tournament_screen.dart';
 import '../../../features/Players/presentation/screens/uploadMediaDetails/uploadmedia_details.dart';
 import '../../../features/Players/presentation/screens/uploadmedia/upload_media.dart';
@@ -24,6 +27,7 @@ class PlayersRoutes {
   static Map<String, Widget Function(BuildContext)> routes = {
     OverviewScreen.id: (context) => const OverviewScreen(),
     EventsScreen.id: (context) => const EventsScreen(),
+    RecentVenuesScreen.id: (context) => const RecentVenuesScreen(),
     TeamsScreen.id: (context) => const TeamsScreen(),
     TeamsDetails.id: (context) => const TeamsDetails(),
     AllTeams.id: (context) => const AllTeams(),
@@ -41,6 +45,8 @@ class PlayersRoutes {
     AddTeamsScreen.id: (context) => const AddTeamsScreen(),
     EditTeamsScreen.id: (context) => const EditTeamsScreen(),
     PlayersProfileScreen.id: (context) => const PlayersProfileScreen(),
+    MatchStatsScreen.id: (context) => const MatchStatsScreen(),
+    TeamsProfileScreen.id: (context) => const TeamsProfileScreen(),
 
   };
 }

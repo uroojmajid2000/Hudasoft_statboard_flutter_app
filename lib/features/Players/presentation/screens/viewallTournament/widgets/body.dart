@@ -8,6 +8,8 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  final List<String> _listItems = List.generate(2, (index) => '$index');
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -22,9 +24,17 @@ class _BodyState extends State<Body> {
             suffixIcon: 'assets/icons/filter.png',
           ),
           const SizedBox(height: 23),
-          SizedBox(width: double.infinity, child: UpcomingTournaments()),
-          const SizedBox(height: 23),
-          SizedBox(width: double.infinity, child: UpcomingTournaments()),
+          Expanded(
+            child: ListView.builder(
+              itemCount: _listItems.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 23),
+                  child: ViewallTournaments(),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/widgets/detail_of_team.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/widgets/filters.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/widgets/matches_grid.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/widgets/profile_container.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/widgets/recent_matches.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/widgets/recentmatches_teams.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/widgets/teams_container.dart';
 
 import '../../../../../resources/colors.dart';

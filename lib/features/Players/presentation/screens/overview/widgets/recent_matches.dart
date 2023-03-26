@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
+
+import '../../matchstats/matchstats_screen.dart';
 
 class RecentMatches extends StatelessWidget {
   const RecentMatches({super.key});
@@ -130,7 +133,9 @@ class RecentMatches extends StatelessWidget {
                   width: 83,
                   height: 35,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigate.to(context, MatchStatsScreen.id);
+                    },
                     style: ButtonStyle(
                       elevation: MaterialStateProperty.all(0),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
