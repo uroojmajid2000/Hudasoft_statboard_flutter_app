@@ -42,6 +42,79 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: EditProfileContaoner(
+                icon: 'assets/icons/profileicon.svg',
+                text: "Profile Details",
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: EditProfileContaoner(
+                icon: 'assets/icons/securityicon.svg',
+                text: "Security",
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: EditProfileContaoner(
+                icon: 'assets/icons/permission.svg',
+                text: "Permissions",
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: EditProfileContaoner(
+                icon: 'assets/icons/bellicon.svg',
+                text: "Notifications",
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: EditProfileContaoner(
+                icon: 'assets/icons/intersticon.svg',
+                text: "Interests",
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: EditProfileContaoner(
+                icon: 'assets/icons/settingicon.svg',
+                text: "Settings",
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: EditProfileContaoner(
+                icon: 'assets/icons/signouticon.svg',
+                text: "Sign Out",
+              ),
+            ),
+            SizedBox(
+              height: 6,
+            ),
           ]),
         ));
   }
