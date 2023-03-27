@@ -16,23 +16,21 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Positioned(
-        bottom: 20,
-        right: 20,
-        child: FloatingActionButton(
-          backgroundColor: kPrimaryColor,
-          child: Text(
-            '+',
-            style: TextStyle(color: Colors.white, fontSize: 45),
+        floatingActionButton: Positioned(
+          bottom: 20,
+          right: 20,
+          child: FloatingActionButton(
+            backgroundColor: kPrimaryColor,
+            child: Text(
+              '+',
+              style: TextStyle(color: Colors.white, fontSize: 45),
+            ),
+            onPressed: () {
+              Navigate.to(context, TeamsDetails.id);
+            },
           ),
-          onPressed: () {
-            Navigate.to(context, TeamsDetails.id);
-          },
         ),
-      ),
-      body: SingleChildScrollView(
-        physics: AlwaysScrollableScrollPhysics(),
-        child: Padding(
+        body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -49,34 +47,13 @@ class _BodyState extends State<Body> {
               MyText.HeadingText(
                 "All ",
               ),
-              const SizedBox(height: 20),
-              GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: _teamNames.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 1,
-                  mainAxisSpacing: 20,
-                  childAspectRatio: 5 / 2,
-                ),
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () {
-                      Navigate.to(context, AllTeams.id);
-                    },
-                    child: GridTile(
-                      child: TeamsContainer(teamName: _teamNames[index]),
-                    ),
-                  );
-                },
-              ),
+        
 
-              // TeamsList(),
+              const SizedBox(height: 20),
+              TeamsList(teamNames: _teamNames),
               const SizedBox(height: 50),
             ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

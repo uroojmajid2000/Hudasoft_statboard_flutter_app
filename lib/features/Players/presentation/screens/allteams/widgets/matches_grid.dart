@@ -8,15 +8,17 @@ class MatchesList extends StatelessWidget {
         // Container(
         //   // height: 157.75,
         //   child:
-        ListView.builder(
-      scrollDirection: Axis.vertical,
-      itemCount: 3,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: EdgeInsets.only(right: 8.0),
-          child: RecentMatchesTeams(),
-        );
-      },
+        Expanded(
+      child: ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: 3,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: EdgeInsets.symmetric(vertical: 8),
+            child: RecentMatchesTeams(),
+          );
+        },
+      ),
     );
     // );
   }

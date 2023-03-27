@@ -3,9 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 class RecentMatchesTeams extends StatelessWidget {
-  const RecentMatchesTeams({
+  RecentMatchesTeams({
     Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

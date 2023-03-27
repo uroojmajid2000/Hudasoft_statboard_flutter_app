@@ -1,37 +1,29 @@
-// import 'package:flutter/material.dart';
-// import 'package:statboard_flutter_app/features/Players/presentation/screens/teams/widgets/teams_container.dart';
-// import '../../../../../../shared/routes/navigate.dart';
-// import '../../allteams/all_teams.dart';
-// import 'matches.dart';
+import 'package:flutter/material.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/teams/widgets/teams_container.dart';
 
-// class TeamsList extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//    final List<String> _teamNames = [
-//     'Tornado',
-//     'Vulcan',
-//   ];
-//     return
-//         // Container(
-//         //   // height: 157.75,
-//         //   child:
-//         ListView.builder(
-//       scrollDirection: Axis.vertical,
-//       itemCount: _teamNames.length,
-//       itemBuilder: (context, index) {
-//         return Padding(
-//           padding: EdgeInsets.only(right: 8.0),
-//           child: GestureDetector(
-//                     onTap: () {
-//                       Navigate.to(context, AllTeams.id);
-//                     },
-//                     child: GridTile(
-//                       child: TeamsContainer(teamName: _teamNames[index]),
-//                     ),
-//                   )
-//         );
-//       },
-//     );
-//     // );
-//   }
-// }
+import '../../../../../../shared/routes/navigate.dart';
+import '../../allteams/all_teams.dart';
+
+class TeamsList extends StatelessWidget {
+  final List<String> teamNames;
+
+  TeamsList({required this.teamNames});
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: ListView.builder(
+        scrollDirection: Axis.vertical,
+        itemCount: teamNames.length,
+        itemBuilder: (BuildContext context, int index) {
+          return GestureDetector(
+              onTap: () => Navigate.to(context, AllTeams.id),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: TeamsContainer(teamName: teamNames[index]),
+              ));
+        },
+      ),
+    );
+  }
+}

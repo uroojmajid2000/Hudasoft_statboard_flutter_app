@@ -50,146 +50,158 @@ class _BodyState extends State<Body> {
           ],
         ),
         body: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
+            // scrollDirection: Axis.vertical,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          padding: const EdgeInsets.symmetric(horizontal: 14),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  height: 15,
+                ),
+                DetailsTeams(),
+                SizedBox(
+                  height: 14,
+                ),
+                AllTeamsContainer(),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
                   children: [
-                    SizedBox(
-                      height: 15,
-                    ),
-                    DetailsTeams(),
-                    SizedBox(
-                      height: 14,
-                    ),
-                    AllTeamsContainer(),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      children: [
-                        Filters(
-                          text: 'Recent Matches',
-                          isSelected: _recentMatchesSelected,
-                          onChanged: (value) {
-                            setState(() {
-                              _recentMatchesSelected = value;
-                              _playersSelected = false;
-                            });
-                          },
-                        ),
-                        SizedBox(
-                          width: 6,
-                        ),
-                        Filters(
-                          text: 'Players',
-                          isSelected: _playersSelected,
-                          onChanged: (value) {
-                            setState(() {
-                              _playersSelected = value;
-                              _recentMatchesSelected = false;
-                            });
-                          },
-                        ),
-                      ],
+                    Filters(
+                      text: 'Recent Matches',
+                      isSelected: _recentMatchesSelected,
+                      onChanged: (value) {
+                        setState(() {
+                          _recentMatchesSelected = value;
+                          _playersSelected = false;
+                        });
+                      },
                     ),
                     SizedBox(
-                      height: 20,
+                      width: 6,
                     ),
-                    if (_recentMatchesSelected)
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                    Filters(
+                      text: 'Players',
+                      isSelected: _playersSelected,
+                      onChanged: (value) {
+                        setState(() {
+                          _playersSelected = value;
+                          _recentMatchesSelected = false;
+                        });
+                      },
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                if (_recentMatchesSelected)
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      MyText.HeadingText(
+                        'Matches',
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      // GridView.builder(
+                      //   shrinkWrap: true,
+                      //   physics: const NeverScrollableScrollPhysics(),
+                      //   itemCount: 3,
+                      //   gridDelegate:
+                      //       const SliverGridDelegateWithFixedCrossAxisCount(
+                      //     crossAxisCount: 1,
+                      //     mainAxisSpacing: 20,
+                      //     childAspectRatio: 5 / 2,
+                      //   ),
+                      //   itemBuilder: (BuildContext context, int index) {
+                      //     return GestureDetector(
+                      //       onTap: () {
+                      //         // Navigate.next(context, AllTeams.id);
+                      //       },
+                      //       child: GridTile(
+                      //         child: RecentMatchesTeams(),
+                      //       ),
+                      //     );
+                      //   },
+                      // ),
+
+                      RecentMatchesTeams(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      RecentMatchesTeams(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      RecentMatchesTeams(),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      // MatchesList(),
+                    ],
+                  ),
+                if (_playersSelected)
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           MyText.HeadingText(
-                            'Matches',
+                            "All",
                           ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          GridView.builder(
-                            shrinkWrap: true,
-                            physics: const NeverScrollableScrollPhysics(),
-                            itemCount: 3,
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 1,
-                              mainAxisSpacing: 20,
-                              childAspectRatio: 5 / 2,
+                          Text(
+                            "View Team Player Stats",
+                            style: TextStyle(
+                              color: Color(0xff00b0f0),
+                              fontSize: 10,
+                              fontFamily: "Montserrat",
+                              fontWeight: FontWeight.w600,
                             ),
-                            itemBuilder: (BuildContext context, int index) {
-                              return GestureDetector(
-                                onTap: () {
-                                  // Navigate.next(context, AllTeams.id);
-                                },
-                                child: GridTile(
-                                  child: RecentMatchesTeams(),
-                                ),
-                              );
-                            },
                           ),
-
-                          // MatchesList(),
                         ],
                       ),
-                    if (_playersSelected)
-                      Column(
+                      SizedBox(
+                        height: 14,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              MyText.HeadingText(
-                                "All",
-                              ),
-                              Text(
-                                "View Team Player Stats",
-                                style: TextStyle(
-                                  color: Color(0xff00b0f0),
-                                  fontSize: 10,
-                                  fontFamily: "Montserrat",
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 14,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ProfileContainer(),
-                              ProfileContainer(),
-                              ProfileContainer(),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 12,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ProfileContainer(),
-                              ProfileContainer(),
-                              ProfileContainer(),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 12,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              ProfileContainer(),
-                              ProfileContainer(),
-                              ProfileContainer(),
-                            ],
-                          ),
+                          ProfileContainer(),
+                          ProfileContainer(),
+                          ProfileContainer(),
                         ],
                       ),
-                  ]),
-            )));
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ProfileContainer(),
+                          ProfileContainer(),
+                          ProfileContainer(),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          ProfileContainer(),
+                          ProfileContainer(),
+                          ProfileContainer(),
+                        ],
+                      ),
+                    ],
+                  ),
+              ]),
+        )));
   }
 }

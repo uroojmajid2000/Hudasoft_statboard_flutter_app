@@ -7,7 +7,7 @@ import 'dart:math';
 
 class TeamsContainer extends StatelessWidget {
   final String teamName;
-  const TeamsContainer({super.key, required this.teamName});
+  const TeamsContainer({ required this.teamName});
 
   @override
   Widget build(BuildContext context) {
