@@ -317,7 +317,7 @@ class _BodyState extends State<Body> {
         label: VerticalDivider(
       color: Colors.grey,
       width: 1,
-      thickness: 1,
+      // thickness: 1,
     ));
   }
 
@@ -325,7 +325,7 @@ class _BodyState extends State<Body> {
     return DataCell(VerticalDivider(
       color: Colors.grey,
       width: 1,
-      thickness: 1,
+      // thickness: 1,
     ));
   }
 }

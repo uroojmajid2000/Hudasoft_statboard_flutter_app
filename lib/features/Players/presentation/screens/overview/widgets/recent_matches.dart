@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
+import '../../../../../../shared/routes/navigate.dart';
+import '../../recentMatchesStats/recentmatchesstats_screen.dart';
+
 class RecentMatches extends StatelessWidget {
   const RecentMatches({super.key});
 
@@ -129,17 +132,21 @@ class RecentMatches extends StatelessWidget {
                 SizedBox(
                   width: 83,
                   height: 35,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      elevation: MaterialStateProperty.all(0),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                  child: GestureDetector(
+                    onTap: () => Navigate.to(context, MatchStatsScreen.id),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                        elevation: MaterialStateProperty.all(0),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                       ),
+                      child: const Text('View'),
                     ),
-                    child: const Text('View'),
                   ),
                 ),
               ],

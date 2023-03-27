@@ -12,6 +12,7 @@ import '../../../features/Players/presentation/screens/notification/notification
 import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
 import '../../../features/Players/presentation/screens/playersProfile/playersprofile_screen.dart';
 import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
+import '../../../features/Players/presentation/screens/recentMatchesStats/recentmatchesstats_screen.dart';
 import '../../../features/Players/presentation/screens/requestjoinin_tournament/requesttojoin_tournament.dart';
 import '../../../features/Players/presentation/screens/stats/stats_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
@@ -41,6 +42,6 @@ class PlayersRoutes {
     AddTeamsScreen.id: (context) => const AddTeamsScreen(),
     EditTeamsScreen.id: (context) => const EditTeamsScreen(),
     PlayersProfileScreen.id: (context) => const PlayersProfileScreen(),
-
+    MatchStatsScreen.id: (context) => const MatchStatsScreen(),
   };
 }
