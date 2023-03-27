@@ -137,7 +137,6 @@ class RecentMatches extends StatelessWidget {
                 SizedBox(
                   width: 83,
                   height: 35,
-<<<<<<< HEAD
                   child: GestureDetector(
                     onTap: () => Navigate.to(context, MatchStatsScreen.id),
                     child: ElevatedButton(
@@ -149,17 +148,6 @@ class RecentMatches extends StatelessWidget {
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
-=======
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigate.to(context, MatchStatsScreen.id);
-                    },
-                    style: ButtonStyle(
-                      elevation: MaterialStateProperty.all(0),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
->>>>>>> e3e1197c403ca5e9e71d97b891d6d4cf00503124
                         ),
                       ),
                       child: const Text('View'),
