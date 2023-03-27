@@ -14,7 +14,7 @@ class StatsDetails extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 140,
+          height: 40,
         ),
         SvgPicture.asset('assets/images/football.svg'),
         SizedBox(

@@ -25,21 +25,22 @@ class _BodyState extends State<Body> {
       //   ),
       child: Column(
         children: [
-          Container(
-            width: double.infinity,
-            height: 400,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-                colors: [
-                  Color.fromRGBO(210, 143, 82, 0.2),
-                  Color.fromRGBO(0, 163, 46, 0.01),
-                ],
-              ),
-            ),
-            child: StatsDetails(),
-          ),
+          // Container(
+          //   width: double.infinity,
+          //   height: 400,
+          // decoration: BoxDecoration(
+          //   gradient: LinearGradient(
+          //     begin: Alignment.topLeft,
+          //     end: Alignment.bottomRight,
+          //     colors: [
+          //       Color.fromRGBO(210, 143, 82, 0.2),
+          //       Color.fromRGBO(0, 163, 46, 0.01),
+          //     ],
+          //   ),
+          // ),
+          // child:
+          StatsDetails(),
+          // ),
           SizedBox(
             height: 15,
           ),
