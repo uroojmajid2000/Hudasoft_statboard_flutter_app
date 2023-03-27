@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../features/Players/presentation/screens/Teams/teams_screen.dart';
 import '../../../features/Players/presentation/screens/addteams/addteams_screen.dart';
 import '../../../features/Players/presentation/screens/allteams/all_teams.dart';
+import '../../../features/Players/presentation/screens/editprofile/editprofile_screen.dart';
 import '../../../features/Players/presentation/screens/editteams/editteams_screen.dart';
 import '../../../features/Players/presentation/screens/events/events_screen.dart';
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
@@ -51,5 +52,6 @@ class PlayersRoutes {
     MatchStatsScreen.id: (context) => const MatchStatsScreen(),
     TeamsProfileScreen.id: (context) => const TeamsProfileScreen(),
     LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),
+    EditProfileScreen.id: (context) => const EditProfileScreen(),
   };
 }

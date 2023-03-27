@@ -16,13 +16,11 @@ class SplashScreen extends HookWidget {
     Size size = MediaQuery.of(context).size;
 
     void _onSuccess() {
-     
       Navigate.next(context, OnboardingScreen.id);
-     
     }
 
     void _navigateToNextScreen(VoidCallback onSuccess) async {
-      await Future.delayed(const Duration(seconds: 5));
+      await Future.delayed(const Duration(seconds: 3));
       onSuccess.call();
     }
 

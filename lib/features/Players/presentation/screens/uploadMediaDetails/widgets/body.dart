@@ -50,10 +50,13 @@ class _BodyState extends State<Body> {
       appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
-          leading: Icon(
-            Icons.clear,
-            color: Colors.black,
-            size: 25,
+          leading: GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: Icon(
+              Icons.clear,
+              color: Colors.black,
+              size: 25,
+            ),
           ),
           title: Text(
             "Details",

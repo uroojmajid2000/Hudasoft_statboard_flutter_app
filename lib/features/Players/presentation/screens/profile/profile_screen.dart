@@ -8,6 +8,7 @@ import '../../../../../shared/widgets/text.dart';
 import '../allteams/widgets/filters.dart';
 import '../allteams/widgets/profile_container.dart';
 import '../allteams/widgets/recentmatches_teams.dart';
+import '../editprofile/editprofile_screen.dart';
 import '../gallery/widgets/gallery_grid.dart';
 import '../notification/notification_screen.dart';
 import '../overview/widgets/recent_matches.dart';

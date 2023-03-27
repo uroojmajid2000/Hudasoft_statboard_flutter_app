@@ -18,7 +18,7 @@ class _BodyState extends State<Body> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14),
           child: SizedBox(
-            width: 343,
+            width: 340,
             // height: 54,
             child: Button(
               child: Text(

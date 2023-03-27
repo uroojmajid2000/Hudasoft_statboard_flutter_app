@@ -115,7 +115,11 @@ class _BodyState extends State<Body> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: Button(child: Text('Edit Profile'), onPressed: () {}),
+              child: Button(
+                  child: Text('Edit Profile'),
+                  onPressed: () {
+                    Navigate.to(context, EditProfileScreen.id);
+                  }),
             ),
             SizedBox(
               height: 8,
