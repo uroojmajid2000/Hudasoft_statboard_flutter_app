@@ -25,6 +25,7 @@ class Team {
     required this.WINSCORE,
     required this.AST2,
     required this.AST3,
+    this.isSelected = false,
   });
 
   final String PLAYER;
@@ -33,4 +34,5 @@ class Team {
   final int WINSCORE;
   final int AST2;
   final int AST3;
+  bool isSelected; // add isSelected property
 }

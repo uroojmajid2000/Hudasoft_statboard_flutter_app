@@ -4,6 +4,7 @@ import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 import '../../../../../../shared/routes/navigate.dart';
 import '../../joinTournamnet/jointournament_screen.dart';
+import '../../leaveTournamnet/leavetournament_screen.dart';
 import '../../tournament/tournament_screen.dart';
 
 class RequestingTournaments extends StatelessWidget {
@@ -13,7 +14,7 @@ class RequestingTournaments extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       // onTap: () => Navigate.to(context, TornamentScreen.id),
-      onTap: () => Navigate.to(context, JoinTornamentScreen.id),
+      onTap: () => Navigate.to(context, LeaveTornamentScreen.id),
       child: Container(
         width: 329.33,
         height: 157.75,

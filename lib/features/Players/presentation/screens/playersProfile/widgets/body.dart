@@ -12,35 +12,39 @@ class _BodyState extends State<Body> {
   bool _gallerySelected = false;
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: SizedBox(
-          height: MediaQuery.of(context).size.height,
+    return SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(children: [
-            Stack(
-              children: [
-                SizedBox(
-                  height: 300, // specify height
-                  width: double.infinity, // take up all available width
-                  child: Image.asset(
-                    'assets/images/cover.png',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                Positioned(
-                  left: 150,
-                  top: 230,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage(
-                      'assets/images/avatarimage.png',
-                    ),
-                    radius: 50,
-                  ),
-                ),
-              ],
-            ),
             SizedBox(
-              height: 15,
+              height: 330, // specify height
+              child: Stack(
+                children: [
+                  SizedBox(
+                    height: 300, // specify height
+                    width: double.infinity, // take up all available width
+                    child: Image.asset(
+                      'assets/images/cover.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  Positioned(
+                    left: 150,
+                    top: 230, // adjust this value to move the avatar higher up
+                    child: CircleAvatar(
+                      backgroundImage: AssetImage(
+                        'assets/images/avatarimage.png',
+                      ),
+                      radius: 50,
+                    ),
+                  ),
+                ],
+              ),
             ),
+            // SizedBox(
+            //   height: 15,
+            // ),
             Text(
               "Elijah Oliver",
               style: TextStyle(
@@ -152,18 +156,77 @@ class _BodyState extends State<Body> {
             if (_eventsSelected)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(width: double.infinity, child: RecentMatches()),
-                    ]),
+                child: Flexible(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                              width: double.infinity, child: RecentMatches()),
+                          SizedBox(
+                              width: double.infinity, child: RecentMatches()),
+                          SizedBox(
+                              width: double.infinity, child: RecentMatches()),
+                          SizedBox(
+                            height: 14,
+                          ),
+                          Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  MyText.HeadingText(
+                                    "Suggested Players",
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 14,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ProfileContainer(),
+                                  ProfileContainer(),
+                                  ProfileContainer(),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ProfileContainer(),
+                                  ProfileContainer(),
+                                  ProfileContainer(),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 12,
+                              ),
+                            ],
+                          ),
+                        ]),
+                  ),
+                ),
               ),
             if (_gallerySelected)
               Column(
-                children: [],
+                children: [
+                  GestureDetector(
+                      onTap: () {
+                        Navigate.to(context, ImageDetailsScreen.id);
+                      },
+                      child: GalleryGrid()),
+                ],
               ),
-          ])),
-    );
+          ]),
+        ));
   }
 }

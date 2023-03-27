@@ -14,7 +14,7 @@ class MatchesContainer extends StatelessWidget {
       onTap: () => Navigate.to(context, StatsScreen.id),
       child: Container(
         width: double.infinity,
-        height: 138,
+        height: 150,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
@@ -91,31 +91,34 @@ class TornadoVsStalion extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 5,
+              height: 6,
             ),
-            Container(
-                width: 56,
-                height: 25,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: Color(0xff00b0f0),
-                    width: 1,
-                  ),
-                  color: Color(0x1900b0f0),
-                ),
-                child: Center(
-                  child: Text(
-                    "45 min",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                  width: 60,
+                  height: 28,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
                       color: Color(0xff00b0f0),
-                      fontSize: 14,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w600,
+                      width: 1,
                     ),
+                    color: Color(0x1900b0f0),
                   ),
-                ))
+                  child: Center(
+                    child: Text(
+                      "45 min",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xff00b0f0),
+                        fontSize: 14,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  )),
+            )
           ],
         ),
         Column(

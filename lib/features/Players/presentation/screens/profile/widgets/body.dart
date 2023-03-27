@@ -8,27 +8,30 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  bool _recentMatchesSelected = true;
-  bool _playersSelected = false;
+  bool _eventsSelected = true;
+  bool _gallerySelected = false;
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: SizedBox(
-          height: MediaQuery.of(context).size.height,
+    return SizedBox(
+        height: MediaQuery.of(context).size.height,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(children: [
-            Flexible(
+            SizedBox(
+              height: 330, // specify height
               child: Stack(
                 children: [
-                  Positioned.fill(
+                  SizedBox(
+                    height: 300, // specify height
+                    width: double.infinity, // take up all available width
                     child: Image.asset(
                       'assets/images/cover.png',
-                      alignment: Alignment.topCenter,
-                      fit: BoxFit.fitWidth,
+                      fit: BoxFit.cover,
                     ),
                   ),
                   Positioned(
                     left: 150,
-                    top: 220,
+                    top: 230, // adjust this value to move the avatar higher up
                     child: CircleAvatar(
                       backgroundImage: AssetImage(
                         'assets/images/avatarimage.png',
@@ -39,32 +42,36 @@ class _BodyState extends State<Body> {
                 ],
               ),
             ),
-            Column(children: [
-              Text(
-                "Elijah Oliver",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w700,
-                ),
+            // SizedBox(
+            //   height: 15,
+            // ),
+            Text(
+              "Elijah Oliver",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w700,
               ),
-              SizedBox(
-                height: 8,
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text(
+              "elijah_551",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 14,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w600,
               ),
-              Text(
-                "elijah_551",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 14,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              Row(
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
@@ -102,22 +109,28 @@ class _BodyState extends State<Body> {
                   ),
                 ],
               ),
-              SizedBox(
-                height: 8,
-              ),
-              Button(child: Text('Edit Profile'), onPressed: () {}),
-              SizedBox(
-                height: 8,
-              ),
-              Row(
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: Button(child: Text('Edit Profile'), onPressed: () {}),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              child: Row(
                 children: [
                   Filters(
-                    text: 'Recent Matches',
-                    isSelected: _recentMatchesSelected,
+                    text: 'Events',
+                    isSelected: _eventsSelected,
                     onChanged: (value) {
                       setState(() {
-                        _recentMatchesSelected = value;
-                        _playersSelected = false;
+                        _eventsSelected = value;
+                        _gallerySelected = false;
                       });
                     },
                   ),
@@ -125,66 +138,55 @@ class _BodyState extends State<Body> {
                     width: 6,
                   ),
                   Filters(
-                    text: 'Players',
-                    isSelected: _playersSelected,
+                    text: 'Gallery',
+                    isSelected: _gallerySelected,
                     onChanged: (value) {
                       setState(() {
-                        _playersSelected = value;
-                        _recentMatchesSelected = false;
+                        _gallerySelected = value;
+                        _eventsSelected = false;
                       });
                     },
                   ),
                 ],
               ),
-              SizedBox(
-                height: 20,
-              ),
-              if (_recentMatchesSelected)
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    MyText.HeadingText(
-                      'Matches',
-                    ),
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Text('recent match'),
-                    Text('recent match'),
-                    Text('recent match'),
-                    Text('recent match'),
-                  ],
-                ),
-              if (_playersSelected)
-                Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        MyText.HeadingText(
-                          "All",
-                        ),
-                        Text(
-                          "View Team Player Stats",
-                          style: TextStyle(
-                            color: Color(0xff00b0f0),
-                            fontSize: 10,
-                            fontFamily: "Montserrat",
-                            fontWeight: FontWeight.w600,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            if (_eventsSelected)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14),
+                child: Flexible(
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(
+                              width: double.infinity, child: RecentMatches()),
+                          SizedBox(
+                              width: double.infinity, child: RecentMatches()),
+                          SizedBox(
+                              width: double.infinity, child: RecentMatches()),
+                          SizedBox(
+                            height: 14,
                           ),
-                        ),
-                      ],
-                    ),
-                    Text('recent match'),
-                    Text('recent match'),
-                    Text('recent match'),
-                    Text('data'),
-                    Text('data'),
-                  ],
+                        ]),
+                  ),
                 ),
-            ]),
-          ])),
-    );
+              ),
+            if (_gallerySelected)
+              Column(
+                children: [
+                  GestureDetector(
+                      onTap: () {
+                        Navigate.to(context, ImageDetailsScreen.id);
+                      },
+                      child: GalleryGrid()),
+                ],
+              ),
+          ]),
+        ));
   }
 }

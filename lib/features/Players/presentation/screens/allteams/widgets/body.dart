@@ -21,10 +21,12 @@ class _BodyState extends State<Body> {
           children: <Widget>[
             FloatingActionButton(
               backgroundColor: kPrimaryColor,
-              child: Text(
-                '+',
-                style: TextStyle(color: Colors.white, fontSize: 45),
-              ),
+              child: SvgPicture.asset('assets/icons/edit.svg'),
+              // child:
+              //  Text(
+              //   '+',
+              //   style: TextStyle(color: Colors.white, fontSize: 45),
+              // ),
               heroTag: null,
               onPressed: () {
                 Navigate.to(context, EditTeamsScreen.id);
@@ -35,10 +37,11 @@ class _BodyState extends State<Body> {
             ),
             FloatingActionButton(
               backgroundColor: kPrimaryColor,
-              child: Text(
-                '-',
-                style: TextStyle(color: Colors.white, fontSize: 45),
-              ),
+              child: SvgPicture.asset('assets/icons/add.svg'),
+              // Text(
+              //   '-',
+              //   style: TextStyle(color: Colors.white, fontSize: 45),
+              // ),
               heroTag: null,
               onPressed: () {
                 Navigate.to(context, AddTeamsScreen.id);

@@ -237,7 +237,6 @@ class _BodyState extends State<Body> {
                             cells: [
                               DataCell(
                                 Container(
-                                    // alignment: AlignmentDirectional.center,
                                     child: Row(
                                   children: [
                                     Image.asset(
@@ -303,6 +302,154 @@ class _BodyState extends State<Body> {
               ),
             )),
           ),
+          // Padding(
+          //   padding: const EdgeInsets.only(left: 14),
+          //   child: Expanded(
+          //     child: SingleChildScrollView(
+          //       scrollDirection: Axis.horizontal,
+          //       child: SizedBox(
+          //         child: DataTableTheme(
+          //           data: DataTableThemeData(
+          //             dataRowColor: MaterialStateProperty.resolveWith<Color?>(
+          //               (Set<MaterialState> states) {
+          //                 if (states.contains(MaterialState.selected)) {
+          //                   return Color(0xffab8000);
+          //                 }
+          //               },
+          //             ),
+          //           ),
+          //           child: DataTable(
+          //             dividerThickness: 1.5,
+          //             columnSpacing: 10,
+          //             decoration: BoxDecoration(
+          //               border: Border.all(
+          //                 color: Color(0xffebebeb),
+          //                 width: 1,
+          //                 style: BorderStyle.solid,
+          //               ),
+          //             ),
+          //             columns: [
+          //               DataColumn(
+          //                 label: MyText.tableHeading('PLAYER'),
+          //                 numeric: false,
+          //               ),
+          //               ColumnVerticleLine(),
+          //               DataColumn(
+          //                 label: MyText.tableHeading('PTS'),
+          //                 numeric: true,
+          //               ),
+          //               ColumnVerticleLine(),
+          //               DataColumn(
+          //                 label: MyText.tableHeading('AST'),
+          //                 numeric: true,
+          //               ),
+          //               ColumnVerticleLine(),
+          //               DataColumn(
+          //                 label: Column(
+          //                   mainAxisAlignment: MainAxisAlignment.center,
+          //                   children: [
+          //                     MyText.tableHeading('WIN'),
+          //                     MyText.tableHeading('SCORE'),
+          //                   ],
+          //                 ),
+          //                 numeric: true,
+          //               ),
+          //               ColumnVerticleLine(),
+          //               DataColumn(
+          //                 label: MyText.tableHeading('AST2'),
+          //                 numeric: true,
+          //               ),
+          //               ColumnVerticleLine(),
+          //               DataColumn(
+          //                 label: MyText.tableHeading('AST3'),
+          //                 numeric: true,
+          //               ),
+          //             ],
+          //             rows: [
+          //               ...teamsData.map(
+          //                 (team) => DataRow(
+          //                   selected: team.isSelected,
+          //                   onSelectChanged: (isSelected) {
+          //                     // Unselect all other rows
+          //                     teamsData.forEach((t) => t.isSelected = false);
+          //                     // Select the clicked row
+          //                     setState(() {
+          //                       team.isSelected = isSelected!;
+          //                     });
+          //                   },
+          //                   cells: [
+          //                     DataCell(
+          //                       Container(
+          //                         child: Row(
+          //                           children: [
+          //                             Image.asset(
+          //                               'assets/images/manimage.png',
+          //                               width: 30,
+          //                               height: 30,
+          //                             ),
+          //                             SizedBox(width: 8),
+          //                             MyText.tableRow(
+          //                               team.PLAYER.toString(),
+          //                             ),
+          //                           ],
+          //                         ),
+          //                       ),
+          //                     ),
+          //                     VerticleLine(),
+          //                     DataCell(
+          //                       Container(
+          //                         alignment: AlignmentDirectional.center,
+          //                         child: MyText.tableRow(
+          //                           team.PTS.toString(),
+          //                         ),
+          //                       ),
+          //                     ),
+          //                     VerticleLine(),
+          //                     DataCell(
+          //                       Container(
+          //                         alignment: AlignmentDirectional.center,
+          //                         child: MyText.tableRow(
+          //                           team.AST.toString(),
+          //                         ),
+          //                       ),
+          //                     ),
+          //                     VerticleLine(),
+          //                     DataCell(
+          //                       Container(
+          //                         alignment: AlignmentDirectional.center,
+          //                         child: MyText.tableRow(
+          //                           team.WINSCORE.toString(),
+          //                         ),
+          //                       ),
+          //                     ),
+          //                     VerticleLine(),
+          //                     DataCell(
+          //                       Container(
+          //                         alignment: AlignmentDirectional.center,
+          //                         child: MyText.tableRow(
+          //                           team.AST2.toString(),
+          //                         ),
+          //                       ),
+          //                     ),
+          //                     VerticleLine(),
+          //                     DataCell(
+          //                       Container(
+          //                         alignment: AlignmentDirectional.center,
+          //                         child: MyText.tableRow(
+          //                           team.AST3.toString(),
+          //                         ),
+          //                       ),
+          //                     ),
+          //                   ],
+          //                 ),
+          //               )
+          //             ],
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
           SizedBox(
             height: 20,
           )

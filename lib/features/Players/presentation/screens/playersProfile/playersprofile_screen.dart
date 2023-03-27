@@ -7,6 +7,8 @@ import '../../../../../shared/widgets/text.dart';
 import '../allteams/widgets/filters.dart';
 import '../allteams/widgets/profile_container.dart';
 import '../allteams/widgets/recentmatches_teams.dart';
+import '../gallery/widgets/gallery_grid.dart';
+import '../imageDetails/imagedetails.dart';
 import '../notification/notification_screen.dart';
 import '../overview/widgets/recent_matches.dart';
 import '../profile/profile_screen.dart';
@@ -21,7 +23,7 @@ class PlayersProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,

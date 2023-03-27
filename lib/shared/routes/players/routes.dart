@@ -8,16 +8,15 @@ import '../../../features/Players/presentation/screens/events/events_screen.dart
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
 import '../../../features/Players/presentation/screens/imageDetails/imagedetails.dart';
 import '../../../features/Players/presentation/screens/joinTournamnet/jointournament_screen.dart';
+import '../../../features/Players/presentation/screens/leaveTournamnet/leavetournament_screen.dart';
 import '../../../features/Players/presentation/screens/matchstats/matchstats_screen.dart';
 import '../../../features/Players/presentation/screens/notification/notification_screen.dart';
 import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
 import '../../../features/Players/presentation/screens/playersProfile/playersprofile_screen.dart';
 import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
-<<<<<<< HEAD
-import '../../../features/Players/presentation/screens/recentMatchesStats/recentmatchesstats_screen.dart';
-=======
+
 import '../../../features/Players/presentation/screens/recentvenues/recentvenues_screen.dart';
->>>>>>> e3e1197c403ca5e9e71d97b891d6d4cf00503124
+
 import '../../../features/Players/presentation/screens/requestjoinin_tournament/requesttojoin_tournament.dart';
 import '../../../features/Players/presentation/screens/stats/stats_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
@@ -50,10 +49,7 @@ class PlayersRoutes {
     EditTeamsScreen.id: (context) => const EditTeamsScreen(),
     PlayersProfileScreen.id: (context) => const PlayersProfileScreen(),
     MatchStatsScreen.id: (context) => const MatchStatsScreen(),
-<<<<<<< HEAD
-=======
     TeamsProfileScreen.id: (context) => const TeamsProfileScreen(),
-
->>>>>>> e3e1197c403ca5e9e71d97b891d6d4cf00503124
+    LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),
   };
 }
