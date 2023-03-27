@@ -54,8 +54,13 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    // Image.asset(
+                    //   'assets/images/michel.png',
+                    //   width: 40,
+                    //   height: 40,
+                    // ),
                     Image.asset(
-                      'assets/images/michel.png',
+                      'assets/images/manimage.png',
                       width: 40,
                       height: 40,
                     ),
@@ -128,7 +133,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                       text: 'Teams',
                     ),
                     Tab(
-                      text: 'Prize',
+                      text: 'Prizes',
                     ),
                   ],
                 ),

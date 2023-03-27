@@ -4,7 +4,14 @@ import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 class InfoCard extends StatelessWidget {
-  const InfoCard({super.key});
+  final String imageIcon;
+  final String stadium;
+  final String location;
+  const InfoCard(
+      {super.key,
+      required this.imageIcon,
+      required this.stadium,
+      required this.location});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +32,10 @@ class InfoCard extends StatelessWidget {
               color: Colors.white,
             ),
             padding: const EdgeInsets.all(14),
-            child: SvgPicture.asset('assets/icons/stadium.svg')),
+            child: SvgPicture.asset(
+              // 'assets/icons/stadium.svg'
+              imageIcon,
+            )),
         SizedBox(
           width: 13,
         ),
@@ -35,7 +45,8 @@ class InfoCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "California Stadium",
+                // "California Stadium",
+                stadium,
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 14,
@@ -44,8 +55,8 @@ class InfoCard extends StatelessWidget {
                 ),
               ),
               MyText.simpleText(
-                "Court A, Court B",
-              ),
+                  // "Court A, Court B",
+                  location),
             ],
           ),
         )

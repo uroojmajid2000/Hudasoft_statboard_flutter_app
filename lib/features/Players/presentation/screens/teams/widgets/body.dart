@@ -1,6 +1,5 @@
 part of '../teams_screen.dart';
 
-
 class Body extends StatefulWidget {
   Body({super.key});
 
@@ -31,7 +30,6 @@ class _BodyState extends State<Body> {
           },
         ),
       ),
-  
       body: SingleChildScrollView(
         physics: AlwaysScrollableScrollPhysics(),
         child: Padding(
@@ -72,6 +70,8 @@ class _BodyState extends State<Body> {
                   );
                 },
               ),
+
+              // TeamsList(),
               const SizedBox(height: 50),
             ],
           ),

@@ -5,7 +5,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/resources/colors.dart';
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
+import '../../../../../shared/widgets/modal_accountrole.dart';
 import '../signin/signin_screen.dart';
+import '../signup/signup_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -72,7 +74,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
-            child: Button(child: Text('Sign Up'), onPressed: () {}),
+            child: Button(
+                child: Text('Sign Up'),
+                onPressed: () {
+                  CustomCreateAccountModal.show(
+                      context: context,
+                      onPressed: () {
+                        Navigate.to(context, SignupScreen.id);
+                      });
+                }),
           ),
           SizedBox(
             height: 10,
@@ -164,21 +174,50 @@ class onboardingContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Align(
-          alignment: Alignment.centerRight,
-          child: Image.asset(
-            image,
-            height: 350,
+        Stack(children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: Image.asset(
+              image,
+              height: 400,
+            ),
           ),
-        ),
-        CircleAvatar(
-          backgroundColor: Colors.white,
-          radius: 40,
-          child: SvgPicture.asset(
-            'assets/logos/signinscreen_logo.svg',
-            width: 50,
+          Positioned(
+            top: 320,
+            left: 140,
+            child: CircleAvatar(
+              backgroundColor: Colors.white,
+              radius: 40,
+              child: SvgPicture.asset(
+                'assets/logos/signinscreen_logo.svg',
+                width: 50,
+              ),
+            ),
           ),
-        ),
+        ]),
+
+        // Align(
+        //   alignment: Alignment.centerRight,
+        //   child: Image.asset(
+        //     image,
+        //     height: 350,
+        //   ),
+        // ),
+        // Image.asset(
+        //   'assets/images/animated_ball.gif',
+        // ),
+        // Image.network(
+        //     'https://cdn.pixabay.com/animation/2022/12/05/15/23/15-23-06-837_512.gif',
+        //     width: 300,
+        //     height: 500),
+        // CircleAvatar(
+        //   backgroundColor: Colors.white,
+        //   radius: 40,
+        //   child: SvgPicture.asset(
+        //     'assets/logos/signinscreen_logo.svg',
+        //     width: 50,
+        //   ),
+        // ),
         SizedBox(
           height: 20,
         ),
@@ -188,7 +227,7 @@ class onboardingContainer extends StatelessWidget {
             ...List.generate(
               demo_data.length,
               ((index) => Padding(
-                    padding: const EdgeInsets.only(right: 4),
+                    padding: const EdgeInsets.only(right: 8),
                     child: DotIndicator(isActive: index == pageIndex),
                   )),
             ),

@@ -9,7 +9,6 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 

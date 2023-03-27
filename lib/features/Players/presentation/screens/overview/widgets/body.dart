@@ -42,23 +42,7 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: 10,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        UpcomingTournaments(),
-                        SizedBox(width: 10),
-                        UpcomingTournaments(),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            UpcomingTournamentsList(),
             SizedBox(
               height: 20,
             ),
@@ -68,25 +52,7 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: 10,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        RecentMatches(),
-                        SizedBox(width: 18),
-                        RecentMatches(),
-                        SizedBox(width: 18),
-                        RecentMatches(),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            RecentMatchList(),
             SizedBox(
               height: 20,
             ),
@@ -96,25 +62,7 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: 10,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        RecentVenues(),
-                        SizedBox(width: 18),
-                        RecentVenues(),
-                        SizedBox(width: 18),
-                        RecentVenues(),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            RecentVenuesList(),
             SizedBox(
               height: 20,
             ),
@@ -124,25 +72,7 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: 10,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        RecentTeams(),
-                        SizedBox(width: 18),
-                        RecentTeams(),
-                        SizedBox(width: 18),
-                        RecentTeams(),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            RecentTeamsList(),
             SizedBox(
               height: 20,
             ),
@@ -152,18 +82,7 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: 10,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Gallery(),
-                  SizedBox(width: 10),
-                  Gallery(),
-                  SizedBox(width: 10),
-                  Gallery(),
-                ],
-              ),
-            )
+            GalleryList()
           ],
         ),
       ),

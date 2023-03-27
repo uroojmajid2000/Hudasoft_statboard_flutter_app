@@ -136,6 +136,7 @@ class ProfileContainer extends StatelessWidget {
                         onPressed: () => {
                               // Navigate.next(context, OverviewScreen.id),
                               // Navigate.next(context, HomeScreen.id),
+                              Navigate.to(context, PlayersProfileScreen.id),
                             }),
                   ),
                   SizedBox(

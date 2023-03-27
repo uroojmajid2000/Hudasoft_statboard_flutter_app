@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Tags extends StatelessWidget {
-  const Tags({super.key});
+  final String text;
+  const Tags({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,8 @@ class Tags extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Football",
+         
+            text,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,

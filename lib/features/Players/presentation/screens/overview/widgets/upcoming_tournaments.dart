@@ -7,7 +7,7 @@ import '../../../../../../shared/routes/navigate.dart';
 import '../../tournament/tournament_screen.dart';
 
 class UpcomingTournaments extends StatelessWidget {
-  const UpcomingTournaments({super.key});
+  UpcomingTournaments({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

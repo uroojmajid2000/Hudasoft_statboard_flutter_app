@@ -4,7 +4,7 @@ import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/text.dart';
 import '../allteams/widgets/filters.dart';
 import '../allteams/widgets/profile_container.dart';
-import '../allteams/widgets/recent_matches.dart';
+import '../allteams/widgets/recentmatches_teams.dart';
 
 part 'widgets/body.dart';
 
