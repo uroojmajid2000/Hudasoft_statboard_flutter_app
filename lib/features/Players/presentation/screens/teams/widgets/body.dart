@@ -16,20 +16,22 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        floatingActionButton: Positioned(
-          bottom: 20,
-          right: 20,
-          child: FloatingActionButton(
-            backgroundColor: kPrimaryColor,
-            child: Text(
-              '+',
-              style: TextStyle(color: Colors.white, fontSize: 45),
-            ),
-            onPressed: () {
-              Navigate.to(context, TeamsDetails.id);
-            },
+        floatingActionButton:
+            //  Positioned(
+            //   bottom: 20,
+            //   right: 20,
+            //   child:
+            FloatingActionButton(
+          backgroundColor: kPrimaryColor,
+          child: Text(
+            '+',
+            style: TextStyle(color: Colors.white, fontSize: 45),
           ),
+          onPressed: () {
+            Navigate.to(context, TeamsDetails.id);
+          },
         ),
+        // ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14),
           child: Column(
@@ -47,8 +49,6 @@ class _BodyState extends State<Body> {
               MyText.HeadingText(
                 "All ",
               ),
-        
-
               const SizedBox(height: 20),
               TeamsList(teamNames: _teamNames),
               const SizedBox(height: 50),

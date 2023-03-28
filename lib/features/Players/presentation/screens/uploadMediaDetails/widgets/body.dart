@@ -11,42 +11,43 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Positioned(
-        bottom: 35,
-        // right: 20,
-        // left: 20,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
-          child: SizedBox(
-            width: 343,
-            // height: 54,
-            child: Button(
-                child: Text(
-                  "Upload",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 17,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.w600,
+      floatingActionButton:
+          //  Positioned(
+          //   bottom: 35,
+          //   // right: 20,
+          //   // left: 20,
+          //   child: Padding(
+          //     padding: const EdgeInsets.symmetric(horizontal: 14),
+          //     child:
+          SizedBox(
+        width: 360,
+        // height: 54,
+        child: Button(
+            child: Text(
+              "Upload",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 17,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            // onPressed: () {
+            //   // Navigate.next(context, OverviewScreen.id),
+            // },
+            onPressed: () => {
+                  CustomModalBottomSheet.show(
+                    context: context,
+                    message: 'Media successfully uploaded to the \n gallery.',
+                    onPressed: () {
+                      Navigate.to(context, GalleryScreen.id);
+                    },
                   ),
-                ),
-                // onPressed: () {
-                //   // Navigate.next(context, OverviewScreen.id),
-                // },
-                onPressed: () => {
-                      CustomModalBottomSheet.show(
-                        context: context,
-                        message:
-                            'Media successfully uploaded to the \n gallery.',
-                        onPressed: () {
-                          Navigate.to(context, GalleryScreen.id);
-                        },
-                      ),
-                    }),
-          ),
-        ),
+                }),
       ),
+      //   ),
+      // ),
       appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,

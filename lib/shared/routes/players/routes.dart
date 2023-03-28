@@ -8,17 +8,23 @@ import '../../../features/Players/presentation/screens/editteams/editteams_scree
 import '../../../features/Players/presentation/screens/events/events_screen.dart';
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
 import '../../../features/Players/presentation/screens/imageDetails/imagedetails.dart';
+import '../../../features/Players/presentation/screens/interest/interst_screen.dart';
 import '../../../features/Players/presentation/screens/joinTournamnet/jointournament_screen.dart';
 import '../../../features/Players/presentation/screens/leaveTournamnet/leavetournament_screen.dart';
 import '../../../features/Players/presentation/screens/matchstats/matchstats_screen.dart';
 import '../../../features/Players/presentation/screens/notification/notification_screen.dart';
+import '../../../features/Players/presentation/screens/notificationeditprofile/notificationeditprofile_screen.dart';
 import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
+import '../../../features/Players/presentation/screens/permissions/permissions_screen.dart';
 import '../../../features/Players/presentation/screens/playersProfile/playersprofile_screen.dart';
 import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
 
+import '../../../features/Players/presentation/screens/profiledetails/profiledetails_screen.dart';
 import '../../../features/Players/presentation/screens/recentvenues/recentvenues_screen.dart';
 
 import '../../../features/Players/presentation/screens/requestjoinin_tournament/requesttojoin_tournament.dart';
+import '../../../features/Players/presentation/screens/security/security_screen.dart';
+import '../../../features/Players/presentation/screens/securitypassword/securitypassword_screen.dart';
 import '../../../features/Players/presentation/screens/stats/stats_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
 import '../../../features/Players/presentation/screens/teamsprofile/teamsprofile_screen.dart';
@@ -53,5 +59,11 @@ class PlayersRoutes {
     TeamsProfileScreen.id: (context) => const TeamsProfileScreen(),
     LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),
     EditProfileScreen.id: (context) => const EditProfileScreen(),
+    ProfileDetailsScreen.id: (context) => const ProfileDetailsScreen(),
+    SecurityScreen.id: (context) => const SecurityScreen(),
+    PermissionsScreen.id: (context) => const PermissionsScreen(),
+    InterstScreen.id: (context) => const InterstScreen(),
+    NotificationEditProfileScreen.id: (context) => const NotificationEditProfileScreen(),
+    SecurityPasswordScreen.id: (context) => const SecurityPasswordScreen(),
   };
 }

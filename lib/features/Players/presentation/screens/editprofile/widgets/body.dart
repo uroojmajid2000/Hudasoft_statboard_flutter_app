@@ -47,9 +47,12 @@ class _BodyState extends State<Body> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: EditProfileContaoner(
-                icon: 'assets/icons/profileicon.svg',
-                text: "Profile Details",
+              child: GestureDetector(
+                onTap: () => Navigate.to(context, ProfileDetailsScreen.id),
+                child: EditProfileContaoner(
+                  icon: 'assets/icons/profileicon.svg',
+                  text: "Profile Details",
+                ),
               ),
             ),
             SizedBox(
@@ -57,9 +60,12 @@ class _BodyState extends State<Body> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: EditProfileContaoner(
-                icon: 'assets/icons/securityicon.svg',
-                text: "Security",
+              child: GestureDetector(
+                onTap: () => Navigate.to(context, SecurityScreen.id),
+                child: EditProfileContaoner(
+                  icon: 'assets/icons/securityicon.svg',
+                  text: "Security",
+                ),
               ),
             ),
             SizedBox(
@@ -67,9 +73,12 @@ class _BodyState extends State<Body> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: EditProfileContaoner(
-                icon: 'assets/icons/permission.svg',
-                text: "Permissions",
+              child: GestureDetector(
+                onTap: () => Navigate.to(context, PermissionsScreen.id),
+                child: EditProfileContaoner(
+                  icon: 'assets/icons/permission.svg',
+                  text: "Permissions",
+                ),
               ),
             ),
             SizedBox(
@@ -77,9 +86,13 @@ class _BodyState extends State<Body> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: EditProfileContaoner(
-                icon: 'assets/icons/bellicon.svg',
-                text: "Notifications",
+              child: GestureDetector(
+                onTap: () =>
+                    Navigate.to(context, NotificationEditProfileScreen.id),
+                child: EditProfileContaoner(
+                  icon: 'assets/icons/bellicon.svg',
+                  text: "Notifications",
+                ),
               ),
             ),
             SizedBox(
@@ -87,9 +100,12 @@ class _BodyState extends State<Body> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
-              child: EditProfileContaoner(
-                icon: 'assets/icons/intersticon.svg',
-                text: "Interests",
+              child: GestureDetector(
+                onTap: () => Navigate.to(context, InterstScreen.id),
+                child: EditProfileContaoner(
+                  icon: 'assets/icons/intersticon.svg',
+                  text: "Interests",
+                ),
               ),
             ),
             SizedBox(

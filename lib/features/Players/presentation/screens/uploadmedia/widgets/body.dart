@@ -11,40 +11,46 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Positioned(
-        bottom: 30,
-        // right: 20,
-        // left: 20,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
-          child: SizedBox(
-            width: 340,
-            // height: 54,
-            child: Button(
-              child: Text(
-                "Next",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 17,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              onPressed: () {
-                Navigate.to(context, UploadMediaDetailsScreen.id);
-              },
+      floatingActionButton:
+          // Positioned(
+          //   bottom: 30,
+          //   // right: 20,
+          //   // left: 20,
+          //   child:
+          //   Padding(
+          //     padding: const EdgeInsets.symmetric(horizontal: 14),
+          // child:
+          SizedBox(
+        width: 355,
+        // height: 54,
+        child: Button(
+          child: Text(
+            "Next",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 17,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.w600,
             ),
           ),
+          onPressed: () {
+            Navigate.to(context, UploadMediaDetailsScreen.id);
+          },
         ),
       ),
+      //   ),
+      // ),
       appBar: AppBar(
           elevation: 0,
           backgroundColor: Colors.white,
-          leading: Icon(
-            Icons.clear,
-            color: Colors.black,
-            size: 25,
+          leading: GestureDetector(
+            onTap: () => Navigator.pop(context),
+            child: Icon(
+              Icons.clear,
+              color: Colors.black,
+              size: 25,
+            ),
           ),
           title: Text(
             "Upload Media",

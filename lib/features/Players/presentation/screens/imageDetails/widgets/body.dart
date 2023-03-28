@@ -11,20 +11,22 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Positioned(
-        bottom: 20,
-        right: 20,
-        child: FloatingActionButton(
-          backgroundColor: kPrimaryColor,
-          child: Text(
-            '+',
-            style: TextStyle(color: Colors.white, fontSize: 45),
-          ),
-          onPressed: () {
-            Navigate.to(context, UploadMediaScreen.id);
-          },
+      floatingActionButton:
+          // Positioned(
+          //   bottom: 20,
+          //   right: 20,
+          //   child:
+          FloatingActionButton(
+        backgroundColor: kPrimaryColor,
+        child: Text(
+          '+',
+          style: TextStyle(color: Colors.white, fontSize: 45),
         ),
+        onPressed: () {
+          Navigate.to(context, UploadMediaScreen.id);
+        },
       ),
+      // ),
       body: SingleChildScrollView(
         physics: AlwaysScrollableScrollPhysics(),
         child: Column(
