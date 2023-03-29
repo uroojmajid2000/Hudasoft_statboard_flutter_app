@@ -53,10 +53,10 @@ class _BodyState extends State<Body> {
           backgroundColor: Colors.white,
           leading: GestureDetector(
             onTap: () => Navigator.pop(context),
-            child: Icon(
-              Icons.clear,
-              color: Colors.black,
-              size: 25,
+            child: SizedBox(
+              width: 10,
+              height: 18,
+              child: Image.asset('assets/icons/backicon.png'),
             ),
           ),
           title: Text(

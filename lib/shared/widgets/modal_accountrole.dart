@@ -19,7 +19,6 @@ class CustomCreateAccountModal {
       ),
       context: context,
       builder: (BuildContext bc) {
-        String selectedContainer = '';
         return Container(
           height: 550,
           child: Padding(
@@ -56,6 +55,7 @@ class CustomCreateAccountModal {
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 0,
                     children: [
+        
                       CreatAccountContainer(
                         text: "PLAYER",
                         contentText: "You want to host an event",
