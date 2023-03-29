@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/statsdetails.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/tablelist.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/teamcontainer.dart';
-
 import '../../../../../shared/routes/navigate.dart';
-import '../../../../../shared/widgets/text.dart';
 import '../notification/notification_screen.dart';
 import '../profile/profile_screen.dart';
 

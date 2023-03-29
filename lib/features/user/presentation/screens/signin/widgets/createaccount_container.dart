@@ -4,7 +4,7 @@ class CreatAccountContainer extends StatefulWidget {
   final String text;
   final String contentText;
 
-  const CreatAccountContainer({
+  CreatAccountContainer({
     super.key,
     required this.text,
     required this.contentText,
@@ -60,7 +60,7 @@ class _CreatAccountContainerState extends State<CreatAccountContainer> {
             ),
           ),
           SizedBox(
-            width: 154,
+            // width: 154,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(

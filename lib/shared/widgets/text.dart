@@ -147,4 +147,23 @@ class MyText {
         fontWeight: FontWeight.w600,
     ),
   );
+  static Widget selectRole(String text) => Text(
+
+   text,
+     style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontFamily: "Montserrat",
+                            fontWeight: FontWeight.w600,
+                          ),);
+  static Widget x(String text) => Text(
+
+   text,
+    textAlign: TextAlign.end,
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Color(0xff535353),
+                          fontWeight: FontWeight.bold,
+                        ),
+  );
 }

@@ -85,7 +85,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 }),
           ),
           SizedBox(
-            height: 10,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -104,7 +104,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 60,
           ),
         ],
       ),
