@@ -27,7 +27,7 @@ class EditProfileContaoner extends StatelessWidget {
           color: Colors.white,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(8.0),
           child: Row(
             children: [
               SvgPicture.asset(

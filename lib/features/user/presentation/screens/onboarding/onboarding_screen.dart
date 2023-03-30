@@ -179,11 +179,18 @@ class onboardingContainer extends StatelessWidget {
             alignment: Alignment.centerRight,
             child: Image.asset(
               image,
-              height: 400,
+              height: 450,
             ),
           ),
           Positioned(
-            top: 320,
+            top: -20,
+            left: -45,
+            child: Image.asset(
+              'assets/images/animation.gif',
+            ),
+          ),
+          Positioned(
+            top: 360,
             left: 140,
             child: CircleAvatar(
               backgroundColor: Colors.white,
@@ -203,9 +210,7 @@ class onboardingContainer extends StatelessWidget {
         //     height: 350,
         //   ),
         // ),
-        // Image.asset(
-        //   'assets/images/animated_ball.gif',
-        // ),
+
         // Image.network(
         //     'https://cdn.pixabay.com/animation/2022/12/05/15/23/15-23-06-837_512.gif',
         //     width: 300,

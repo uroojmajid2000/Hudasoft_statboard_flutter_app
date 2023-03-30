@@ -30,13 +30,13 @@ class _BodyState extends State<Body> {
               ),
               const SizedBox(height: 13),
               MyDropdown(
-                items: ['Football', 'Basketball'],
-                selected: 'Football',
+                items: ['Yes', 'No'],
+                selected: 'Yes',
                 onChange: (String? value) {
                   print('Selected: $value');
                 },
               ),
-              const SizedBox(height: 13),
+              const SizedBox(height: 490),
               Button(
                   child: Text('SAVE'),
                   onPressed: () {

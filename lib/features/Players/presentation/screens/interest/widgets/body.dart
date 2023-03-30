@@ -22,6 +22,9 @@ class _BodyState extends State<Body> {
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Column(
               children: [
+                SizedBox(
+                  height: 30,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -38,7 +41,19 @@ class _BodyState extends State<Body> {
                     print('Selected: $value');
                   },
                 ),
-                const SizedBox(height: 30),
+                SizedBox(height: 17),
+                Row(
+                  children: [
+                    Tags(
+                      text: "Football",
+                    ),
+                    SizedBox(width: 8),
+                    Tags(
+                      text: "Basketball",
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 24),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -53,19 +68,7 @@ class _BodyState extends State<Body> {
                   hintText: 'Enter ZIP Code',
                   onChange: (value) {},
                 ),
-                SizedBox(height: 10),
-                Row(
-                  children: [
-                    Tags(
-                      text: "Football",
-                    ),
-                    SizedBox(width: 5),
-                    Tags(
-                      text: "Basketball",
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 140),
+                const SizedBox(height: 320),
                 Button(
                     child: MyText.buttonText('SAVE'),
                     onPressed: () =>

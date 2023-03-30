@@ -32,7 +32,7 @@ class PermissionsScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "PermissionsScreen",
+          "Permissions",
           style: TextStyle(
             color: Colors.black,
             fontSize: 25,

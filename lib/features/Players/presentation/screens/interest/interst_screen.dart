@@ -34,7 +34,7 @@ class InterstScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Interest Screen",
+          "Profile Details",
           style: TextStyle(
             color: Colors.black,
             fontSize: 25,

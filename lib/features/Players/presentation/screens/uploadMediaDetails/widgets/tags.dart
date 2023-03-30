@@ -8,17 +8,16 @@ class Tags extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 90,
+      width: 100,
       height: 30,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: Color(0xff00b0f0),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(
-         
             text,
             textAlign: TextAlign.center,
             style: TextStyle(

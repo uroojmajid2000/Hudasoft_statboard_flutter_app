@@ -83,11 +83,11 @@ class _BodyState extends State<Body> {
                 // suffixIcon: "assets/icons/editicon.svg"
                 suffixIcon: 'assets/icons/edit.png',
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 180),
               Button(
                   child: Text('SAVE'),
                   onPressed: () {
-                    Navigate.to(context, ProfileDetailsScreen.id);
+                    Navigate.to(context, EditProfileScreen.id);
                   }),
               const SizedBox(height: 18),
             ]),

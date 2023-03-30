@@ -18,7 +18,7 @@ class _BodyState extends State<Body> {
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Column(children: [
               SizedBox(
-                height: 20,
+                height: 25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -30,8 +30,8 @@ class _BodyState extends State<Body> {
               ),
               const SizedBox(height: 13),
               MyDropdown(
-                items: ['Football', 'Basketball'],
-                selected: 'Football',
+                items: ['Everyone', 'My Contacts'],
+                selected: 'Everyone',
                 onChange: (String? value) {
                   print('Selected: $value');
                 },
@@ -47,8 +47,8 @@ class _BodyState extends State<Body> {
               ),
               const SizedBox(height: 13),
               MyDropdown(
-                items: ['Football', 'Basketball'],
-                selected: 'Football',
+                items: ['Followers', 'All'],
+                selected: 'Followers',
                 onChange: (String? value) {
                   print('Selected: $value');
                 },
@@ -64,8 +64,8 @@ class _BodyState extends State<Body> {
               ),
               const SizedBox(height: 13),
               MyDropdown(
-                items: ['Football', 'Basketball'],
-                selected: 'Football',
+                items: ['None', 'Playing'],
+                selected: 'None',
                 onChange: (String? value) {
                   print('Selected: $value');
                 },
@@ -81,13 +81,13 @@ class _BodyState extends State<Body> {
               ),
               const SizedBox(height: 13),
               MyDropdown(
-                items: ['Football', 'Basketball'],
-                selected: 'Football',
+                items: ['Followers', 'others'],
+                selected: 'Followers',
                 onChange: (String? value) {
                   print('Selected: $value');
                 },
               ),
-              const SizedBox(height: 18),
+              const SizedBox(height: 180),
               Button(
                   child: Text('SAVE'),
                   onPressed: () {

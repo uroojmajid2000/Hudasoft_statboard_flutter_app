@@ -18,11 +18,11 @@ class _BodyState extends State<Body> {
           scrollDirection: Axis.vertical,
           child: Column(children: [
             SizedBox(
-              height: 330, // specify height
+              height: 260, // specify height
               child: Stack(
                 children: [
                   SizedBox(
-                    height: 300, // specify height
+                    height: 230, // specify height
                     width: double.infinity, // take up all available width
                     child: Image.asset(
                       'assets/images/cover.png',
@@ -31,20 +31,22 @@ class _BodyState extends State<Body> {
                   ),
                   Positioned(
                     left: 150,
-                    top: 230, // adjust this value to move the avatar higher up
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(
-                        'assets/images/avatarimage.png',
+                    top: 170, // adjust this value to move the avatar higher up
+                    child: Center(
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage(
+                          'assets/images/avatarimage.png',
+                        ),
+                        radius: 45,
                       ),
-                      radius: 50,
                     ),
                   ),
                 ],
               ),
             ),
-            // SizedBox(
-            //   height: 15,
-            // ),
+            SizedBox(
+              height: 15,
+            ),
             Text(
               "Elijah Oliver",
               style: TextStyle(
@@ -67,7 +69,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 8,
+              height: 17,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -111,7 +113,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 8,
+              height: 20,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -122,7 +124,7 @@ class _BodyState extends State<Body> {
                   }),
             ),
             SizedBox(
-              height: 8,
+              height: 25,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -139,7 +141,7 @@ class _BodyState extends State<Body> {
                     },
                   ),
                   SizedBox(
-                    width: 6,
+                    width: 10,
                   ),
                   Filters(
                     text: 'Gallery',
@@ -155,30 +157,12 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 30,
             ),
             if (_eventsSelected)
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 14),
-                child: Flexible(
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.vertical,
-                    child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                              width: double.infinity, child: RecentMatches()),
-                          SizedBox(
-                              width: double.infinity, child: RecentMatches()),
-                          SizedBox(
-                              width: double.infinity, child: RecentMatches()),
-                          SizedBox(
-                            height: 14,
-                          ),
-                        ]),
-                  ),
-                ),
+                child: recentmatchesProfilelist(),
               ),
             if (_gallerySelected)
               Column(

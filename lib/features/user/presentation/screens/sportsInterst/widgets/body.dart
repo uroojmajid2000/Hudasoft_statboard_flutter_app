@@ -67,6 +67,18 @@ class _BodyState extends State<Body> {
                     print('Selected: $value');
                   },
                 ),
+                SizedBox(height: 13),
+                Row(
+                  children: [
+                    Tags(
+                      text: "Football",
+                    ),
+                    SizedBox(width: 5),
+                    Tags(
+                      text: "Basketball",
+                    ),
+                  ],
+                ),
                 const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -82,25 +94,13 @@ class _BodyState extends State<Body> {
                   hintText: 'Enter ZIP Code',
                   onChange: (value) {},
                 ),
-                SizedBox(height: 10),
-                Row(
-                  children: [
-                    Tags(
-                      text: "Football",
-                    ),
-                    SizedBox(width: 5),
-                    Tags(
-                      text: "Basketball",
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 140),
+                const SizedBox(height: 120),
                 Button(
                     child: MyText.buttonText('Continue'),
                     onPressed: () => {
                           Navigate.next(context, OverviewScreen.id),
                         }),
-                const SizedBox(height: 20),
+                const SizedBox(height: 25),
               ],
             ),
           ),

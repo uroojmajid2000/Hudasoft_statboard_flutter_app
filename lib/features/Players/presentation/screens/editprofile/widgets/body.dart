@@ -18,11 +18,11 @@ class _BodyState extends State<Body> {
           scrollDirection: Axis.vertical,
           child: Column(children: [
             SizedBox(
-              height: 330, // specify height
+              height: 260, // specify height
               child: Stack(
                 children: [
                   SizedBox(
-                    height: 300, // specify height
+                    height: 230, // specify height
                     width: double.infinity, // take up all available width
                     child: Image.asset(
                       'assets/images/cover.png',
@@ -30,20 +30,45 @@ class _BodyState extends State<Body> {
                     ),
                   ),
                   Positioned(
-                    left: 150,
-                    top: 230, // adjust this value to move the avatar higher up
-                    child: CircleAvatar(
-                      backgroundImage: AssetImage(
-                        'assets/images/avatarimage.png',
+                    right: 18,
+                    top: 185,
+                    child: Center(
+                      child: CircleAvatar(
+                        backgroundColor: Color(0xff00b0f0),
+                        radius: 15,
+                        child: SvgPicture.asset('assets/icons/cameraicon.svg'),
                       ),
-                      radius: 50,
-                    ),
+                    ), //CircleAvatar
+                  ),
+                  Positioned(
+                    left: 150,
+                    top: 170, // adjust this value to move the avatar higher up
+                    child: Stack(children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage(
+                          'assets/images/avatarimage.png',
+                        ),
+                        radius: 45,
+                      ),
+                      Positioned(
+                        left: 30,
+                        top: 28,
+                        child: Center(
+                          child: CircleAvatar(
+                            backgroundColor: Color(0xff00b0f0),
+                            radius: 15,
+                            child:
+                                SvgPicture.asset('assets/icons/cameraicon.svg'),
+                          ),
+                        ), //CircleAvatar
+                      ),
+                    ]),
                   ),
                 ],
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 25,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -56,7 +81,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 6,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -69,7 +94,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 6,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -82,7 +107,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 6,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -96,7 +121,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 6,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -109,7 +134,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 6,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -119,7 +144,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 6,
+              height: 8,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -129,7 +154,7 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(
-              height: 6,
+              height: 50,
             ),
           ]),
         ));

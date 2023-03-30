@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/imageDetails/imagedetails.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/profile/widgets/recentmatches_profilelist.dart';
 
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
@@ -11,6 +12,7 @@ import '../allteams/widgets/recentmatches_teams.dart';
 import '../editprofile/editprofile_screen.dart';
 import '../gallery/widgets/gallery_grid.dart';
 import '../notification/notification_screen.dart';
+import '../overview/widgets/recent_match_grid.dart';
 import '../overview/widgets/recent_matches.dart';
 
 part 'widgets/body.dart';
@@ -27,27 +29,6 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
-          Row(
-            children: [
-              GestureDetector(
-                  onTap: () => Navigate.to(context, NotificationScreen.id),
-                  child:
-                      SvgPicture.asset('assets/icons/notification_icons.svg')),
-              SizedBox(width: 12),
-              GestureDetector(
-                onTap: () => Navigate.to(context, ProfileScreen.id),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage(
-                    'assets/images/avatarimage.png',
-                  ),
-                  radius: 13,
-                ),
-              ),
-              SizedBox(width: 5),
-            ],
-          )
-        ],
         leading: GestureDetector(
           onTap: () => Navigator.pop(context),
           child: SizedBox(
