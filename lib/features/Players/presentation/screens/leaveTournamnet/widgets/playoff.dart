@@ -25,11 +25,12 @@ class _PlayOffState extends State<PlayOff> {
                 alphabet: 'T',
                 color: Color(0xff5642a9),
                 text: "Tornado",
+                
               ),
               TeamsCard(
                 alphabet: 'S',
                 color: Color(0xffEF4C53),
-                text: "Stallion",
+                text: "Stallion",   
               ),
             ],
           ),
@@ -42,12 +43,12 @@ class _PlayOffState extends State<PlayOff> {
               TeamsCard(
                 alphabet: 'T',
                 color: Color(0xff5642a9),
-                text: "Tornado",
+                text: "Tornado",      
               ),
               TeamsCard(
                 alphabet: 'S',
                 color: Color(0xffEF4C53),
-                text: "Stallion",
+                text: "Stallion",  
               ),
             ],
           ),
@@ -60,12 +61,12 @@ class _PlayOffState extends State<PlayOff> {
               TeamsCard(
                 alphabet: 'T',
                 color: Color(0xff5642a9),
-                text: "Tornado",
+                text: "Tornado",    
               ),
               TeamsCard(
                 alphabet: 'S',
                 color: Color(0xffEF4C53),
-                text: "Stallion",
+                text: "Stallion",       
               ),
             ],
           ),

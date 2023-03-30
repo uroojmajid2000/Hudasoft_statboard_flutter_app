@@ -21,32 +21,29 @@ class _TeamsState extends State<Teams> {
           alphabet: 'T',
           color: Color(0xff5642a9),
           text: "Tornado",
+    
         ),
         TeamsCard(
           alphabet: 'S',
           color: Color(0xffEF4C53),
           text: "Stallion",
+
         ),
         TeamsCard(
-          alphabet: 'T',
-          color: Color(0xff5642a9),
-          text: "Tornado",
-        ),
+            alphabet: 'T', color: Color(0xff5642a9), text: "Tornado", ),
         TeamsCard(
           alphabet: 'S',
           color: Color(0xffEF4C53),
           text: "Stallion",
+        
         ),
         TeamsCard(
-          alphabet: 'T',
-          color: Color(0xff5642a9),
-          text: "Tornado",
-        ),
+            alphabet: 'T', color: Color(0xff5642a9), text: "Tornado", ),
         TeamsCard(
-          alphabet: 'S',
-          color: Color(0xffEF4C53),
-          text: "Stallion",
-        ),
+            alphabet: 'S',
+            color: Color(0xffEF4C53),
+            text: "Stallion",
+            ),
       ],
     );
   }

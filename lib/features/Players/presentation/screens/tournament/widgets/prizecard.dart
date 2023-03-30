@@ -4,16 +4,21 @@ import 'package:flutter_svg/svg.dart';
 
 class PrizeCard extends StatelessWidget {
   final String rank;
- final Color grdientcolorOne;
- final Color grdientcolorTwo;
- final String prize;
-  const PrizeCard({super.key, required this.rank, required this.prize, required this.grdientcolorOne, required this.grdientcolorTwo});
+  final Color grdientcolorOne;
+  final Color grdientcolorTwo;
+  final String prize;
+  const PrizeCard(
+      {super.key,
+      required this.rank,
+      required this.prize,
+      required this.grdientcolorOne,
+      required this.grdientcolorTwo});
 
   @override
   Widget build(BuildContext context) {
     return Container(
         width: 343,
-        height: 290.85,
+        height: 250,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
@@ -27,18 +32,15 @@ class PrizeCard extends StatelessWidget {
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
             colors: [
-              
               // Color(0xff67075f), Color(0xff9d366f)
-      grdientcolorOne, 
-      grdientcolorTwo
-              
-              ],
+              grdientcolorOne,
+              grdientcolorTwo
+            ],
           ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-       
             Text(
               // "1st Place",
               rank,

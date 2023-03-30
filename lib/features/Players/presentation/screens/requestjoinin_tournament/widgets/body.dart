@@ -61,11 +61,13 @@ class _BodyState extends State<Body> {
                   alphabet: 'T',
                   color: Color(0xff5642a9),
                   text: "Tornado",
+
                 ),
                 TeamsCard(
                   alphabet: 'S',
                   color: Color(0xffEF4C53),
                   text: "Stallion",
+           
                 ),
               ],
             ),
@@ -79,6 +81,7 @@ class _BodyState extends State<Body> {
                   alphabet: 'T',
                   color: Color(0xff5642a9),
                   text: "Tornado",
+             
                 ),
                 TeamsCard(
                   alphabet: 'S',
