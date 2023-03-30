@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Filters extends StatelessWidget {
   final String text;
   final bool isSelected;
-  
+
   final Function(bool) onChanged;
 
   Filters({
@@ -30,7 +30,7 @@ class Filters extends StatelessWidget {
         ),
         padding: const EdgeInsets.symmetric(
           horizontal: 13,
-          vertical: 6,
+          vertical: 5,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

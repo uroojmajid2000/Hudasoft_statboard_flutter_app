@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/lineup_container.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/playersldetails.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/playersldetailsName.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/statsdetails.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/tablelist.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/teamcontainer.dart';
-
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/text.dart';
 import '../allteams/widgets/filters.dart';
-import '../allteams/widgets/profile_container.dart';
-import '../allteams/widgets/recentmatches_teams.dart';
 import '../notification/notification_screen.dart';
 import '../profile/profile_screen.dart';
 
@@ -46,7 +41,7 @@ class MatchStatsScreen extends StatelessWidget {
                   radius: 13,
                 ),
               ),
-              SizedBox(width: 5),
+              SizedBox(width: 14),
             ],
           )
         ],

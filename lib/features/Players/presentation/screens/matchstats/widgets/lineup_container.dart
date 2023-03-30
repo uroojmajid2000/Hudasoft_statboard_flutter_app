@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/playersldetails.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/playersldetailsName.dart';
@@ -6,8 +5,14 @@ import 'package:statboard_flutter_app/features/Players/presentation/screens/matc
 import '../../../../../../shared/widgets/text.dart';
 
 class LineUpContainer extends StatelessWidget {
+  final Color color;
+  final String alphabet;
+  final String text;
   const LineUpContainer({
     super.key,
+    required this.color,
+    required this.alphabet,
+    required this.text,
   });
 
   @override
@@ -32,10 +37,11 @@ class LineUpContainer extends StatelessWidget {
             height: 8,
           ),
           CircleAvatar(
-              backgroundColor: Color(0xff5642a9),
+              backgroundColor: color,
               radius: 15,
               child: Text(
-                "T",
+                // "T",
+                alphabet,
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
@@ -47,7 +53,8 @@ class LineUpContainer extends StatelessWidget {
             height: 3,
           ),
           MyText.labelText(
-            "Tornado",
+            // "Tornado",
+            text,
           ),
           SizedBox(
             height: 5,
@@ -58,26 +65,31 @@ class LineUpContainer extends StatelessWidget {
           PlayersDetailsName(
             text: "Elijah Oliver",
             number: '1',
+            image: 'assets/images/circleavatar_image.png',
           ),
           Divider(),
           PlayersDetailsName(
             text: "James Karl",
             number: '2',
+            image: 'assets/images/michel.png',
           ),
           Divider(),
           PlayersDetailsName(
             text: "John Michael",
             number: '3',
+            image: 'assets/images/robert.png',
           ),
           Divider(),
           PlayersDetailsName(
             text: "Robert John",
-            number: '3',
+            number: '4',
+            image: 'assets/images/circleavatar_image.png',
           ),
           Divider(),
           PlayersDetailsName(
             text: "James Karl",
-            number: '4',
+            number: '5',
+            image: 'assets/images/robert.png',
           ),
         ],
       ),

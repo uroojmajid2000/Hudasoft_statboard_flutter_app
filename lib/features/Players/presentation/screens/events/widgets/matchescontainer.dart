@@ -81,23 +81,36 @@ class TornadoVsStalion extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              "5 : 2",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: "Montserrat",
-                fontWeight: FontWeight.w600,
+            RichText(
+              text: TextSpan(
+                text: '5 ',
+                style: TextStyle(
+                  color: Color(0xff00A32E),
+                  fontSize: 20,
+                  fontFamily: "Montserrat",
+                  fontWeight: FontWeight.w700,
+                ),
+                children: const <TextSpan>[
+                  TextSpan(
+                    text: ': 2',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(
               height: 6,
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
               child: Container(
-                  width: 60,
-                  height: 28,
+                  width: 65,
+                  height: 27,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     border: Border.all(
@@ -126,7 +139,7 @@ class TornadoVsStalion extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-                backgroundColor: Color.fromARGB(255, 134, 3, 117),
+                backgroundColor: Color(0xffEF4C53),
                 radius: 20,
                 child: Text(
                   "S",
@@ -141,7 +154,7 @@ class TornadoVsStalion extends StatelessWidget {
               height: 3,
             ),
             MyText.labelText(
-              "Tornado",
+              "Stallion",
             ),
           ],
         ),

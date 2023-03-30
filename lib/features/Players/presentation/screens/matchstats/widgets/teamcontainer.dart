@@ -5,8 +5,11 @@ import 'package:flutter/material.dart';
 import '../../../../../../shared/widgets/text.dart';
 
 class TeamContainer extends StatelessWidget {
+    final Color color;
+  final String alphabet;
+  final String text;
   const TeamContainer({
-    super.key,
+    super.key, required this.color, required this.alphabet, required this.text,
   });
 
   @override
@@ -29,10 +32,11 @@ class TeamContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-                backgroundColor: Color(0xff5642a9),
+                backgroundColor:color,
                 radius: 15,
                 child: Text(
-                  "T",
+                  // "T",
+                  alphabet,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
@@ -44,7 +48,8 @@ class TeamContainer extends StatelessWidget {
               height: 3,
             ),
             MyText.labelText(
-              "Tornado",
+              // "Tornado",
+              text,
             ),
           ],
         ));

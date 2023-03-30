@@ -5,10 +5,11 @@ import '../../../../../../shared/widgets/text.dart';
 class PlayersDetailsName extends StatelessWidget {
   final String text;
   final String number;
+  final String image;
   const PlayersDetailsName({
     super.key,
     required this.text,
-    required this.number,
+    required this.number, required this.image,
   });
 
   @override
@@ -24,7 +25,8 @@ class PlayersDetailsName extends StatelessWidget {
               child: Row(
                 children: [
                   Image.asset(
-                    'assets/images/circleavatar_image.png',
+                    // 'assets/images/circleavatar_image.png',
+                    image,
                     width: 35,
                     height: 35,
                   ),
