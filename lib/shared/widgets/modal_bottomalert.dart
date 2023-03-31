@@ -17,7 +17,7 @@ class CustomModalBottomSheetAlert {
       context: context,
       builder: (BuildContext bc) {
         return Container(
-          height: 280,
+          height: 300,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
@@ -63,9 +63,7 @@ class CustomModalBottomSheetAlert {
 }
 
 class CancelButton extends StatelessWidget {
-  const CancelButton({
-    super.key,
-  });
+  const CancelButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -103,9 +101,7 @@ class CancelButton extends StatelessWidget {
 }
 
 class ConfirmButton extends StatelessWidget {
-  const ConfirmButton({
-    super.key,
-  });
+  const ConfirmButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

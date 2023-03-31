@@ -56,14 +56,15 @@ class PlayersRoutes {
     EditTeamsScreen.id: (context) => const EditTeamsScreen(),
     PlayersProfileScreen.id: (context) => const PlayersProfileScreen(),
     MatchStatsScreen.id: (context) => const MatchStatsScreen(),
-    TeamsProfileScreen.id: (context) => const TeamsProfileScreen(),
+    // TeamsProfileScreen.id: (context) => const TeamsProfileScreen(),
     LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),
     EditProfileScreen.id: (context) => const EditProfileScreen(),
     ProfileDetailsScreen.id: (context) => const ProfileDetailsScreen(),
     SecurityScreen.id: (context) => const SecurityScreen(),
     PermissionsScreen.id: (context) => const PermissionsScreen(),
     InterstScreen.id: (context) => const InterstScreen(),
-    NotificationEditProfileScreen.id: (context) => const NotificationEditProfileScreen(),
+    NotificationEditProfileScreen.id: (context) =>
+        const NotificationEditProfileScreen(),
     SecurityPasswordScreen.id: (context) => const SecurityPasswordScreen(),
   };
 }

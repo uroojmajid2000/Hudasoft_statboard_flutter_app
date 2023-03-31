@@ -100,7 +100,9 @@ class _BodyState extends State<Body> {
                         ),
                         columns: [
                           DataColumn(
-                            label: MyText.tableHeading('PLAYER'),
+                            label: Container(
+                                alignment: AlignmentDirectional.center,
+                                child: MyText.tableHeading('PLAYER')),
                             numeric: false,
                           ),
                           ColumnVerticleLine(),
@@ -143,7 +145,8 @@ class _BodyState extends State<Body> {
                                         child: Row(
                                       children: [
                                         Image.asset(
-                                          'assets/images/manimage.png',
+                                          // 'assets/images/manimage.png',
+                                          team.image.toString(),
                                           width: 30,
                                           height: 30,
                                         ),

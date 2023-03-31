@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/matchescontainer.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/recentvenues/widgets/matchescontainer.dart';
 
 class MatchesView extends StatelessWidget {
   const MatchesView({super.key});

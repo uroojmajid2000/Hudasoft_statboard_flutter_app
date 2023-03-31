@@ -27,7 +27,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
             Stack(
               children: [
                 SizedBox(
-                  height: 300, // specify height
+                  height: 250, // specify height
                   width: double.infinity, // take up all available width
                   child: Image.asset(
                     'assets/images/tournamentcoverpic.png',
@@ -36,7 +36,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                 ),
                 Positioned(
                   left: 15,
-                  top: 250,
+                  top: 200,
                   child: SizedBox(
                     width: 343.91,
                     child: MyText.TournamentHeadingText(

@@ -4,6 +4,7 @@ import 'package:statboard_flutter_app/features/Players/presentation/screens/stat
 
 import '../../../../../../shared/routes/navigate.dart';
 import '../../../../../../shared/widgets/text.dart';
+import '../../matchstats/matchstats_screen.dart';
 
 class MatchesContainer extends StatelessWidget {
   const MatchesContainer({super.key});
@@ -11,7 +12,7 @@ class MatchesContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.to(context, StatsScreen.id),
+      onTap: () => Navigate.to(context, MatchStatsScreen.id),
       child: Container(
         width: double.infinity,
         height: 138,

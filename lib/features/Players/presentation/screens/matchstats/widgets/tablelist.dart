@@ -8,8 +8,8 @@ List<Team> teamsData = [
       AST2: 12,
       AST3: 15),
   Team(
-      PLAYER: "Elijah Oliver ",
-      image: 'assets/images/manimage.png',
+      PLAYER: "James Karl",
+      image: 'assets/images/michel.png',
       PTS: 5,
       AST: 8,
       WINSCORE: 9,
@@ -25,7 +25,7 @@ List<Team> teamsData = [
       AST3: 15),
   Team(
       PLAYER: "Elijah Oliver ",
-      image: 'assets/images/manimage.png',
+      image: 'assets/images/robert.png',
       PTS: 5,
       AST: 8,
       WINSCORE: 9,

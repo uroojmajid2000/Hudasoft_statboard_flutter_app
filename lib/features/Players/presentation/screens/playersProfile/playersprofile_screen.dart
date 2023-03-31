@@ -12,6 +12,7 @@ import '../imageDetails/imagedetails.dart';
 import '../notification/notification_screen.dart';
 import '../overview/widgets/recent_matches.dart';
 import '../profile/profile_screen.dart';
+import '../profile/widgets/recentmatches_profilelist.dart';
 
 part 'widgets/body.dart';
 
