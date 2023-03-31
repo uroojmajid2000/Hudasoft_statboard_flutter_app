@@ -14,9 +14,7 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    return
-   
-        SingleChildScrollView(
+    return SingleChildScrollView(
       child: GestureDetector(
         onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
         child: SafeArea(
@@ -29,9 +27,11 @@ class _BodyState extends State<Body> {
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Column(
                     children: [
+                      const SizedBox(height: 25),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
+                          const SizedBox(height: 15),
                           MyText.labelText(
                             "Team Name",
                           ),
@@ -80,15 +80,30 @@ class _BodyState extends State<Body> {
                         ),
                       ),
                       const SizedBox(height: 25),
-                      InviteFiends(),
+                      InviteFiends(
+                        text: "James Karl",
+                        img: 'assets/images/robert.png',
+                      ),
                       SizedBox(height: 10),
-                      InviteFiends(),
+                      InviteFiends(
+                        img: 'assets/images/michel.png',
+                        text: "James Karl",
+                      ),
                       SizedBox(height: 10),
-                      InviteFiends(),
+                      InviteFiends(
+                        text: "James Karl",
+                        img: 'assets/images/robert.png',
+                      ),
                       SizedBox(height: 10),
-                      InviteFiends(),
+                      InviteFiends(
+                        text: "Robert John",
+                        img: 'assets/images/circleavatar_image.png',
+                      ),
                       SizedBox(height: 10),
-                      InviteFiends(),
+                      InviteFiends(
+                        text: "James Karl",
+                        img: 'assets/images/robert.png',
+                      ),
                     ],
                   ),
                 ),

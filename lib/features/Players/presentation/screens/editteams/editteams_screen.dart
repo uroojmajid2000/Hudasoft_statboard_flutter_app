@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/addteams/widgets/invitefriends.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/editteams/widgets/invitefriends.dart';
 
 import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/dropdown.dart';
@@ -29,6 +29,12 @@ class EditTeamsScreen extends StatelessWidget {
             child: Image.asset('assets/icons/backicon.png'),
           ),
         ),
+        actions: [
+          SvgPicture.asset('assets/icons/deleteicon.svg'),
+          SizedBox(
+            width: 8,
+          )
+        ],
         title: Text(
           "Edit Team",
           style: TextStyle(
