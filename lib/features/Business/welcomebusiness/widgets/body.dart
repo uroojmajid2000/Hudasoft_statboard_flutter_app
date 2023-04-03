@@ -78,7 +78,7 @@ class _BodyState extends State<Body> {
                     child: Button(
                         child: MyText.buttonText('Continue'),
                         onPressed: () => {
-                              // Navigate.next(context, SportsInterstScreen.id),
+                              Navigate.next(context, VenuesScreen.id),
                             }),
                   ),
                   const SizedBox(height: 20),

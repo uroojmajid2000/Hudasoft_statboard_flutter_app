@@ -5,12 +5,12 @@ import 'package:statboard_flutter_app/shared/businesslayout/widgets/sidemenu.dar
 
 import '../widgets/ResponsiveLayout.dart';
 
-class Layout extends StatelessWidget {
+class BusinessLayout extends StatelessWidget {
   final Widget body;
   final int currentTab;
   final String text;
 
-  Layout({
+  BusinessLayout({
     Key? key,
     required this.body,
     this.currentTab = 0,

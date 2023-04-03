@@ -25,7 +25,7 @@ class NavigationButton extends StatelessWidget {
     Color color = currentTab == tab ? kPrimaryColor : const Color(0xFFA2A2A2);
 
     return MaterialButton(
-        minWidth: 40,
+        minWidth: 30,
         onPressed: onPressed,
         child: ResponsiveLayout.isDesktop(context)
             ? Row(

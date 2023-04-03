@@ -1,11 +1,11 @@
+import 'package:statboard_flutter_app/features/Business/venues/venues_screen.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/widgets/navigation_button.dart';
 
 import 'package:flutter/material.dart';
-
+import '../../../features/Business/statkeepers/statkeepers_screen.dart';
 import '../../../features/Players/presentation/screens/Teams/teams_screen.dart';
 import '../../../features/Players/presentation/screens/events/events_screen.dart';
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
-import '../../../features/Players/presentation/screens/overview/overview_screen.dart';
 import '../../routes/navigate.dart';
 
 class BuildBottomAppBar extends StatefulWidget {
@@ -33,9 +33,16 @@ class _BuildBottomAppBarState extends State<BuildBottomAppBar> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               NavigationButton(
-                onPressed: () => Navigate.to(context, OverviewScreen.id),
+                onPressed: () => Navigate.to(context, VenuesScreen.id),
                 icon: 'assets/icons/home.svg',
-                text: 'Overview',
+                text: 'venues',
+                tab: 0,
+                currentTab: widget.currentTab,
+              ),
+              NavigationButton(
+                onPressed: () => Navigate.to(context, StatKeeperScreen.id),
+                icon: 'assets/icons/home.svg',
+                text: 'Statkeepers',
                 tab: 1,
                 currentTab: widget.currentTab,
               ),
