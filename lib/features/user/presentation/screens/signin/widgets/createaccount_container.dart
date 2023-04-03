@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 class CreatAccountContainer extends StatefulWidget {
   final String text;
   final String contentText;
+  final bool isSelected;
+  final Function(bool) onSelect;
 
   CreatAccountContainer({
-    super.key,
+    Key? key,
     required this.text,
     required this.contentText,
-  });
+    this.isSelected = false,
+    required this.onSelect,
+  }) : super(key: key);
 
   @override
   State<CreatAccountContainer> createState() => _CreatAccountContainerState();
@@ -20,10 +24,14 @@ class _CreatAccountContainerState extends State<CreatAccountContainer> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      // onTap: () {
+      //   setState(() {
+      //     _isSelected = !_isSelected;
+      //   });
+      // },
       onTap: () {
-        setState(() {
-          _isSelected = !_isSelected;
-        });
+        // widget.onSelect(!widget.isSelected);
+        widget.onSelect(true);
       },
       child: Column(
         children: [
@@ -42,7 +50,8 @@ class _CreatAccountContainerState extends State<CreatAccountContainer> {
               ],
               color: Colors.white,
               border: Border.all(
-                color: _isSelected ? Color(0xff00b0f0) : Colors.white,
+                // color: _isSelected ? Color(0xff00b0f0) : Colors.white,
+                color: widget.isSelected ? Color(0xff00b0f0) : Colors.white,
                 width: 2,
               ),
             ),
@@ -51,7 +60,9 @@ class _CreatAccountContainerState extends State<CreatAccountContainer> {
                 widget.text,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: _isSelected ? Color(0xff00b0f0) : Color(0xff161616),
+                  // color: _isSelected ? Color(0xff00b0f0) : Color(0xff161616),
+                  color:
+                      widget.isSelected ? Color(0xff00b0f0) : Color(0xff161616),
                   fontSize: 18,
                   fontFamily: "Montserrat",
                   fontWeight: FontWeight.w600,
@@ -69,7 +80,9 @@ class _CreatAccountContainerState extends State<CreatAccountContainer> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   // color: Color(0xff161616),
-                  color: _isSelected ? Color(0xff00b0f0) : Color(0xff161616),
+                  // color: _isSelected ? Color(0xff00b0f0) : Color(0xff161616),
+                  color:
+                      widget.isSelected ? Color(0xff00b0f0) : Color(0xff161616),
                   fontSize: 13,
                   fontFamily: "Montserrat",
                   fontWeight: FontWeight.w600,
