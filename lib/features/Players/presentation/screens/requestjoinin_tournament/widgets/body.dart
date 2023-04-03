@@ -8,6 +8,14 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
+  int _selectedIndex = -1;
+
+  void _handleSelect(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -15,7 +23,7 @@ class _BodyState extends State<Body> {
         padding: const EdgeInsets.symmetric(horizontal: 14),
         child: Column(
           children: [
-            const SizedBox(height: 25),
+            const SizedBox(height: 18),
             SvgPicture.asset(
               'assets/icons/requesttournament.svg',
             ),
@@ -40,7 +48,7 @@ class _BodyState extends State<Body> {
                 fontWeight: FontWeight.w500,
               ),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 18),
             Align(
               alignment: Alignment.topLeft,
               child: Text(
@@ -53,75 +61,91 @@ class _BodyState extends State<Body> {
                 ),
               ),
             ),
-            const SizedBox(height: 25),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                TeamsCard(
-                  alphabet: 'T',
-                  color: Color(0xff5642a9),
-                  text: "Tornado",
+            const SizedBox(height: 18),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: [
+            //     TeamsCard(
+            //       alphabet: 'T',
+            //       color: Color(0xff5642a9),
+            //       text: "Tornado",
 
-                ),
-                TeamsCard(
-                  alphabet: 'S',
-                  color: Color(0xffEF4C53),
-                  text: "Stallion",
-           
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                TeamsCard(
-                  alphabet: 'T',
-                  color: Color(0xff5642a9),
-                  text: "Tornado",
-             
-                ),
-                TeamsCard(
-                  alphabet: 'S',
-                  color: Color(0xffEF4C53),
-                  text: "Stallion",
-                ),
-              ],
-            ),
-            // Expanded(
-            //   child: GridView.count(
-            //     crossAxisCount: 2,
-            //     mainAxisSpacing: 15,
-            //     crossAxisSpacing: 10,
-            //     // padding: EdgeInsets.all(20),
-            //     children: [
-            //       TeamsCard(
-            //         alphabet: 'T',
-            //         color: Color(0xff5642a9),
-            //         text: "Tornado",
-            //       ),
-            //       TeamsCard(
-            //         alphabet: 'S',
-            //         color: Color(0xffEF4C53),
-            //         text: "Stallion",
-            //       ),
-            //       TeamsCard(
-            //         alphabet: 'T',
-            //         color: Color(0xff5642a9),
-            //         text: "Tornado",
-            //       ),
-            //       TeamsCard(
-            //         alphabet: 'S',
-            //         color: Color(0xffEF4C53),
-            //         text: "Stallion",
-            //       ),
-            //     ],
-            //   ),
+            //     ),
+            //     TeamsCard(
+            //       alphabet: 'S',
+            //       color: Color(0xffEF4C53),
+            //       text: "Stallion",
+
+            //     ),
+            //   ],
             // ),
+            // SizedBox(
+            //   height: 20,
+            // ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+            //   children: [
+            //     TeamsCard(
+            //       alphabet: 'T',
+            //       color: Color(0xff5642a9),
+            //       text: "Tornado",
+
+            //     ),
+            //     TeamsCard(
+            //       alphabet: 'S',
+            //       color: Color(0xffEF4C53),
+            //       text: "Stallion",
+            //     ),
+            //   ],
+            // ),
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 2,
+                mainAxisSpacing: 15,
+                crossAxisSpacing: 10,
+                // padding: EdgeInsets.all(20),
+                children: [
+                  TeamsCard(
+                    alphabet: 'T',
+                    color: Color(0xff5642a9),
+                    text: "Tornado",
+                    isSelected: _selectedIndex == 0,
+                    onSelect: (isSelected) {
+                      _handleSelect(isSelected ? 0 : -1);
+                    },
+                  ),
+                  TeamsCard(
+                    alphabet: 'S',
+                    color: Color(0xffEF4C53),
+                    text: "Stallion",
+                    isSelected: _selectedIndex == 1,
+                    onSelect: (isSelected) {
+                      _handleSelect(isSelected ? 1 : -1);
+                    },
+                  ),
+                  TeamsCard(
+                    alphabet: 'T',
+                    color: Color(0xff5642a9),
+                    text: "Tornado",
+                    isSelected: _selectedIndex == 2,
+                    onSelect: (isSelected) {
+                      _handleSelect(isSelected ? 2 : -1);
+                    },
+                  ),
+                  TeamsCard(
+                    alphabet: 'S',
+                    color: Color(0xffEF4C53),
+                    text: "Stallion",
+                    isSelected: _selectedIndex == 3,
+                    onSelect: (isSelected) {
+                      _handleSelect(isSelected ? 3 : -1);
+                    },
+                  ),
+                ],
+              ),
+            ),
             SizedBox(
-              height: 25,
+              height: 18,
             ),
             Button(
                 child: Text('Request To Join'),
@@ -133,7 +157,10 @@ class _BodyState extends State<Body> {
                       onPressed: () {
                         Navigate.to(context, OverviewScreen.id);
                       });
-                })
+                }),
+            SizedBox(
+              height: 18,
+            ),
           ],
         ),
       ),

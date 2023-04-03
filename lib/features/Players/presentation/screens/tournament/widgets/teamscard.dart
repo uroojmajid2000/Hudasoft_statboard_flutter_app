@@ -7,12 +7,16 @@ class TeamsCard extends StatefulWidget {
   final String alphabet;
   final String text;
   final Color color;
+  final bool isSelected;
+  final Function(bool) onSelect;
 
-  const TeamsCard(
-      {super.key,
-      required this.text,
-      required this.color,
-      required this.alphabet,
+  const TeamsCard({
+    super.key,
+    required this.text,
+    required this.color,
+    required this.alphabet,
+    this.isSelected = false,
+    required this.onSelect,
   });
 
   @override
@@ -24,15 +28,18 @@ class _TeamsCardState extends State<TeamsCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      // onTap: () {
+      //   setState(() {
+      //     _isSelected = !_isSelected;
+      //   });
+      // },
       onTap: () {
-        setState(() {
-          _isSelected = !_isSelected;
-        });
+        // widget.onSelect(!widget.isSelected);
+        widget.onSelect(true);
       },
-   
       child: Container(
-        width: 160,
-        height: 120,
+        width: 150,
+        height: 70,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
@@ -44,7 +51,8 @@ class _TeamsCardState extends State<TeamsCard> {
           ],
           color: Colors.white,
           border: Border.all(
-            color: _isSelected ? Color(0xff00b0f0) : Colors.white,
+            // color: _isSelected ? Color(0xff00b0f0) : Colors.white,
+            color: widget.isSelected ? Color(0xff00b0f0) : Colors.white,
             width: 2,
           ),
         ),
