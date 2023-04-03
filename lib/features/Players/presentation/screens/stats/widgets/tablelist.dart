@@ -15,6 +15,27 @@ List<Team> teamsData = [
       WINSCORE: 9,
       AST2: 12,
       AST3: 15),
+  Team(
+      PLAYER: "Elijah Oliver ",
+      PTS: 5,
+      AST: 8,
+      WINSCORE: 9,
+      AST2: 12,
+      AST3: 15),
+  Team(
+      PLAYER: "Elijah Oliver ",
+      PTS: 5,
+      AST: 8,
+      WINSCORE: 9,
+      AST2: 12,
+      AST3: 15),
+  Team(
+      PLAYER: "Elijah Oliver ",
+      PTS: 5,
+      AST: 8,
+      WINSCORE: 9,
+      AST2: 12,
+      AST3: 15),
 ];
 
 class Team {

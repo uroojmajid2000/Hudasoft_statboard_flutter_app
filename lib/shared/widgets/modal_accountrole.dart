@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/shared/widgets/button.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
+import '../../features/Business/subscription/subscription_screen.dart';
 import '../../features/user/presentation/screens/signin/widgets/createaccount_container.dart';
+import '../routes/navigate.dart';
 
 class CreateAccountModal extends StatefulWidget {
   final VoidCallback onPressed;
@@ -74,6 +76,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                     isSelected: _selectedIndex == 1,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 1 : -1);
+                      Navigate.to(context, SubscriptionScreen.id);
                     },
                   ),
                   CreatAccountContainer(

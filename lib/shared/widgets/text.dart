@@ -11,6 +11,16 @@ class MyText {
           fontWeight: FontWeight.w600,
         ),
       );
+  //fontsize 16 w600
+  static Widget businesssubscription(String text) => Text(
+        text,
+           style: TextStyle(
+            color: Color(0xff6f6f6f),
+            fontSize: 16,
+            fontFamily: "Montserrat",
+            fontWeight: FontWeight.w600,
+          ),
+      );
 
   //fontsize 13 w600
   static Widget forgetPassword(String text) => Text(
