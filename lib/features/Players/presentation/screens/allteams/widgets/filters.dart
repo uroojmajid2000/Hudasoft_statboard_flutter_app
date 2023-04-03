@@ -17,7 +17,8 @@ class Filters extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        onChanged(!isSelected);
+        // onChanged(!isSelected);
+        onChanged(true);
       },
       child: Container(
         decoration: BoxDecoration(
