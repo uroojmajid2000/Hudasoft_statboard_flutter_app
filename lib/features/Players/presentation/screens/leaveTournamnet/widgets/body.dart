@@ -85,32 +85,69 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                     SizedBox(
                       height: 15,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                          color: Color(0xffef4c53),
-                          width: 2,
+                    // Container(
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10),
+                    //     border: Border.all(
+                    //       color: Color(0xffef4c53),
+                    //       width: 2,
+                    //     ),
+                    //   ),
+                    //   padding: const EdgeInsets.symmetric(
+                    //     horizontal: 14,
+                    //     vertical: 11,
+                    //   ),
+                    //   child: Row(
+                    //     mainAxisAlignment: MainAxisAlignment.center,
+                    //     crossAxisAlignment: CrossAxisAlignment.center,
+                    //     children: [
+                    //       Text(
+                    //         "Cancel Request",
+                    //         style: TextStyle(
+                    //           color: Color(0xffef4c53),
+                    //           fontSize: 14,
+                    //           fontFamily: "Montserrat",
+                    //           fontWeight: FontWeight.w600,
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // )
+                    ElevatedButton(
+                      onPressed: () {
+                        // add your code here for when the button is pressed
+                        CustomModalBottomSheetAlert.show(
+                          context: context,
+                          message: "Are you sure you want to cancel?",
+                          // onPressed: () {
+                          //   Navigator.pop(context);
+                          // },
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        onPrimary: Color(0xffef4c53),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                          side: BorderSide(
+                            color: Color(0xffef4c53),
+                            width: 2,
+                          ),
+                        ),
+                        elevation: 0, // set the elevation to 0
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 14,
+                          vertical: 11,
                         ),
                       ),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 14,
-                        vertical: 11,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Cancel Request",
-                            style: TextStyle(
-                              color: Color(0xffef4c53),
-                              fontSize: 14,
-                              fontFamily: "Montserrat",
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
+                      child: Text(
+                        "Cancel Request",
+                        style: TextStyle(
+                          color: Color(0xffef4c53),
+                          fontSize: 14,
+                          fontFamily: "Montserrat",
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
                     )
                   ]),

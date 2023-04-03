@@ -17,15 +17,18 @@ class CustomModalBottomSheetAlert {
       context: context,
       builder: (BuildContext bc) {
         return Container(
-          height: 300,
+          height: 250,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SvgPicture.asset('assets/icons/alertlogo'),
                 SizedBox(
-                  height: 12,
+                  height: 8,
+                ),
+                SvgPicture.asset('assets/icons/alertlogo.svg'),
+                SizedBox(
+                  height: 25,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

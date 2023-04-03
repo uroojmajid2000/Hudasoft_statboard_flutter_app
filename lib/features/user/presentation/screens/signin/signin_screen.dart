@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/user/presentation/screens/signup/widgets/createaccount_container.dart';
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/modal_accountrole.dart';
