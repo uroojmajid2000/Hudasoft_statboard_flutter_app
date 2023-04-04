@@ -25,7 +25,7 @@ class NavigationButton extends StatelessWidget {
     Color color = currentTab == tab ? kPrimaryColor : const Color(0xFFA2A2A2);
 
     return MaterialButton(
-        minWidth: 30,
+        minWidth: 10,
         onPressed: onPressed,
         child: ResponsiveLayout.isDesktop(context)
             ? Row(
@@ -56,12 +56,12 @@ class NavigationButton extends StatelessWidget {
                     color: color,
                     height: 20,
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 4),
                   Text(
                     text,
                     style: TextStyle(
                       color: color,
-                      fontSize: 12,
+                      fontSize: 11,
                       fontFamily: "Montserrat",
                       fontWeight: FontWeight.w600,
                     ),

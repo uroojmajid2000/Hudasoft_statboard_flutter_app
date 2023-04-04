@@ -20,58 +20,54 @@ class _BuildBottomAppBarState extends State<BuildBottomAppBar> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+      height: 70,
       elevation: 18.0,
-      shape: const CircularNotchedRectangle(),
-      notchMargin: 10,
-      child: SizedBox(
-        height: 70,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              NavigationButton(
-                onPressed: () => Navigate.to(context, VenuesScreen.id),
-                icon: 'assets/icons/home.svg',
-                text: 'venues',
-                tab: 0,
-                currentTab: widget.currentTab,
-              ),
-              NavigationButton(
-                onPressed: () => Navigate.to(context, StatKeeperScreen.id),
-                icon: 'assets/icons/home.svg',
-                text: 'Statkeepers',
-                tab: 1,
-                currentTab: widget.currentTab,
-              ),
-              NavigationButton(
-                onPressed: () => Navigate.to(context, EventsScreen.id),
-                icon: 'assets/icons/events.svg',
-                text: 'Events',
-                tab: 2,
-                isDisabled: true,
-                currentTab: widget.currentTab,
-              ),
-              NavigationButton(
-                onPressed: () => Navigate.to(context, TeamsScreen.id),
-                icon: 'assets/icons/teams.svg',
-                text: 'Teams',
-                tab: 3,
-                isDisabled: true,
-                currentTab: widget.currentTab,
-              ),
-              NavigationButton(
-                onPressed: () => Navigate.to(context, GalleryScreen.id),
-                icon: 'assets/icons/gallery.svg',
-                text: 'Gallery',
-                tab: 4,
-                isDisabled: true,
-                currentTab: widget.currentTab,
-              ),
-            ],
+      // shape: const CircularNotchedRectangle(),
+      // notchMargin: 10,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          NavigationButton(
+            onPressed: () => Navigate.to(context, VenuesScreen.id),
+            icon: 'assets/icons/home.svg',
+            text: 'venues',
+            tab: 0,
+            isDisabled: false,
+            currentTab: widget.currentTab,
           ),
-        ),
+          NavigationButton(
+            onPressed: () => Navigate.to(context, StatKeeperScreen.id),
+            icon: 'assets/icons/statkeeper.svg',
+            text: 'Statkeepers',
+            tab: 1,
+            isDisabled: true,
+            currentTab: widget.currentTab,
+          ),
+          NavigationButton(
+            onPressed: () => Navigate.to(context, EventsScreen.id),
+            icon: 'assets/icons/events.svg',
+            text: 'Events',
+            tab: 2,
+            isDisabled: true,
+            currentTab: widget.currentTab,
+          ),
+          NavigationButton(
+            onPressed: () => Navigate.to(context, TeamsScreen.id),
+            icon: 'assets/icons/teams.svg',
+            text: 'Teams',
+            tab: 3,
+            isDisabled: true,
+            currentTab: widget.currentTab,
+          ),
+          NavigationButton(
+            onPressed: () => Navigate.to(context, GalleryScreen.id),
+            icon: 'assets/icons/gallery.svg',
+            text: 'Gallery',
+            tab: 4,
+            isDisabled: true,
+            currentTab: widget.currentTab,
+          ),
+        ],
       ),
     );
   }
