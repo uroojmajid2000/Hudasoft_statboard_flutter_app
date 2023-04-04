@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
-import '../../../features/Business/paying/paying_screen.dart';
-import '../../../features/Business/statkeepers/statkeepers_screen.dart';
-import '../../../features/Business/subscription/subscription_screen.dart';
-import '../../../features/Business/venues/venues_screen.dart';
-import '../../../features/Business/welcomebusiness/welcomebusiness_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/paying/paying_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/statkeepers/statkeepers_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/subscription/subscription_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/venues/venues_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/welcomebusiness/welcomebusiness_screen.dart';
 
 
 class BusinessRoutes {

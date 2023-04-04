@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Business/paying/widgets/paymentoptions.dart';
-import 'package:statboard_flutter_app/features/Business/subscription/widgets/preniumdetails.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/paying/widgets/paymentoptions.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/teamsdetails/widgets/text_field_team.dart';
-import 'package:statboard_flutter_app/features/user/presentation/screens/welcome/widgets/content.dart';
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/text.dart';
-import '../../../shared/widgets/text_field.dart';
 import '../welcomebusiness/welcomebusiness_screen.dart';
 
 part 'widgets/body.dart';

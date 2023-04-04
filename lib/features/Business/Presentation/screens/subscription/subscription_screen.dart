@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Business/subscription/widgets/preniumdetails.dart';
-import 'package:statboard_flutter_app/features/user/presentation/screens/welcome/widgets/content.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/subscription/widgets/preniumdetails.dart';
 import '../../../../../shared/routes/navigate.dart';
 import '../../../../../shared/widgets/button.dart';
 import '../../../../../shared/widgets/text.dart';

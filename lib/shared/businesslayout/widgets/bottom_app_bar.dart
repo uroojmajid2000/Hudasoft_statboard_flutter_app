@@ -1,8 +1,7 @@
-import 'package:statboard_flutter_app/features/Business/venues/venues_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/statkeepers/statkeepers_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/venues/venues_screen.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/widgets/navigation_button.dart';
-
 import 'package:flutter/material.dart';
-import '../../../features/Business/statkeepers/statkeepers_screen.dart';
 import '../../../features/Players/presentation/screens/Teams/teams_screen.dart';
 import '../../../features/Players/presentation/screens/events/events_screen.dart';
 import '../../../features/Players/presentation/screens/gallery/gallery_screen.dart';
@@ -27,7 +26,7 @@ class _BuildBottomAppBarState extends State<BuildBottomAppBar> {
       child: SizedBox(
         height: 70,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 0),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
