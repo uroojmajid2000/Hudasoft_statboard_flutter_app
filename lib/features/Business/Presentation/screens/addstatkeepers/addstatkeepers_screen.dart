@@ -17,10 +17,10 @@ import '../../../../Players/presentation/screens/uploadMediaDetails/widgets/tags
 
 part 'widgets/body.dart';
 
-class EditStatKeepersScreen extends StatelessWidget {
-  const EditStatKeepersScreen({Key? key}) : super(key: key);
+class AddStatKeepersScreen extends StatelessWidget {
+  const AddStatKeepersScreen({Key? key}) : super(key: key);
 
-  static String id = "editstatkeepers_screen";
+  static String id = "addstatkeepers_screen";
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class EditStatKeepersScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Statkeepers",
+          "Add Statkeeper",
           style: TextStyle(
             color: Colors.black,
             fontSize: 25,

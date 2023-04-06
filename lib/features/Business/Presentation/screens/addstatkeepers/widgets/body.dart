@@ -1,4 +1,4 @@
-part of '../editstatkeepers_screen.dart';
+part of '../addstatkeepers_screen.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -146,29 +146,18 @@ class _BodyState extends State<Body> {
                 ),
                 const SizedBox(height: 18),
                 Button(
-                    child: MyText.buttonText('SAVE'),
+                    child: MyText.buttonText('Create Account'),
                     onPressed: () => {
                           CustomModalBottomSheet.show(
                               context: context,
                               message:
-                                  "Statskeepers account has been \nedited successfully.",
+                                  "Statskeepers account has been \ncreated successfully.",
                               onPressed: () {
                                 Navigate.to(context, StatKeeperScreen.id);
                               })
 
                           // Navigate.to(context, StatKeeperScreen.id)
                         }),
-                const SizedBox(height: 20),
-                Text(
-                  "Delete Account",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color(0xffeb4335),
-                    fontSize: 17,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
                 const SizedBox(height: 40),
               ],
             ),
