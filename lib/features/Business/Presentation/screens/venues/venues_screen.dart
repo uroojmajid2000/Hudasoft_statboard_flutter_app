@@ -4,6 +4,8 @@ import 'package:statboard_flutter_app/shared/businesslayout/businesslayout_scree
 import 'package:statboard_flutter_app/shared/widgets/search_bar.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
+import '../../../../../resources/colors.dart';
+
 part 'widgets/body.dart';
 
 class VenuesScreen extends StatelessWidget {
