@@ -61,6 +61,7 @@ class _BodyState extends State<Body> {
                         Expanded(child: StatkeepersProfileContainer()),
                       ],
                     ),
+                    const SizedBox(height: 40),
                   ])),
         ));
   }
