@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/editstatkeepers/editstatkeepers_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/paying/paying_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/statkeepers/statkeepers_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/subscription/subscription_screen.dart';
@@ -19,5 +20,6 @@ class BusinessRoutes {
     VenuesProfileScreen.id: (context) => const VenuesProfileScreen(),
     VenueEditScreen.id: (context) => const VenueEditScreen(),
     VenuesEditProfileScreen.id: (context) => const VenuesEditProfileScreen(),
+    EditStatKeepersScreen.id: (context) => const EditStatKeepersScreen(),
   };
 }

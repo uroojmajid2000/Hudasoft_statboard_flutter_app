@@ -27,7 +27,6 @@ import '../../../features/Players/presentation/screens/security/security_screen.
 import '../../../features/Players/presentation/screens/securitypassword/securitypassword_screen.dart';
 import '../../../features/Players/presentation/screens/stats/stats_screen.dart';
 import '../../../features/Players/presentation/screens/teamsdetails/teams_details.dart';
-import '../../../features/Players/presentation/screens/teamsprofile/teamsprofile_screen.dart';
 import '../../../features/Players/presentation/screens/tournament/tournament_screen.dart';
 import '../../../features/Players/presentation/screens/uploadMediaDetails/uploadmedia_details.dart';
 import '../../../features/Players/presentation/screens/uploadmedia/upload_media.dart';

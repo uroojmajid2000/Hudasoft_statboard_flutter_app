@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:statboard_flutter_app/resources/colors.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/businesslayout_screen.dart';
+import 'package:statboard_flutter_app/shared/widgets/search_bar.dart';
+import 'package:statboard_flutter_app/shared/widgets/text.dart';
+
+import 'widgets/statkeepersprofile_container.dart';
 
 part 'widgets/body.dart';
 
@@ -11,11 +16,9 @@ class StatKeeperScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BusinessLayout(
-      text: 'StatKeeperScreen',
+      text: 'StatKeepers',
       currentTab: 1,
-      body: const SingleChildScrollView(
-        child: Body(),
-      ),
+      body: Body(),
     );
   }
 }
