@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/venues/widgets/activebutton_container.dart';
 import '../../../../../../shared/widgets/text.dart';
 
 class VenuesContainer extends StatelessWidget {
@@ -9,7 +10,7 @@ class VenuesContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         width: double.infinity,
-        height: 200,
+        height: 215,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
@@ -32,29 +33,20 @@ class VenuesContainer extends StatelessWidget {
                     topRight: Radius.circular(10),
                   ),
                   child: Image.asset(
-                    // 'assets/images/imagetwo.png',
-                    'assets/images/image.png',
+                    // 'assets/images/image.png',
+                    'assets/images/groundimage.png',
                     fit: BoxFit.cover,
                     height: 100, // specify height
                     width: double.infinity,
                   ),
                 ),
-
-                // SizedBox(
-                //   height: 100, // specify height
-                //   width: double.infinity, // take up all available width
-                //   child: Image.asset(
-                //     'assets/images/cover.png',
-                //     fit: BoxFit.fill,
-                //   ),
-                // ),
                 Positioned(
                   left: 12,
                   top: 70,
                   child: Center(
                     child: CircleAvatar(
                       backgroundImage: AssetImage(
-                        'assets/images/avatarimage.png',
+                        'assets/images/soccerlogo.png',
                       ),
                       radius: 30,
                     ),
@@ -64,60 +56,14 @@ class VenuesContainer extends StatelessWidget {
                   right: 12,
                   top: 110,
                   child: Center(
-                    child: Container(
-                      width: 59,
-                      height: 22.02,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        color: Color(0xffebfdf2),
-                      ),
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 7,
-                        vertical: 2,
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            width: 8,
-                            height: 8,
-                            padding: const EdgeInsets.all(1),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Container(
-                                  width: 6,
-                                  height: 6,
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Color(0xff12b669),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(width: 5),
-                          Text(
-                            "Active",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Color(0xff027947),
-                              fontSize: 10,
-                              fontFamily: "Montserrat",
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    child: ActiveContainer(),
                   ),
                 ),
               ],
             ),
+          ),
+          SizedBox(
+            height: 5,
           ),
           Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
@@ -142,7 +88,57 @@ class VenuesContainer extends StatelessWidget {
                         MyText.simpleblueText("15"),
                       ],
                     ),
-                  ]))
+                  ])),
+          SizedBox(
+            height: 15,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 14),
+            child: Stack(children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage(
+                      'assets/images/avatarimage.png',
+                    ),
+                    radius: 15,
+                  ),
+                ],
+              ),
+              Positioned(
+                left: 25,
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(
+                    'assets/images/michel.png',
+                  ),
+                  radius: 15,
+                ),
+              ),
+              Positioned(
+                left: 45,
+                child: CircleAvatar(
+                  backgroundImage: AssetImage(
+                    'assets/images/robert.png',
+                  ),
+                  radius: 15,
+                ),
+              ),
+              Positioned(
+                  left: 80,
+                  top: 10,
+                  child: Center(
+                    child: Text(
+                      "+5 more",
+                      style: TextStyle(
+                        color: Color(0xff646464),
+                        fontSize: 10,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ))
+            ]),
+          )
         ]));
   }
 }

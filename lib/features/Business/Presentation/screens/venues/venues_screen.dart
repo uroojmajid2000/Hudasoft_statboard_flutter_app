@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:statboard_flutter_app/features/Business/Presentation/screens/venues/widgets/venues_container.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/venues/widgets/venues_list.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/businesslayout_screen.dart';
 import 'package:statboard_flutter_app/shared/widgets/search_bar.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
@@ -16,9 +16,7 @@ class VenuesScreen extends StatelessWidget {
     return BusinessLayout(
       text: 'Venues',
       currentTab: 0,
-      body: const SingleChildScrollView(
-        child: Body(),
-      ),
+      body: Body(),
     );
   }
 }
