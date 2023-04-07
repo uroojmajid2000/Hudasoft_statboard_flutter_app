@@ -148,7 +148,7 @@ class _BodyState extends State<Body> {
               ),
             ],
           ),
-          const SizedBox(height: 55),
+          const SizedBox(height: 110),
           Button(
               child: Text('Let’s Explore'),
               onPressed: () {

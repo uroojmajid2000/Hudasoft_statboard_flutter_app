@@ -132,12 +132,11 @@ class _BodyState extends State<Body> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14),
-          child: Button(child: Text('Buy Subscription'), onPressed: (
-
-          ) {
-Navigate.to(context, PayingScreen.id);
-
-          }),
+          child: Button(
+              child: Text('Buy Subscription'),
+              onPressed: () {
+                Navigate.to(context, PayingScreen.id);
+              }),
         )
       ],
     );

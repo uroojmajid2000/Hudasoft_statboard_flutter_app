@@ -1,4 +1,4 @@
-part of '../editstatkeepers_screen.dart';
+part of '../addbranch_screen.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -12,8 +12,6 @@ class _BodyState extends State<Body> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: SafeArea(
@@ -22,13 +20,40 @@ class _BodyState extends State<Body> {
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Column(
               children: [
-                const SizedBox(height: 24),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xff00B0F0),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        height: 5,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Color(0xffEBEBEB),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        height: 5,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 15),
                 SvgPicture.asset(
-                  'assets/logos/statkeeperslogo.svg',
+                  'assets/icons/homeblue.svg',
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  "Edit Statskeepers Account",
+                  "Branch Details",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
@@ -39,7 +64,7 @@ class _BodyState extends State<Body> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  "Edit the details of an Statskeepers",
+                  "Please enter the branch details",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xff454545),
@@ -53,17 +78,32 @@ class _BodyState extends State<Body> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     MyText.labelText(
+                      "Branch Name",
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 13),
+                MyTextFieldTeam(
+                  // controller: _name,
+                  hintText: 'California Gym',
+                  onChange: (value) {},
+                ),
+                const SizedBox(height: 13),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    MyText.labelText(
                       "Email Address",
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 13),
                 MyTextFieldTeam(
                   // controller: _name,
-                  hintText: 'elijaholiver@gmail.com',
+                  hintText: 'californiagym@gmail.com',
                   onChange: (value) {},
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 13),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -72,103 +112,78 @@ class _BodyState extends State<Body> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 13),
                 MyTextFieldTeam(
                   // controller: _name,
-                  hintText: '09321312321',
+                  hintText: '095461645',
                   onChange: (value) {},
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 13),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     MyText.labelText(
-                      "Full Name",
+                      "Website",
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 13),
                 MyTextFieldTeam(
                   // controller: _name,
-                  hintText: 'Elijah Oliver',
+                  hintText: 'www.californiagym.com',
                   onChange: (value) {},
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 13),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     MyText.labelText(
-                      "Password",
+                      "Address",
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                MyTextField(
-                  // controller: _passwordController,
-                  hintText: '  password123',
-                  // prefixIcon: 'assets/icons/password_icon.png',
-                  obscureText: true,
+                const SizedBox(height: 13),
+                MyTextFieldTeam(
+                  // controller: _name,
+                  hintText: '12th Street',
                   onChange: (value) {},
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     MyText.labelText(
-                      "Branch",
+                      "Facebook Link",
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                MyDropdown(
-                  items: ['California Stadium', 'other'],
-                  selected: 'California Stadium',
-                  onChange: (String? value) {
-                    print('Selected: $value');
-                  },
+                const SizedBox(height: 13),
+                MyTextFieldTeam(
+                  // controller: _name,
+                  hintText: 'www.facebook.com/californiagym',
+                  onChange: (value) {},
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     MyText.labelText(
-                      "Venue",
+                      "Twitter Link",
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                MyDropdown(
-                  items: ['California Stadium', 'other'],
-                  selected: 'California Stadium',
-                  onChange: (String? value) {
-                    print('Selected: $value');
-                  },
+                const SizedBox(height: 13),
+                MyTextFieldTeam(
+                  // controller: _name,
+                  hintText: 'www.twitter.com/californiagym',
+                  onChange: (value) {},
                 ),
-                const SizedBox(height: 18),
+                const SizedBox(height: 20),
                 Button(
                     child: MyText.buttonText('SAVE'),
                     onPressed: () => {
-                          CustomModalBottomSheet.show(
-                              context: context,
-                              message:
-                                  "Statskeepers account has been \nedited successfully.",
-                              onPressed: () {
-                                Navigate.to(context, StatKeeperScreen.id);
-                              })
-
-                          // Navigate.to(context, StatKeeperScreen.id)
+                         Navigate.to(context, BranchDetailsScreen.id)
                         }),
-                const SizedBox(height: 20),
-                Text(
-                  "Delete Account",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color(0xffeb4335),
-                    fontSize: 17,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
                 const SizedBox(height: 40),
               ],
             ),
