@@ -77,60 +77,100 @@ class TornadoVsStalion extends StatelessWidget {
             ),
           ],
         ),
+        // Column(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   crossAxisAlignment: CrossAxisAlignment.center,
+        //   children: [
+        //     RichText(
+        //       text: TextSpan(
+        //         text: '5 ',
+        //         style: TextStyle(
+        //           color: Color(0xff00A32E),
+        //           fontSize: 20,
+        //           fontFamily: "Montserrat",
+        //           fontWeight: FontWeight.w700,
+        //         ),
+        //         children: const <TextSpan>[
+        //           TextSpan(
+        //             text: ': 2',
+        //             style: TextStyle(
+        //               color: Colors.black,
+        //               fontSize: 20,
+        //               fontFamily: "Montserrat",
+        //               fontWeight: FontWeight.w700,
+        //             ),
+        //           ),
+        //         ],
+        //       ),
+        //     ),
+        //     SizedBox(
+        //       height: 6,
+        //     ),
+        //     Padding(
+        //       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
+        //       child: Container(
+        //           width: 65,
+        //           height: 27,
+        //           decoration: BoxDecoration(
+        //             borderRadius: BorderRadius.circular(20),
+        //             border: Border.all(
+        //               color: Color(0xff00b0f0),
+        //               width: 1,
+        //             ),
+        //             color: Color(0x1900b0f0),
+        //           ),
+        //           child: Center(
+        //             child: Text(
+        //               "45 min",
+        //               textAlign: TextAlign.center,
+        //               style: TextStyle(
+        //                 color: Color(0xff00b0f0),
+        //                 fontSize: 14,
+        //                 fontFamily: "Montserrat",
+        //                 fontWeight: FontWeight.w600,
+        //               ),
+        //             ),
+        //           )),
+        //     )
+        //   ],
+        // ),
         Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            RichText(
-              text: TextSpan(
-                text: '5 ',
-                style: TextStyle(
-                  color: Color(0xff00A32E),
-                  fontSize: 20,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w700,
-                ),
-                children: const <TextSpan>[
-                  TextSpan(
-                    text: ': 2',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ],
+            Text(
+              "5",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w600,
               ),
-            ),
-            SizedBox(
-              height: 6,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
-              child: Container(
-                  width: 65,
-                  height: 27,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: Color(0xff00b0f0),
-                      width: 1,
-                    ),
-                    color: Color(0x1900b0f0),
-                  ),
-                  child: Center(
-                    child: Text(
-                      "45 min",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Color(0xff00b0f0),
-                        fontSize: 14,
-                        fontFamily: "Montserrat",
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  )),
+            )
+          ],
+        ),
+        Column(
+          children: [
+            Text(
+              "-",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 30,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w600,
+              ),
+            )
+          ],
+        ),
+
+        Column(
+          children: [
+            Text(
+              " 2",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 20,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w600,
+              ),
             )
           ],
         ),
