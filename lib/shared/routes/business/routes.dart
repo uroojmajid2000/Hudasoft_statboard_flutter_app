@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/addbranch/addbranch_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/addstatkeepers/addstatkeepers_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/addvenue/addvenue_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/branchdetails/branchdetails_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/editstatkeepers/editstatkeepers_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/paying/paying_screen.dart';
@@ -27,5 +28,6 @@ class BusinessRoutes {
     AddStatKeepersScreen.id: (context) => const AddStatKeepersScreen(),
     AddBranchScreen.id: (context) => const AddBranchScreen(),
     BranchDetailsScreen.id: (context) => const BranchDetailsScreen(),
+    AddVenueScreen.id: (context) => const AddVenueScreen(),
   };
 }
