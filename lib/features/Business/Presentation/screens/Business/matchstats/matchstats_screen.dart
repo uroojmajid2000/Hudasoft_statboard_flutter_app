@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/statsdetails.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/tablelist.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/teamcontainer.dart';
-import '../../../../../shared/routes/navigate.dart';
-import '../../../../../shared/widgets/text.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/lineup_container.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/statsdetails.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/tablelist.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/matchstats/widgets/teamcontainer.dart';
+import 'package:statboard_flutter_app/resources/colors.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
+import 'package:statboard_flutter_app/shared/widgets/text.dart';
+import '../allteams/widgets/filters.dart';
 import '../notification/notification_screen.dart';
 import '../profile/profile_screen.dart';
 
 part 'widgets/body.dart';
 
-class StatsScreen extends StatelessWidget {
-  const StatsScreen({Key? key}) : super(key: key);
+class MatchStatsScreen extends StatelessWidget {
+  const MatchStatsScreen({Key? key}) : super(key: key);
 
-  static String id = "stats_screen";
+  static String id = "matchstats_screen";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -40,7 +42,7 @@ class StatsScreen extends StatelessWidget {
                   radius: 13,
                 ),
               ),
-              SizedBox(width: 5),
+              SizedBox(width: 14),
             ],
           )
         ],
@@ -62,7 +64,8 @@ class StatsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Body(),
+      body:
+          SingleChildScrollView(scrollDirection: Axis.vertical, child: Body()),
     );
     // Layout(
     //   text: 'Stats',

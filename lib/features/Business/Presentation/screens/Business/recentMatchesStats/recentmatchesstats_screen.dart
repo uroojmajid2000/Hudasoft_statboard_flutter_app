@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/statsdetails.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/tablelist.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/teamcontainer.dart';
-import '../../../../../shared/routes/navigate.dart';
-import '../../../../../shared/widgets/text.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 import '../notification/notification_screen.dart';
 import '../profile/profile_screen.dart';
 
 part 'widgets/body.dart';
 
-class StatsScreen extends StatelessWidget {
-  const StatsScreen({Key? key}) : super(key: key);
+class MatchStatsScreen extends StatelessWidget {
+  const MatchStatsScreen({Key? key}) : super(key: key);
 
-  static String id = "stats_screen";
+  static String id = "matchstats_screen";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      // extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -53,7 +50,7 @@ class StatsScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Stats",
+          "Match Stats",
           style: TextStyle(
             color: Colors.black,
             fontSize: 25,

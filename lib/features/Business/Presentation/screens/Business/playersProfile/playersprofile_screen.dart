@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/statsdetails.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/tablelist.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/teamcontainer.dart';
-import '../../../../../shared/routes/navigate.dart';
-import '../../../../../shared/widgets/text.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
+import 'package:statboard_flutter_app/shared/widgets/button.dart';
+import 'package:statboard_flutter_app/shared/widgets/text.dart';
+
+import '../allteams/widgets/filters.dart';
+import '../gallery/widgets/gallery_grid.dart';
+import '../imageDetails/imagedetails.dart';
 import '../notification/notification_screen.dart';
 import '../profile/profile_screen.dart';
+import '../profile/widgets/recentmatches_profilelist.dart';
 
 part 'widgets/body.dart';
 
-class StatsScreen extends StatelessWidget {
-  const StatsScreen({Key? key}) : super(key: key);
+class PlayersProfileScreen extends StatelessWidget {
+  const PlayersProfileScreen({Key? key}) : super(key: key);
 
-  static String id = "stats_screen";
+  static String id = "playersprofile_screen";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -40,7 +42,6 @@ class StatsScreen extends StatelessWidget {
                   radius: 13,
                 ),
               ),
-              SizedBox(width: 5),
             ],
           )
         ],
@@ -53,7 +54,7 @@ class StatsScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Stats",
+          "Teams",
           style: TextStyle(
             color: Colors.black,
             fontSize: 25,
@@ -64,15 +65,5 @@ class StatsScreen extends StatelessWidget {
       ),
       body: Body(),
     );
-    // Layout(
-    //   text: 'Stats',
-    //   currentTab: 3,
-    //   body:
-    //   //  const SingleChildScrollView(
-    //   //   scrollDirection: Axis.vertical,
-    //   //   child:
-    //     Body(),
-    //   // ),
-    // );
   }
 }

@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/statsdetails.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/tablelist.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/widgets/teamcontainer.dart';
-import '../../../../../shared/routes/navigate.dart';
-import '../../../../../shared/widgets/text.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/recentvenues/widgets/eventsfilters.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/recentvenues/widgets/matchesview.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/recentvenues/widgets/tournamentsview.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
+import 'package:statboard_flutter_app/shared/widgets/search_bar.dart';
+
 import '../notification/notification_screen.dart';
 import '../profile/profile_screen.dart';
 
 part 'widgets/body.dart';
 
-class StatsScreen extends StatelessWidget {
-  const StatsScreen({Key? key}) : super(key: key);
+class RecentVenuesScreen extends StatelessWidget {
+  const RecentVenuesScreen({Key? key}) : super(key: key);
 
-  static String id = "stats_screen";
+  static String id = "recentvenues_screen";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      // extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -53,7 +52,7 @@ class StatsScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Stats",
+          'Recent Venues',
           style: TextStyle(
             color: Colors.black,
             fontSize: 25,
@@ -73,6 +72,14 @@ class StatsScreen extends StatelessWidget {
     //   //   child:
     //     Body(),
     //   // ),
+    // );
+
+    // Layout(
+    //   currentTab: 1,
+    //   text: 'Recent Venues',
+    //   body: const SingleChildScrollView(
+    //     child: Body(),
+    //   ),
     // );
   }
 }

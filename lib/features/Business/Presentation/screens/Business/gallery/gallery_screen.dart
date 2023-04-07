@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/gallery/widgets/gallery_grid.dart';
-import '../../../../../resources/colors.dart';
-import '../../../../../shared/layout/layout_screen.dart';
-import '../../../../../shared/routes/navigate.dart';
-import '../../../../../shared/widgets/search_bar.dart';
-import '../../../../../shared/widgets/text.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/Business/gallery/widgets/gallery_grid.dart';
+import 'package:statboard_flutter_app/resources/colors.dart';
+import 'package:statboard_flutter_app/shared/businesslayout/businesslayout_screen.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
+import 'package:statboard_flutter_app/shared/widgets/search_bar.dart';
+import 'package:statboard_flutter_app/shared/widgets/text.dart';
+
 import '../imageDetails/imagedetails.dart';
 import '../uploadmedia/upload_media.dart';
 
@@ -17,7 +18,7 @@ class GalleryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Layout(
+    return BusinessLayout(
       text: 'Gallery',
       currentTab: 4,
       body:
