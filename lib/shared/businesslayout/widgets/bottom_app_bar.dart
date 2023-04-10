@@ -1,10 +1,10 @@
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/statkeepers/statkeepers_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/venues/venues_screen.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/events/events_screen.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/gallery/gallery_screen.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/widgets/navigation_button.dart';
 import 'package:flutter/material.dart';
-import '../../../features/Business/presentation/screens/Business/Teams/teams_screen.dart';
-import '../../../features/Business/presentation/screens/Business/events/events_screen.dart';
-import '../../../features/Business/presentation/screens/Business/gallery/gallery_screen.dart';
+import '../../../features/Players/presentation/screens/teams/teams_screen.dart';
 import '../../routes/navigate.dart';
 
 class BuildBottomAppBar extends StatefulWidget {

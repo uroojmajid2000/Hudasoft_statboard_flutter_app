@@ -18,10 +18,8 @@ import '../../../features/Players/presentation/screens/overview/overview_screen.
 import '../../../features/Players/presentation/screens/permissions/permissions_screen.dart';
 import '../../../features/Players/presentation/screens/playersProfile/playersprofile_screen.dart';
 import '../../../features/Players/presentation/screens/profile/profile_screen.dart';
-
 import '../../../features/Players/presentation/screens/profiledetails/profiledetails_screen.dart';
 import '../../../features/Players/presentation/screens/recentvenues/recentvenues_screen.dart';
-
 import '../../../features/Players/presentation/screens/requestjoinin_tournament/requesttojoin_tournament.dart';
 import '../../../features/Players/presentation/screens/security/security_screen.dart';
 import '../../../features/Players/presentation/screens/securitypassword/securitypassword_screen.dart';
