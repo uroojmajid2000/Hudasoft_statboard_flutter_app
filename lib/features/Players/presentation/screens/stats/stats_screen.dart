@@ -18,7 +18,6 @@ class StatsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -64,15 +63,6 @@ class StatsScreen extends StatelessWidget {
       ),
       body: Body(),
     );
-    // Layout(
-    //   text: 'Stats',
-    //   currentTab: 3,
-    //   body:
-    //   //  const SingleChildScrollView(
-    //   //   scrollDirection: Axis.vertical,
-    //   //   child:
-    //     Body(),
-    //   // ),
-    // );
+
   }
 }
