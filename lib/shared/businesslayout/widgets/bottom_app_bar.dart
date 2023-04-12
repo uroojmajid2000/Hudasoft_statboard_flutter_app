@@ -1,3 +1,4 @@
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/bevents/bevents_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/bgallery/bgallery_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/bteams/bteams_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/statkeepers/statkeepers_screen.dart';
@@ -45,7 +46,7 @@ class _BuildBottomAppBarState extends State<BuildBottomAppBar> {
             currentTab: widget.currentTab,
           ),
           NavigationButton(
-            onPressed: () => Navigate.to(context, EventsScreen.id),
+            onPressed: () => Navigate.to(context, BEventsScreen.id),
             icon: 'assets/icons/events.svg',
             text: 'Events',
             tab: 2,

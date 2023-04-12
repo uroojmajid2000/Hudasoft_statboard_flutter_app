@@ -32,43 +32,47 @@ import '../../../features/Players/presentation/screens/viewallTournament/viewall
 
 class PlayersRoutes {
   static Map<String, Widget Function(BuildContext)> routes = {
+    //overview
     OverviewScreen.id: (context) => const OverviewScreen(),
-    EventsScreen.id: (context) => const EventsScreen(),
+    ViewallTornamentScreen.id: (context) => const ViewallTornamentScreen(),
+    TornamentScreen.id: (context) => const TornamentScreen(),
     RecentVenuesScreen.id: (context) => const RecentVenuesScreen(),
+    MatchStatsScreen.id: (context) => const MatchStatsScreen(),
 
     //Teams
-
     TeamsScreen.id: (context) => const TeamsScreen(),
     TeamsDetails.id: (context) => const TeamsDetails(),
     AllTeams.id: (context) => const AllTeams(),
     PlayersProfileScreen.id: (context) => const PlayersProfileScreen(),
     AddTeamsScreen.id: (context) => const AddTeamsScreen(),
     EditTeamsScreen.id: (context) => const EditTeamsScreen(),
+
     //GALLERY
     GalleryScreen.id: (context) => const GalleryScreen(),
     UploadMediaScreen.id: (context) => const UploadMediaScreen(),
     UploadMediaDetailsScreen.id: (context) => const UploadMediaDetailsScreen(),
     ImageDetailsScreen.id: (context) => const ImageDetailsScreen(),
 
-    //----
-    NotificationScreen.id: (context) => const NotificationScreen(),
-    ViewallTornamentScreen.id: (context) => const ViewallTornamentScreen(),
-    TornamentScreen.id: (context) => const TornamentScreen(),
-    ProfileScreen.id: (context) => const ProfileScreen(),
+    //events
+    EventsScreen.id: (context) => const EventsScreen(),
+    StatsScreen.id: (context) => const StatsScreen(),
     RequestJoiningTournament.id: (context) => const RequestJoiningTournament(),
     JoinTornamentScreen.id: (context) => const JoinTornamentScreen(),
-    StatsScreen.id: (context) => const StatsScreen(),
-    
-
-    MatchStatsScreen.id: (context) => const MatchStatsScreen(),
     LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),
+
+    //Notification
+    NotificationScreen.id: (context) => const NotificationScreen(),
+
+
+    //profile
+    ProfileScreen.id: (context) => const ProfileScreen(),
     EditProfileScreen.id: (context) => const EditProfileScreen(),
     ProfileDetailsScreen.id: (context) => const ProfileDetailsScreen(),
     SecurityScreen.id: (context) => const SecurityScreen(),
+    SecurityPasswordScreen.id: (context) => const SecurityPasswordScreen(),
     PermissionsScreen.id: (context) => const PermissionsScreen(),
     InterstScreen.id: (context) => const InterstScreen(),
-    NotificationEditProfileScreen.id: (context) =>
-        const NotificationEditProfileScreen(),
-    SecurityPasswordScreen.id: (context) => const SecurityPasswordScreen(),
+    NotificationEditProfileScreen.id: (context) => const NotificationEditProfileScreen(),
+    
   };
 }

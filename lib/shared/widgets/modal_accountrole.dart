@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/subscription/subscription_screen.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/overview_screen.dart';
 import 'package:statboard_flutter_app/shared/widgets/button.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
@@ -68,6 +69,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                     isSelected: _selectedIndex == 0,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 0 : -1);
+                      Navigate.to(context, OverviewScreen.id);
                     },
                   ),
                   CreatAccountContainer(

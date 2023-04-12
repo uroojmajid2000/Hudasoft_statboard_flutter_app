@@ -7,6 +7,7 @@ import 'package:statboard_flutter_app/features/Business/Presentation/screens/add
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/baddteams/baddteams_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/ballteams/ball_teams.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/beditteams/beditteams_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/bevents/bevents_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/bgallery/bgallery_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/bplayersProfile/bplayersprofile_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/branchdetails/branchdetails_screen.dart';
@@ -22,6 +23,7 @@ import 'package:statboard_flutter_app/features/Business/Presentation/screens/ven
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/venueseditprofile/venueseditprofile_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/venuesprofile/venuesprofile_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/welcomebusiness/welcomebusiness_screen.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/stats_screen.dart';
 
 class BusinessRoutes {
   static Map<String, Widget Function(BuildContext)> routes = {
@@ -52,5 +54,13 @@ class BusinessRoutes {
     BPlayersProfileScreen.id: (context) => const BPlayersProfileScreen(),
     BAddTeamsScreen.id: (context) => const BAddTeamsScreen(),
     BEditTeamsScreen.id: (context) => const BEditTeamsScreen(),
+
+    //events 
+
+      BEventsScreen.id: (context) => const BEventsScreen(),
+    StatsScreen.id: (context) => const StatsScreen(),
+    // RequestJoiningTournament.id: (context) => const RequestJoiningTournament(),
+    // JoinTornamentScreen.id: (context) => const JoinTornamentScreen(),
+    // LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),
   };
 }
