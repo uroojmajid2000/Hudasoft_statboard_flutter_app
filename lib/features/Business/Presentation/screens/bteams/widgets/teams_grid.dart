@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/ballteams/ball_teams.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/teams/widgets/teams_container.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 
-import '../../../../../../shared/routes/navigate.dart';
 
 class TeamsList extends StatelessWidget {
   final List<String> teamNames;

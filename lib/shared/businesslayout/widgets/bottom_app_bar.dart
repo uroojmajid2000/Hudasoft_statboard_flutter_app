@@ -1,7 +1,8 @@
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/bgallery/bgallery_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/bteams/bteams_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/statkeepers/statkeepers_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/venues/venues_screen.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/events/events_screen.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/gallery/gallery_screen.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/widgets/navigation_button.dart';
 import 'package:flutter/material.dart';
 import '../../../features/Players/presentation/screens/teams/teams_screen.dart';
@@ -52,7 +53,7 @@ class _BuildBottomAppBarState extends State<BuildBottomAppBar> {
             currentTab: widget.currentTab,
           ),
           NavigationButton(
-            onPressed: () => Navigate.to(context, TeamsScreen.id),
+            onPressed: () => Navigate.to(context, BTeamsScreen.id),
             icon: 'assets/icons/teams.svg',
             text: 'Teams',
             tab: 3,
@@ -60,7 +61,7 @@ class _BuildBottomAppBarState extends State<BuildBottomAppBar> {
             currentTab: widget.currentTab,
           ),
           NavigationButton(
-            onPressed: () => Navigate.to(context, GalleryScreen.id),
+            onPressed: () => Navigate.to(context, BGalleryScreen.id),
             icon: 'assets/icons/gallery.svg',
             text: 'Gallery',
             tab: 4,

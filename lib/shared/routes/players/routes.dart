@@ -35,13 +35,22 @@ class PlayersRoutes {
     OverviewScreen.id: (context) => const OverviewScreen(),
     EventsScreen.id: (context) => const EventsScreen(),
     RecentVenuesScreen.id: (context) => const RecentVenuesScreen(),
+
+    //Teams
+
     TeamsScreen.id: (context) => const TeamsScreen(),
     TeamsDetails.id: (context) => const TeamsDetails(),
     AllTeams.id: (context) => const AllTeams(),
+    PlayersProfileScreen.id: (context) => const PlayersProfileScreen(),
+    AddTeamsScreen.id: (context) => const AddTeamsScreen(),
+    EditTeamsScreen.id: (context) => const EditTeamsScreen(),
+    //GALLERY
     GalleryScreen.id: (context) => const GalleryScreen(),
     UploadMediaScreen.id: (context) => const UploadMediaScreen(),
     UploadMediaDetailsScreen.id: (context) => const UploadMediaDetailsScreen(),
     ImageDetailsScreen.id: (context) => const ImageDetailsScreen(),
+
+    //----
     NotificationScreen.id: (context) => const NotificationScreen(),
     ViewallTornamentScreen.id: (context) => const ViewallTornamentScreen(),
     TornamentScreen.id: (context) => const TornamentScreen(),
@@ -49,11 +58,9 @@ class PlayersRoutes {
     RequestJoiningTournament.id: (context) => const RequestJoiningTournament(),
     JoinTornamentScreen.id: (context) => const JoinTornamentScreen(),
     StatsScreen.id: (context) => const StatsScreen(),
-    AddTeamsScreen.id: (context) => const AddTeamsScreen(),
-    EditTeamsScreen.id: (context) => const EditTeamsScreen(),
-    PlayersProfileScreen.id: (context) => const PlayersProfileScreen(),
+    
+
     MatchStatsScreen.id: (context) => const MatchStatsScreen(),
-    // TeamsProfileScreen.id: (context) => const TeamsProfileScreen(),
     LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),
     EditProfileScreen.id: (context) => const EditProfileScreen(),
     ProfileDetailsScreen.id: (context) => const ProfileDetailsScreen(),
