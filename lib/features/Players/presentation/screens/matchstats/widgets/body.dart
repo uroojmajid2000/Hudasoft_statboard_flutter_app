@@ -139,6 +139,13 @@ class _BodyState extends State<Body> {
                         ],
                         rows: [
                           ...teamsData.map((team) => DataRow(
+                                color: MaterialStateColor.resolveWith((states) {
+                                  // Check if the team.PLAYER equals to "John Doe"
+                                  // If yes, return Colors.red, else return Colors.transparent
+                                  return team.PLAYER == "John Michel"
+                                      ? Color(0xffab8000)
+                                      : Colors.transparent;
+                                }),
                                 cells: [
                                   DataCell(
                                     Container(
@@ -275,6 +282,13 @@ class _BodyState extends State<Body> {
                         ],
                         rows: [
                           ...teamsData.map((team) => DataRow(
+                                color: MaterialStateColor.resolveWith((states) {
+                                  // Check if the team.PLAYER equals to "John Doe"
+                                  // If yes, return Colors.red, else return Colors.transparent
+                                  return team.PLAYER == "John Michel"
+                                      ? Color(0xffab8000)
+                                      : Colors.transparent;
+                                }),
                                 cells: [
                                   DataCell(
                                     Container(
