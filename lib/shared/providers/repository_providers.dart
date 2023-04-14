@@ -4,7 +4,7 @@ import 'package:statboard_flutter_app/shared/providers/user/repository_providers
 
 class RepositoryProviders {
   static List<RepositoryProvider> providers = [
-    ...UserRepositoryProviders.providers,
+    // ...UserRepositoryProviders.providers,
 
   ];
 }

@@ -12,36 +12,36 @@ class _BodyState extends State<Body> {
   final _passwordController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  void _onSuccess() => Navigate.to(context, OverviewScreen.id);
+  // void _onSuccess() => Navigate.to(context, OverviewScreen.id);
 
-  void _onSubmit(VoidCallback onSuccess) async {
-    final form = _formKey.currentState;
+  // void _onSubmit(VoidCallback onSuccess) async {
+  //   final form = _formKey.currentState;
 
-    if (form!.validate()) {
-      FocusManager.instance.primaryFocus?.unfocus();
-      if (_emailController.text != '' && _passwordController.text != '') {
-        await context
-            .read<UserCubit>()
-            .login(_emailController.text, _passwordController.text);
-        if (context.read<UserCubit>().state.status == UserStatus.error) {
-          _emailController.clear();
-          _passwordController.clear();
-          showDialog(
-            context: context,
-            builder: (BuildContext context) {
-              return const Alert(
-                heading: 'Login Failed!',
-                body: 'incorrect username password',
-              );
-            },
-          );
-        } else {
-          onSuccess.call();
-        }
-        form.save();
-      }
-    } else {}
-  }
+  //   if (form!.validate()) {
+  //     FocusManager.instance.primaryFocus?.unfocus();
+  //     if (_emailController.text != '' && _passwordController.text != '') {
+  //       await context
+  //           .read<UserCubit>()
+  //           .login(_emailController.text, _passwordController.text);
+  //       if (context.read<UserCubit>().state.status == UserStatus.error) {
+  //         _emailController.clear();
+  //         _passwordController.clear();
+  //         showDialog(
+  //           context: context,
+  //           builder: (BuildContext context) {
+  //             return const Alert(
+  //               heading: 'Login Failed!',
+  //               body: 'incorrect username password',
+  //             );
+  //           },
+  //         );
+  //       } else {
+  //         onSuccess.call();
+  //       }
+  //       form.save();
+  //     }
+  //   } else {}
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -118,23 +118,23 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 25),
 
-                      Button(
-                        child: context.watch<UserCubit>().state.status ==
-                                UserStatus.loading
-                            ? const CircularProgressIndicator(
-                                color: Colors.white,
-                              )
-                            : const Text('Login',
-                                style: TextStyle(fontSize: 18)),
-                        onPressed: () => _onSubmit(_onSuccess),
-                      ),
-
                       // Button(
-                      //     child: MyText.buttonText('Sign In'),
-                      //     onPressed: () => {
-                      //           Navigate.next(context, OverviewScreen.id),
-                      //         }),
-                      // const SizedBox(height: 20),
+                      //   child: context.watch<UserCubit>().state.status ==
+                      //           UserStatus.loading
+                      //       ? const CircularProgressIndicator(
+                      //           color: Colors.white,
+                      //         )
+                      //       : const Text('Login',
+                      //           style: TextStyle(fontSize: 18)),
+                      //   onPressed: () => _onSubmit(_onSuccess),
+                      // ),
+
+                      Button(
+                          child: MyText.buttonText('Sign In'),
+                          onPressed: () => {
+                                Navigate.next(context, OverviewScreen.id),
+                              }),
+                      const SizedBox(height: 20),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
