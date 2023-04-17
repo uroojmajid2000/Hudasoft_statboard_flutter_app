@@ -1,6 +1,5 @@
 part of '../venues_screen.dart';
 
-
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
 
@@ -25,17 +24,31 @@ class _BodyState extends State<Body> {
               },
               child: _isExpanded
                   ? Center(
-                      child: Text(
-                        'x',
-                        style: TextStyle(color: Colors.white, fontSize: 30),
-                      ),
+                      child: SvgPicture.asset(
+                      'assets/icons/multiplyicon.svg',
+                      width: 20,
+                      height: 20,
+                      // color: Colors.red,
                     )
+
+                      // Text(
+                      //   'x',
+                      //   style: TextStyle(color: Colors.white, fontSize: 30),
+                      // ),
+                      )
                   : Center(
-                      child: Text(
-                        '+',
-                        style: TextStyle(color: Colors.white, fontSize: 40),
+                      child: SvgPicture.asset(
+                      'assets/icons/plusicon.svg',
+                      width: 20,
+                      height: 20,
+                      // color: Colors.red,
+                    )
+
+                      // Text(
+                      //   '+',
+                      //   style: TextStyle(color: Colors.white, fontSize: 40),
+                      // ),
                       ),
-                    ),
 
               // Icon(_isExpanded ? Icons.close : Icons.add),
             ),
@@ -62,10 +75,16 @@ class _BodyState extends State<Body> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        '+',
-                        style: TextStyle(color: Colors.white, fontSize: 24),
+                      SvgPicture.asset(
+                        'assets/icons/plusicon.svg',
+                        width: 14,
+                        height: 14,
+                        // color: Colors.red,
                       ),
+                      // Text(
+                      //   '+',
+                      //   style: TextStyle(color: Colors.white, fontSize: 24),
+                      // ),
                       Text(
                         "Add Branch",
                         style: TextStyle(
@@ -86,7 +105,6 @@ class _BodyState extends State<Body> {
             ),
           ),
 
-    
           Visibility(
             visible: _isExpanded,
             child: Positioned(
@@ -108,10 +126,16 @@ class _BodyState extends State<Body> {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        '+',
-                        style: TextStyle(color: Colors.white, fontSize: 24),
+                      SvgPicture.asset(
+                        'assets/icons/plusicon.svg',
+                        width: 14,
+                        height: 14,
+                        // color: Colors.red,
                       ),
+                      // Text(
+                      //   '+',
+                      //   style: TextStyle(color: Colors.white, fontSize: 24),
+                      // ),
                       Text(
                         "Add Venue",
                         style: TextStyle(

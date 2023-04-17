@@ -15,9 +15,10 @@ class _BodyState extends State<Body> {
     Size size = MediaQuery.of(context).size;
 
     return SingleChildScrollView(
+      scrollDirection: Axis.vertical,
       child: SafeArea(
         child: SizedBox(
-          height: size.height * 0.8,
+          // height: size.height * 0.8,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Column(

@@ -160,7 +160,7 @@ class _BodyState extends State<Body> {
                         }),
                 const SizedBox(height: 20),
                 Text(
-                  "Delete Account",
+                  "Deactivate Account",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xffeb4335),

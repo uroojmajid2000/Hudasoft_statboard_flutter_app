@@ -36,11 +36,11 @@ class _BodyState extends State<Body> {
                   ),
                   const SizedBox(height: 25),
                   Text(
-                    "Welcome to Statboard",
+                    "Welcome to The Statboard",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 25,
+                      fontSize: 20,
                       fontFamily: "Montserrat",
                       fontWeight: FontWeight.w700,
                     ),
@@ -76,7 +76,7 @@ class _BodyState extends State<Body> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 14),
                     child: Button(
-                        child: MyText.buttonText('Continue'),
+                        child: MyText.buttonText('Let\'s Explore'),
                         onPressed: () => {
                               Navigate.next(context, VenuesScreen.id),
                             }),

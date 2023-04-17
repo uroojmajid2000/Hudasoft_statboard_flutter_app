@@ -19,10 +19,16 @@ class _BodyState extends State<Body> {
           //   child:
           FloatingActionButton(
         backgroundColor: kPrimaryColor,
-        child: Text(
-          '+',
-          style: TextStyle(color: Colors.white, fontSize: 45),
+        child: SvgPicture.asset(
+          'assets/icons/plusicon.svg',
+          width: 20,
+          height: 20,
+          // color: Colors.red,
         ),
+        // Text(
+        //   '+',
+        //   style: TextStyle(color: Colors.white, fontSize: 45),
+        // ),
         onPressed: () {
           Navigate.to(context, BUploadMediaScreen.id);
         },

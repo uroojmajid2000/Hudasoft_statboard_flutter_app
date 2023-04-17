@@ -100,7 +100,7 @@ class _BodyState extends State<Body> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     MyText.labelText(
-                      "Activities",
+                      "Activity",
                     ),
                   ],
                 ),
