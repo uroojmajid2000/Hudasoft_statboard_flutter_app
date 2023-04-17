@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/BimageDetails/bimagedetails.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/bgallery/bgallery_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/venuesedit/venuesedit_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/venueseditprofile/venueseditprofile_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/venuesprofile/widgets/venues_profilelist.dart';

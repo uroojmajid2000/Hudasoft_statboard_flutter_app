@@ -9,6 +9,13 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  int _selectedIndex = -1;
+
+  void _handleSelect(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,15 +48,33 @@ class _BodyState extends State<Body> {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              PaymentOptions(text: 'assets/icons/paywithicon.png'),
+              PaymentOptions(
+                text: 'assets/icons/paywithicon.png',
+                isSelected: _selectedIndex == 0,
+                onSelect: (isSelected) {
+                  _handleSelect(isSelected ? 0 : -1);
+                },
+              ),
               SizedBox(
                 width: 12,
               ),
-              PaymentOptions(text: 'assets/icons/appleicon.png'),
+              PaymentOptions(
+                text: 'assets/icons/appleicon.png',
+                isSelected: _selectedIndex == 1,
+                onSelect: (isSelected) {
+                  _handleSelect(isSelected ? 1 : -1);
+                },
+              ),
               SizedBox(
                 width: 12,
               ),
-              PaymentOptions(text: 'assets/icons/p.png'),
+              PaymentOptions(
+                text: 'assets/icons/p.png',
+                isSelected: _selectedIndex == 2,
+                onSelect: (isSelected) {
+                  _handleSelect(isSelected ? 2 : -1);
+                },
+              ),
             ],
           ),
           SizedBox(

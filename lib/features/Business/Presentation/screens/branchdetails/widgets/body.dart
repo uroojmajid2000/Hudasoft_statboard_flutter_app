@@ -107,6 +107,7 @@ class _BodyState extends State<Body> {
                     print('Selected: $value');
                   },
                 ),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [

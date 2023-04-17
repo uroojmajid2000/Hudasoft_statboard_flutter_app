@@ -10,14 +10,44 @@ class VenuesProfilelist extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       itemCount: 3,
+      //   itemBuilder: (BuildContext context, int index) {
+      //     return Column(
+      //       children: [
+      //         // RecentMatchesprofile(),
+      //         VenuesProfileContainer(
+      //           text: "Venue 2",
+      //         ),
+      //         SizedBox(height: 15),
+      //       ],
+      //     );
+      //   },
+      // );
+
       itemBuilder: (BuildContext context, int index) {
-        return Column(
-          children: [
-            // RecentMatchesprofile(),
-            VenuesProfileContainer(),
-            SizedBox(height: 15),
-          ],
-        );
+        if (index == 0) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: VenuesProfileContainer(
+              text: "Venue 1",
+            ),
+          );
+        } else if (index == 1) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: VenuesProfileContainer(
+              text: "Venue 2",
+            ),
+          );
+        } else if (index == 2) {
+          return Padding(
+            padding: const EdgeInsets.only(bottom: 15),
+            child: VenuesProfileContainer(
+              text: "Venue 3",
+            ),
+          );
+        } else {
+          return Container(); // or throw an error if index > 1
+        }
       },
     );
   }

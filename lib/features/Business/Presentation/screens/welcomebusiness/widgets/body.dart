@@ -72,7 +72,7 @@ class _BodyState extends State<Body> {
                           'Invite your friends to Team and play Matches with them '),
                   SizedBox(height: 10),
                   Content(text: 'Get contacted and hired by the hunters'),
-                  SizedBox(height: 170),
+                  SizedBox(height: 160),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 14),
                     child: Button(

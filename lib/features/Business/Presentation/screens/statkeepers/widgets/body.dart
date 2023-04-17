@@ -44,21 +44,41 @@ class _BodyState extends State<Body> {
                     const SizedBox(height: 15),
                     Row(
                       children: [
-                        Expanded(child: StatkeepersProfileContainer()),
+                        Expanded(
+                            child: StatkeepersProfileContainer(
+                          avatar: 'assets/images/avatarimage.png',
+                          name: "Elijah Oliver",
+                          email: "elijaholiver@gmail.com",
+                        )),
                         SizedBox(
                           width: 18,
                         ),
-                        Expanded(child: StatkeepersProfileContainer()),
+                        Expanded(
+                            child: StatkeepersProfileContainer(
+                          avatar: 'assets/images/michel.png',
+                          name: "James Karl",
+                          email: "jameskarl@gmail.com",
+                        )),
                       ],
                     ),
                     const SizedBox(height: 40),
                     Row(
                       children: [
-                        Expanded(child: StatkeepersProfileContainer()),
+                        Expanded(
+                            child: StatkeepersProfileContainer(
+                          avatar: 'assets/images/michel.png',
+                          name: "John Michel",
+                          email: "johnmichel@gmail.com",
+                        )),
                         SizedBox(
                           width: 18,
                         ),
-                        Expanded(child: StatkeepersProfileContainer()),
+                        Expanded(
+                            child: StatkeepersProfileContainer(
+                          avatar: 'assets/images/robert.png',
+                          name: "Robert John",
+                          email: "robertjohn@gmail.com",
+                        )),
                       ],
                     ),
                     const SizedBox(height: 40),

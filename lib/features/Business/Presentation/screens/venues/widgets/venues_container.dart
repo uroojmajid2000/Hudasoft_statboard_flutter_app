@@ -6,7 +6,8 @@ import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 import '../../../../../../shared/widgets/text.dart';
 
 class VenuesContainer extends StatelessWidget {
-  const VenuesContainer({Key? key}) : super(key: key);
+  final String text;
+  const VenuesContainer({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +76,8 @@ class VenuesContainer extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "California Stadium",
+                        // "California Stadium",
+                        text,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: 13,

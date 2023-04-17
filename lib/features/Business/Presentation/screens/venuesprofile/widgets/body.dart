@@ -159,7 +159,7 @@ class _BodyState extends State<Body> {
                 children: [
                   GestureDetector(
                       onTap: () {
-                        Navigate.to(context, ImageDetailsScreen.id);
+                        Navigate.to(context, BImageDetailsScreen.id);
                       },
                       child: GalleryGrid()),
                 ],

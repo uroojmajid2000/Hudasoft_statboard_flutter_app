@@ -4,7 +4,10 @@ import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 class StatkeepersProfileContainer extends StatelessWidget {
-  const StatkeepersProfileContainer({Key? key}) : super(key: key);
+  final String avatar;
+  final String name;
+  final String email;
+  const StatkeepersProfileContainer({Key? key, required this.avatar, required this.name, required this.email}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +39,7 @@ class StatkeepersProfileContainer extends StatelessWidget {
                     ),
                     child: Image.asset(
                       'assets/images/cover.png',
+             
 
                       fit: BoxFit.cover,
                       height: 80, // specify height
@@ -48,7 +52,8 @@ class StatkeepersProfileContainer extends StatelessWidget {
                     child: Center(
                       child: CircleAvatar(
                         backgroundImage: AssetImage(
-                          'assets/images/avatarimage.png',
+                          // 'assets/images/avatarimage.png',
+                               avatar,
                         ),
                         radius: 30,
                       ),
@@ -61,7 +66,8 @@ class StatkeepersProfileContainer extends StatelessWidget {
               height: 3,
             ),
             MyText.simpleblackText(
-              "Elijah Oliver",
+              // "Elijah Oliver",
+              name,
             ),
             SizedBox(
               height: 5,
@@ -121,7 +127,8 @@ class StatkeepersProfileContainer extends StatelessWidget {
               height: 5,
             ),
             Text(
-              "elijaholiver@gmail.com",
+              // "elijaholiver@gmail.com",
+              email,
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 11,

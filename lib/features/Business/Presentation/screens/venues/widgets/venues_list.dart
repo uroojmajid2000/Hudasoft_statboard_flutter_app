@@ -12,10 +12,19 @@ class VenueListView extends StatelessWidget {
         scrollDirection: Axis.vertical,
         itemCount: 2,
         itemBuilder: (BuildContext context, int index) {
-          return Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: const VenuesContainer(),
-          );
+          if (index == 0) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: const VenuesContainer(text: "California Stadium"),
+            );
+          } else if (index == 1) {
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: const VenuesContainer(text: "New York Arena"),
+            );
+          } else {
+            return Container(); // or throw an error if index > 1
+          }
         },
       ),
     );

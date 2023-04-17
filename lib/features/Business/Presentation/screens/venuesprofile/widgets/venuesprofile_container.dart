@@ -7,7 +7,8 @@ import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 import '../../../../../../shared/widgets/text.dart';
 
 class VenuesProfileContainer extends StatelessWidget {
-  const VenuesProfileContainer({Key? key}) : super(key: key);
+  final String text;
+  const VenuesProfileContainer({Key? key, required this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,8 @@ class VenuesProfileContainer extends StatelessWidget {
                             width: 5,
                           ),
                           Text(
-                            "Venue 1",
+                            // "Venue 1",
+                            text,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 13,
