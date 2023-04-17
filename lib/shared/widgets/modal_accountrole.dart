@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/subscription/subscription_screen.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/overview_screen.dart';
+import 'package:statboard_flutter_app/features/user/presentation/screens/signup/signup_screen.dart';
 import 'package:statboard_flutter_app/shared/widgets/button.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
@@ -69,7 +70,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                     isSelected: _selectedIndex == 0,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 0 : -1);
-                      Navigate.to(context, OverviewScreen.id);
+                      // Navigate.to(context, OverviewScreen.id);
                     },
                   ),
                   CreatAccountContainer(
@@ -78,11 +79,11 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                     isSelected: _selectedIndex == 1,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 1 : -1);
-                      Navigate.to(context, SubscriptionScreen.id);
+                      // Navigate.to(context, SubscriptionScreen.id);
                     },
                   ),
                   CreatAccountContainer(
-                    text: 'EVENT ORGANIZER',
+                    text: 'SCOUT',
                     contentText: "You want to organize an event",
                     isSelected: _selectedIndex == 2,
                     onSelect: (isSelected) {
@@ -92,9 +93,27 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                 ],
               ),
             ),
+            // Button(
+            //   child: MyText.buttonText('Continue'),
+            //   onPressed: widget.onPressed,
+            // ),
+
             Button(
               child: MyText.buttonText('Continue'),
-              onPressed: widget.onPressed,
+              onPressed: () {
+                if (_selectedIndex == 0) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignupScreen()),
+                  );
+                } else if (_selectedIndex == 1) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => SubscriptionScreen()),
+                  );
+                }
+              },
             ),
             SizedBox(
               height: 12,

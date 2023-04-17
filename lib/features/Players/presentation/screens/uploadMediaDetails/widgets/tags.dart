@@ -14,24 +14,27 @@ class Tags extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
         color: Color(0xff00b0f0),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Text(
-            text,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 12,
-              fontFamily: "Montserrat",
-              fontWeight: FontWeight.w600,
+      child: Padding(
+        padding: const EdgeInsets.all(7.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                fontFamily: "Montserrat",
+                fontWeight: FontWeight.w600,
+              ),
             ),
-          ),
-          SizedBox(
-            width: 3,
-          ),
-          SvgPicture.asset('assets/icons/clear_icon.svg'),
-        ],
+            SizedBox(
+              width: 3,
+            ),
+            SvgPicture.asset('assets/icons/clear_icon.svg'),
+          ],
+        ),
       ),
     );
   }

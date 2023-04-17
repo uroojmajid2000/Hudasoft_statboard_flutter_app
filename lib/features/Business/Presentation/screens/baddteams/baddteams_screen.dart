@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Business/presentation/screens/baddteams/widgets/cancelinvite.dart';
 import 'package:statboard_flutter_app/features/Business/presentation/screens/baddteams/widgets/invitefriends.dart';
 

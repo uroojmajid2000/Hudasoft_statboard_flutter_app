@@ -19,19 +19,15 @@ class CreatAccountContainer extends StatefulWidget {
 }
 
 class _CreatAccountContainerState extends State<CreatAccountContainer> {
-  bool _isSelected = false;
+
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: () {
-      //   setState(() {
-      //     _isSelected = !_isSelected;
-      //   });
-      // },
+    
       onTap: () {
-        // widget.onSelect(!widget.isSelected);
         widget.onSelect(true);
+        
       },
       child: Column(
         children: [

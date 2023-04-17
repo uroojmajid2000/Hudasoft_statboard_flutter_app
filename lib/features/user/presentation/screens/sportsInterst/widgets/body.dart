@@ -79,7 +79,7 @@ class _BodyState extends State<Body> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -94,7 +94,7 @@ class _BodyState extends State<Body> {
                   hintText: 'Enter ZIP Code',
                   onChange: (value) {},
                 ),
-                const SizedBox(height: 120),
+                const SizedBox(height: 125),
                 Button(
                     child: MyText.buttonText('Continue'),
                     onPressed: () => {
