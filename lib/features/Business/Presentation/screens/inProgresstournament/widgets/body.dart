@@ -12,7 +12,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 6, vsync: this);
+    _tabController = TabController(length: 7, vsync: this);
   }
 
   @override
@@ -106,7 +106,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            "Leave Tournament",
+                            "Edit Tournament",
                             style: TextStyle(
                               color: Color(0xff00b0f0),
                               fontSize: 14,
@@ -160,6 +160,9 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                       text: 'Play Off',
                     ),
                     Tab(
+                      text: 'Statkeepers',
+                    ),
+                    Tab(
                       text: 'Prize',
                     ),
                     Tab(
@@ -178,6 +181,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                   Teams(),
                   Seasons(),
                   PlayOff(),
+                  Statkeepers(),
                   Prize(),
                   Results()
                 ],
