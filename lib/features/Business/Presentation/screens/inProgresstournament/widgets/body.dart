@@ -1,4 +1,4 @@
-part of '../jointournament_screen.dart';
+part of '../inprogresstournament_screen.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -92,7 +92,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(
-                          color: Color(0xffef4c53),
+                          color: Color(0xff00b0f0),
                           width: 2,
                         ),
                       ),
@@ -106,9 +106,9 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            "Edit Tournament",
+                            "Leave Tournament",
                             style: TextStyle(
-                              color: Color(0xffef4c53),
+                              color: Color(0xff00b0f0),
                               fontSize: 14,
                               fontFamily: "Montserrat",
                               fontWeight: FontWeight.w600,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/inProgresstournament/inprogresstournament_screen.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 import '../../../../../../shared/routes/navigate.dart';
-
 
 class JoiningTournaments extends StatelessWidget {
   const JoiningTournaments({super.key});
@@ -11,16 +11,16 @@ class JoiningTournaments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: () => Navigate.to(context, JoinTornamentScreen.id),
+      onTap: () => Navigate.to(context, InProgressTornamentScreen.id),
       child: Container(
         width: 329.33,
         height: 157.75,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            color: Color(0xff00b0f0),
-            width: 2,
-          ),
+          // border: Border.all(
+          //   color: Color(0xff00b0f0),
+          //   width: 2,
+          // ),
           boxShadow: [
             BoxShadow(
               color: Color(0x19000000),
@@ -138,7 +138,7 @@ class JoiningTournaments extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Joined",
+                          "In Progress",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Color(0xff00b0f0),

@@ -15,6 +15,7 @@ import 'package:statboard_flutter_app/features/Business/Presentation/screens/bte
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/bteamsdetails/bteams_details.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/buploadmedia/bupload_media.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/editstatkeepers/editstatkeepers_screen.dart';
+import 'package:statboard_flutter_app/features/Business/Presentation/screens/inProgresstournament/inprogresstournament_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/paying/paying_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/statkeepers/statkeepers_screen.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/subscription/subscription_screen.dart';
@@ -55,10 +56,12 @@ class BusinessRoutes {
     BAddTeamsScreen.id: (context) => const BAddTeamsScreen(),
     BEditTeamsScreen.id: (context) => const BEditTeamsScreen(),
 
-    //events 
+    //events
 
-      BEventsScreen.id: (context) => const BEventsScreen(),
+    BEventsScreen.id: (context) => const BEventsScreen(),
     StatsScreen.id: (context) => const StatsScreen(),
+    InProgressTornamentScreen.id: (context) =>
+        const InProgressTornamentScreen(),
     // RequestJoiningTournament.id: (context) => const RequestJoiningTournament(),
     // JoinTornamentScreen.id: (context) => const JoinTornamentScreen(),
     // LeaveTornamentScreen.id: (context) => const LeaveTornamentScreen(),

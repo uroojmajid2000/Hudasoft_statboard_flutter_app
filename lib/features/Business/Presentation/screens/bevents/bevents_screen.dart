@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/eventsfilters.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/matchesview.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/tournamentsview.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/bevents/widgets/eventsfilters.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/bevents/widgets/matchesview.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/bevents/widgets/tournamentsview.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/businesslayout_screen.dart';
 import 'package:statboard_flutter_app/shared/widgets/search_bar.dart';
 

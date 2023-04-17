@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
+import '../../../../../Players/presentation/screens/overview/widgets/upcommingContainer.dart';
 
 class RequestingTournaments extends StatelessWidget {
   const RequestingTournaments({super.key});
@@ -9,17 +10,16 @@ class RequestingTournaments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-    
       // onTap: () => Navigate.to(context, LeaveTornamentScreen.id),
       child: Container(
         width: 329.33,
         height: 157.75,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(
-            color: Color(0xff00b0f0),
-            width: 2,
-          ),
+          // border: Border.all(
+          //   color: Color(0xff00b0f0),
+          //   width: 2,
+          // ),
           boxShadow: [
             BoxShadow(
               color: Color(0x19000000),
@@ -122,33 +122,8 @@ class RequestingTournaments extends StatelessWidget {
                           ]),
                     ),
                   ),
-                  Container(
-                    width: 100,
-                    height: 30,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Color(0xff03c038),
-                        width: 1,
-                      ),
-                      color: Color(0x1904c038),
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Text(
-                          "Requested Join",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Color(0xff03c038),
-                            fontSize: 10,
-                            fontFamily: "Montserrat",
-                            fontWeight: FontWeight.w600,
-                          ),
-                        )
-                      ],
-                    ),
-                  )
+       
+                  UpcommingContainer(),
                 ],
               ),
             ],

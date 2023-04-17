@@ -15,11 +15,11 @@ class TournamentsView extends StatelessWidget {
           SizedBox(
             height: 25,
           ),
-          SizedBox(width: double.infinity, child: RequestingTournaments()),
+          SizedBox(width: double.infinity, child: JoiningTournaments()),
           SizedBox(
             height: 20,
           ),
-          SizedBox(width: double.infinity, child: JoiningTournaments()),
+          SizedBox(width: double.infinity, child: RequestingTournaments()),
         ],
       ),
     );
