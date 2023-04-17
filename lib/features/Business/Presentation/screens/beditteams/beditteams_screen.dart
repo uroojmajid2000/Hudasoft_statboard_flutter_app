@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/editteams/widgets/invitefriends.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/teamsdetails/widgets/text_field_team.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/beditteams/widgets/invitefriends.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/bteamsdetails/widgets/text_field_team.dart';
 import '../../../../../shared/widgets/dropdown.dart';
 import '../../../../../shared/widgets/search_bar.dart';
 import '../../../../../shared/widgets/text.dart';

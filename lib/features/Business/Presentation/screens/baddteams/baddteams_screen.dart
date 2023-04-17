@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/addteams/widgets/cancelinvite.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/addteams/widgets/invitefriends.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/gallery/widgets/gallery_grid.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/imageDetails/widgets/tags.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/notification/widgets/notification_container.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/notification/widgets/notification_event.dart';
-import '../../../../../resources/colors.dart';
-import '../../../../../shared/layout/layout_screen.dart';
-import '../../../../../shared/routes/navigate.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/baddteams/widgets/cancelinvite.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/baddteams/widgets/invitefriends.dart';
+
 import '../../../../../shared/widgets/search_bar.dart';
 import '../../../../../shared/widgets/text.dart';
 

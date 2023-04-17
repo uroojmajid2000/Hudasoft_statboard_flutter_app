@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/bteamsdetails/bteams_details.dart';
-import 'package:statboard_flutter_app/features/Players/presentation/screens/teams/widgets/teams_grid.dart';
+import 'package:statboard_flutter_app/features/Business/presentation/screens/bteams/widgets/teams_grid.dart';
 import 'package:statboard_flutter_app/shared/businesslayout/businesslayout_screen.dart';
 import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 import '../../../../../resources/colors.dart';
