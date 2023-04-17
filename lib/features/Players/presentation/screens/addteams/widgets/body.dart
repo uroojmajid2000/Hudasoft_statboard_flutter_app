@@ -31,15 +31,20 @@ class _BodyState extends State<Body> {
               ),
             ),
             SizedBox(height: 15),
-            CancelFiends(),
+            CancelFiends(
+              text: "Robert John",
+              img: 'assets/images/circleavatar_image.png',
+            ),
             SizedBox(height: 15),
-            CancelFiends(),
+            CancelFiends(
+              img: 'assets/images/michel.png',
+              text: "John Michel",
+            ),
             SizedBox(height: 15),
-            CancelFiends(),
-            SizedBox(height: 15),
-            CancelFiends(),
-            SizedBox(height: 15),
-            CancelFiends(),
+            CancelFiends(
+              text: "James Karl",
+              img: 'assets/images/robert.png',
+            ),
             const SizedBox(height: 25),
             Align(
               alignment: Alignment.topLeft,
@@ -49,13 +54,13 @@ class _BodyState extends State<Body> {
             ),
             SizedBox(height: 10),
             InviteFiends(
-              text: "James Karl",
+              text: "John Michel",
               img: 'assets/images/robert.png',
             ),
             SizedBox(height: 10),
             InviteFiends(
-              img: 'assets/images/michel.png',
-              text: "James Karl",
+              text: "Robert John",
+              img: 'assets/images/circleavatar_image.png',
             ),
             SizedBox(height: 10),
             InviteFiends(

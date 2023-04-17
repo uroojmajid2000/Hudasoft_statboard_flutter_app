@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/events/widgets/tournamentsview.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/gallery/widgets/gallery_grid.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/imageDetails/widgets/tags.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/notification/widgets/notification_container.dart';

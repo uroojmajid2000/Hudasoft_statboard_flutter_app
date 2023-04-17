@@ -12,7 +12,7 @@ class MatchesContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigate.to(context, MatchStatsScreen.id),
+      onTap: () => Navigate.to(context, StatsScreen.id),
       child: Container(
         width: double.infinity,
         height: 138,
@@ -78,46 +78,36 @@ class TornadoVsStalion extends StatelessWidget {
             ),
           ],
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Text(
-              "5 : 2",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: "Montserrat",
-                fontWeight: FontWeight.w600,
-              ),
+        Container(
+            child: Text(
+          "5",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 20,
+            fontFamily: "Montserrat",
+            fontWeight: FontWeight.w600,
+          ),
+        )),
+        Container(
+            child: Text(
+          "-",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+            fontFamily: "Montserrat",
+            fontWeight: FontWeight.w600,
+          ),
+        )),
+        Container(
+          child: Text(
+            " 2",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 20,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.w600,
             ),
-            SizedBox(
-              height: 5,
-            ),
-            Container(
-                width: 56,
-                height: 25,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(
-                    color: Color(0xff00b0f0),
-                    width: 1,
-                  ),
-                  color: Color(0x1900b0f0),
-                ),
-                child: Center(
-                  child: Text(
-                    "45 min",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xff00b0f0),
-                      fontSize: 14,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ))
-          ],
+          ),
         ),
         Column(
           mainAxisAlignment: MainAxisAlignment.center,

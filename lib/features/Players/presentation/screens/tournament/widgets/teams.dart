@@ -79,6 +79,9 @@ class _TeamsState extends State<Teams> {
             _handleSelect(isSelected ? 5 : -1);
           },
         ),
+        SizedBox(
+          height: 10,
+        )
       ],
     );
   }

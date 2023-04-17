@@ -52,151 +52,90 @@ class TornadoVsStalion extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-                backgroundColor: Color(0xff5642a9),
-                radius: 20,
-                child: Text(
-                  "T",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.w700,
-                  ),
-                )),
-            SizedBox(
-              height: 3,
-            ),
-            MyText.labelText(
-              "Tornado",
-            ),
-          ],
-        ),
-        // Column(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   crossAxisAlignment: CrossAxisAlignment.center,
-        //   children: [
-        //     RichText(
-        //       text: TextSpan(
-        //         text: '5 ',
-        //         style: TextStyle(
-        //           color: Color(0xff00A32E),
-        //           fontSize: 20,
-        //           fontFamily: "Montserrat",
-        //           fontWeight: FontWeight.w700,
-        //         ),
-        //         children: const <TextSpan>[
-        //           TextSpan(
-        //             text: ': 2',
-        //             style: TextStyle(
-        //               color: Colors.black,
-        //               fontSize: 20,
-        //               fontFamily: "Montserrat",
-        //               fontWeight: FontWeight.w700,
-        //             ),
-        //           ),
-        //         ],
-        //       ),
-        //     ),
-        //     SizedBox(
-        //       height: 6,
-        //     ),
-        //     Padding(
-        //       padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 8),
-        //       child: Container(
-        //           width: 65,
-        //           height: 27,
-        //           decoration: BoxDecoration(
-        //             borderRadius: BorderRadius.circular(20),
-        //             border: Border.all(
-        //               color: Color(0xff00b0f0),
-        //               width: 1,
-        //             ),
-        //             color: Color(0x1900b0f0),
-        //           ),
-        //           child: Center(
-        //             child: Text(
-        //               "45 min",
-        //               textAlign: TextAlign.center,
-        //               style: TextStyle(
-        //                 color: Color(0xff00b0f0),
-        //                 fontSize: 14,
-        //                 fontFamily: "Montserrat",
-        //                 fontWeight: FontWeight.w600,
-        //               ),
-        //             ),
-        //           )),
-        //     )
-        //   ],
-        // ),
-        Column(
-          children: [
-            Text(
-              "5",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: "Montserrat",
-                fontWeight: FontWeight.w600,
-              ),
-            )
-          ],
-        ),
-        Column(
-          children: [
-            Text(
-              "-",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 30,
-                fontFamily: "Montserrat",
-                fontWeight: FontWeight.w600,
-              ),
-            )
-          ],
-        ),
+        Container(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
 
-        Column(
-          children: [
-            Text(
-              " 2",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 20,
-                fontFamily: "Montserrat",
-                fontWeight: FontWeight.w600,
+            children: [
+              CircleAvatar(
+                  backgroundColor: Color(0xff5642a9),
+                  radius: 20,
+                  child: Text(
+                    "T",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.w700,
+                    ),
+                  )),
+              SizedBox(
+                height: 3,
               ),
-            )
-          ],
+              MyText.labelText(
+                "Tornado",
+              ),
+            ],
+          ),
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-                backgroundColor: Color(0xffEF4C53),
-                radius: 20,
-                child: Text(
-                  "S",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.w700,
-                  ),
-                )),
-            SizedBox(
-              height: 3,
+        Container(
+            child: Text(
+          "5",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 20,
+            fontFamily: "Montserrat",
+            fontWeight: FontWeight.w600,
+          ),
+        )),
+        Container(
+            child: Text(
+          "-",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 30,
+            fontFamily: "Montserrat",
+            fontWeight: FontWeight.w600,
+          ),
+        )),
+        Container(
+          child: Text(
+            " 2",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 20,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.w600,
             ),
-            MyText.labelText(
-              "Stallion",
-            ),
-          ],
+          ),
+        ),
+        Container(
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+
+            children: [
+              CircleAvatar(
+                  backgroundColor: Color(0xffEF4C53),
+                  radius: 20,
+                  child: Text(
+                    "S",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.w700,
+                    ),
+                  )),
+              SizedBox(
+                height: 3,
+              ),
+              MyText.labelText(
+                "Stallion",
+              ),
+            ],
+          ),
         ),
       ],
     );
@@ -212,6 +151,7 @@ class matchesVs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SvgPicture.asset('assets/images/football.svg'),
         Expanded(

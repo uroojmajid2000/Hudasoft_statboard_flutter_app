@@ -11,6 +11,15 @@ class MyText {
           fontWeight: FontWeight.w600,
         ),
       );
+  static Widget labelTextWhite(String text) => Text(
+        text,
+        style: TextStyle(
+          color: Colors.white,
+         fontSize: 13,
+        fontFamily: "Montserrat",
+        fontWeight: FontWeight.w600,
+        ),
+      );
   //fontsize 16 w600
   static Widget businesssubscription(String text) => Text(
         text,

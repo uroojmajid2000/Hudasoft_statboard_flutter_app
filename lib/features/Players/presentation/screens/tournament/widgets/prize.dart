@@ -40,7 +40,7 @@ class _PrizeState extends State<Prize> {
               grdientcolorOne: Color(0xff964cdd),
               grdientcolorTwo: Color(0xff5702ac)),
           SizedBox(
-            height: 20,
+            height: 100,
           ),
         ],
       ),

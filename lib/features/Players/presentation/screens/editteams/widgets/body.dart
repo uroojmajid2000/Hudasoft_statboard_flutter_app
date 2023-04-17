@@ -67,7 +67,7 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 13),
                       MySearchBar(
-                        hintText: 'Search gallery',
+                        hintText: 'Search',
                         onChange: (value) {},
                         prefixIcon: 'assets/icons/search.png',
                         suffixIcon: 'assets/icons/filter.png',

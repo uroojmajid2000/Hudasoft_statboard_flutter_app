@@ -5,15 +5,20 @@ import '../../tournament/widgets/container_button.dart';
 import 'invitebutton.dart';
 
 class CancelFiends extends StatelessWidget {
+  final String img;
+  final String text;
   const CancelFiends({
     super.key,
+    required this.img,
+    required this.text,
   });
 
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       Image.asset(
-        'assets/images/michel.png',
+        // 'assets/images/michel.png',
+        img,
         width: 40,
         height: 40,
       ),
@@ -21,7 +26,8 @@ class CancelFiends extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: MyText.labelText(
-            "Elijah Oliver",
+            // "Elijah Oliver",
+            text,
           ),
         ),
       ),
