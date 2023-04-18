@@ -52,89 +52,100 @@ class TornadoVsStalion extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      // crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
+          // color: Colors.red,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
 
-            children: [
-              CircleAvatar(
-                  backgroundColor: Color(0xff5642a9),
-                  radius: 20,
-                  child: Text(
-                    "T",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w700,
-                    ),
-                  )),
-              SizedBox(
-                height: 3,
-              ),
-              MyText.labelText(
-                "Tornado",
-              ),
-            ],
+              children: [
+                CircleAvatar(
+                    backgroundColor: Color(0xff5642a9),
+                    radius: 20,
+                    child: Text(
+                      "T",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.w700,
+                      ),
+                    )),
+                SizedBox(
+                  height: 3,
+                ),
+                MyText.labelText(
+                  "Tornado",
+                ),
+              ],
+            ),
           ),
         ),
         Container(
+            // color: Colors.blue,
             child: Text(
           "5",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20,
             fontFamily: "Montserrat",
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
           ),
         )),
         Container(
+            // color: Colors.green,
             child: Text(
           "-",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 30,
             fontFamily: "Montserrat",
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
           ),
         )),
         Container(
+          // color: Colors.pink,
           child: Text(
             " 2",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 20,
               fontFamily: "Montserrat",
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ),
         Container(
-          child: Column(
-            // mainAxisAlignment: MainAxisAlignment.center,
+          // color: Colors.amber,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
 
-            children: [
-              CircleAvatar(
-                  backgroundColor: Color(0xffEF4C53),
-                  radius: 20,
-                  child: Text(
-                    "S",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: "Montserrat",
-                      fontWeight: FontWeight.w700,
-                    ),
-                  )),
-              SizedBox(
-                height: 3,
-              ),
-              MyText.labelText(
-                "Stallion",
-              ),
-            ],
+              children: [
+                CircleAvatar(
+                    backgroundColor: Color(0xffEF4C53),
+                    radius: 20,
+                    child: Text(
+                      "S",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: "Montserrat",
+                        fontWeight: FontWeight.w700,
+                      ),
+                    )),
+                SizedBox(
+                  height: 3,
+                ),
+                MyText.labelText(
+                  "Stallion",
+                ),
+              ],
+            ),
           ),
         ),
       ],

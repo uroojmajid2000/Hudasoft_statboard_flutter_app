@@ -36,87 +36,99 @@ class _MyTextFieldState extends State<MyTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0x26000000),
-            blurRadius: 6,
-            offset: Offset(0, 0),
-          ),
-        ],
-        color: Colors.white,
-      ),
-      child: TextFormField(
-        controller: widget.controller,
-        enabled: true,
-        autofocus: widget.autofocus,
-        obscureText: widget.obscureText ? show : false,
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        onChanged: (String value) => widget.onChange(value),
-        keyboardType: widget.keyboardType,
-        style: TextStyle(
-          color: Color(0xff272626),
-          fontSize: 16,
-          fontFamily: "Montserrat",
-          fontWeight: FontWeight.w500,
+    return Center(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          // boxShadow: [
+          //   BoxShadow(
+          //     color: Color(0x26000000),
+          //     blurRadius: 6,
+          //     offset: Offset(0, 0),
+          //   ),
+          // ],
+
+          boxShadow: [
+            BoxShadow(
+              color: Color(0x26000000),
+              blurRadius: 6,
+              offset: Offset(0, 0),
+              // spreadRadius: 6,
+            ),
+          ],
+
+          color: Colors.white,
         ),
-        textAlign: widget.textCenter ? TextAlign.center : TextAlign.start,
-        inputFormatters: widget.length != 0
-            ? [
-                LengthLimitingTextInputFormatter(widget.length),
-                FilteringTextInputFormatter.digitsOnly,
-              ]
-            : null,
-        decoration: InputDecoration(
-          hintText: widget.hintText,
-          hintStyle: const TextStyle(
+        child: TextFormField(
+          controller: widget.controller,
+          enabled: true,
+          autofocus: widget.autofocus,
+          obscureText: widget.obscureText ? show : false,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          onChanged: (String value) => widget.onChange(value),
+          keyboardType: widget.keyboardType,
+          style: TextStyle(
             color: Color(0xff272626),
-            fontSize: 14,
+            fontSize: 16,
             fontFamily: "Montserrat",
             fontWeight: FontWeight.w500,
           ),
-          prefixIcon: widget.prefixIcon != null
-              ?
-              //  SvgPicture.asset(
-              //   widget.prefixIcon!,
-              // )
-              Image.asset(
-                  widget.prefixIcon!,
-                  width: 1,
-                  height: 1,
-                )
+          textAlign: widget.textCenter ? TextAlign.center : TextAlign.start,
+          inputFormatters: widget.length != 0
+              ? [
+                  LengthLimitingTextInputFormatter(widget.length),
+                  FilteringTextInputFormatter.digitsOnly,
+                ]
               : null,
+          decoration: InputDecoration(
+            hintText: widget.hintText,
+            hintStyle: const TextStyle(
+              color: Color(0xff272626),
+              fontSize: 14,
+              fontFamily: "Montserrat",
+              fontWeight: FontWeight.w500,
+            ),
+            prefixIcon: widget.prefixIcon != null
+                ?
+                //  SvgPicture.asset(
+                //   widget.prefixIcon!,
+                // )
+                Image.asset(
+                    widget.prefixIcon!,
+                    width: 1,
+                    height: 1,
+                  )
+                : null,
 
-          border: InputBorder.none,
-         
-          // focusedBorder: InputBorder.none,
-          // errorBorder: InputBorder.none,
-          // disabledBorder: InputBorder.none,
+            border: InputBorder.none,
 
-          suffixIcon: widget.obscureText
-              ? (show
-                  ? IconButton(
-                      icon: const Icon(Icons.visibility_off,
-                          color: Color(0xff858484)),
-                      onPressed: () => setState(() => show = false))
-                  : IconButton(
-                      icon: const Icon(
-                        Icons.visibility,
-                        color: Color(0xff858484),
-                      ),
-                      onPressed: () => setState(() => show = true)))
-              : null,
+            // focusedBorder: InputBorder.none,
+            // errorBorder: InputBorder.none,
+            // disabledBorder: InputBorder.none,
+
+            suffixIcon: widget.obscureText
+                ? (show
+                    ? IconButton(
+                        icon: const Icon(Icons.visibility_off,
+                            color: Color(0xff858484)),
+                        onPressed: () => setState(() => show = false))
+                    : IconButton(
+                        icon: const Icon(
+                          Icons.visibility,
+                          color: Color(0xff858484),
+                        ),
+                        onPressed: () => setState(() => show = true)))
+                : null,
+          ),
+          // validator: widget.required
+          //     ? (value) {
+          //         if (value!.isEmpty) {
+          //           return 'This field is required';
+          //         }
+          //         return null;
+          //       }
+          //     : null,
         ),
-        // validator: widget.required
-        //     ? (value) {
-        //         if (value!.isEmpty) {
-        //           return 'This field is required';
-        //         }
-        //         return null;
-        //       }
-        //     : null,
       ),
     );
   }

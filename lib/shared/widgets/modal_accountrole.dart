@@ -61,7 +61,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
-                crossAxisSpacing: 10,
+                crossAxisSpacing: 7,
                 mainAxisSpacing: 0,
                 children: [
                   CreatAccountContainer(
