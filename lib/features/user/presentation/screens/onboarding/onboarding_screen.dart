@@ -75,7 +75,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Button(
-                child: Text('Sign Up'),
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(
+                    fontSize: 18,
+                  ),
+                ),
                 onPressed: () {
                   CustomCreateAccountModal.show(
                       context: context,
@@ -96,7 +101,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Color(0xff00b0f0),
-                  fontSize: 17,
+                  fontSize: 18,
                   fontFamily: "Montserrat",
                   fontWeight: FontWeight.w600,
                 ),

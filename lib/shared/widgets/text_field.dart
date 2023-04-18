@@ -37,6 +37,7 @@ class _MyTextFieldState extends State<MyTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 54,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
@@ -90,7 +91,7 @@ class _MyTextFieldState extends State<MyTextField> {
               : null,
 
           border: InputBorder.none,
-         
+
           // focusedBorder: InputBorder.none,
           // errorBorder: InputBorder.none,
           // disabledBorder: InputBorder.none,
