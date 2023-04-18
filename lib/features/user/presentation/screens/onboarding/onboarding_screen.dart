@@ -76,9 +76,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Button(
                 child: Text(
-                  'Sign Up',
+                  "Sign Up",
+                  textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 18,
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontFamily: "Montserrat",
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
                 onPressed: () {
@@ -95,18 +99,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: GestureDetector(
-              onTap: () => Navigate.to(context, SigninScreen.id),
-              child: Text(
-                "Sign In",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xff00b0f0),
-                  fontSize: 18,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
+                onTap: () => Navigate.to(context, SigninScreen.id),
+                child: Text(
+                  "Sign In",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Color(0xff00b0f0),
+                    fontSize: 17,
+                    fontFamily: "Montserrat",
+                    fontWeight: FontWeight.w600,
+                  ),
+                )),
           ),
           SizedBox(
             height: 60,
@@ -207,27 +210,6 @@ class onboardingContainer extends StatelessWidget {
             ),
           ),
         ]),
-
-        // Align(
-        //   alignment: Alignment.centerRight,
-        //   child: Image.asset(
-        //     image,
-        //     height: 350,
-        //   ),
-        // ),
-
-        // Image.network(
-        //     'https://cdn.pixabay.com/animation/2022/12/05/15/23/15-23-06-837_512.gif',
-        //     width: 300,
-        //     height: 500),
-        // CircleAvatar(
-        //   backgroundColor: Colors.white,
-        //   radius: 40,
-        //   child: SvgPicture.asset(
-        //     'assets/logos/signinscreen_logo.svg',
-        //     width: 50,
-        //   ),
-        // ),
         SizedBox(
           height: 20,
         ),
