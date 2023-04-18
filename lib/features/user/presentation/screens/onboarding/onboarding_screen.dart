@@ -72,10 +72,28 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
           ),
+          SizedBox(
+            height: 15,
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 14,
+            ),
             child: Button(
-                child: Text('Sign Up'),
+                child:
+
+                    // Text('Sign Up'),
+
+                    Text(
+                  "Sign Up",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontFamily: "Montserrat",
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 onPressed: () {
                   CustomCreateAccountModal.show(
                       context: context,
@@ -90,21 +108,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: GestureDetector(
-              onTap: () => Navigate.to(context, SigninScreen.id),
-              child: Text(
-                "Sign In",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xff00b0f0),
-                  fontSize: 17,
-                  fontFamily: "Montserrat",
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-            ),
+                onTap: () => Navigate.to(context, SigninScreen.id),
+                child: Text(
+                  "Sign In",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Color(0xff00b0f0),
+                    fontSize: 17,
+                    fontFamily: "Montserrat",
+                    fontWeight: FontWeight.w600,
+                  ),
+                )),
           ),
           SizedBox(
-            height: 60,
+            height: 45,
           ),
         ],
       ),
