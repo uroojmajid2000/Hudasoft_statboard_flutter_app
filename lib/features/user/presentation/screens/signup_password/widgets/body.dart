@@ -102,7 +102,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 40),
                       MyTextField(
                         controller: _passwordController,
-                        hintText: 'password123',
+                        hintText: 'Enter password',
                         prefixIcon: 'assets/icons/password_icon.png',
                         obscureText: true,
                         onChange: (value) {},
@@ -110,7 +110,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 18),
                       MyTextField(
                         controller: _passwordnewController,
-                        hintText: 'password123',
+                        hintText: 'ReEnter password',
                         prefixIcon: 'assets/icons/password_icon.png',
                         obscureText: true,
                         onChange: (value) {},

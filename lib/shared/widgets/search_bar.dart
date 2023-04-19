@@ -38,6 +38,7 @@ class _MySearchBarState extends State<MySearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 54,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -73,7 +74,7 @@ class _MySearchBarState extends State<MySearchBar> {
         decoration: InputDecoration(
           hintText: widget.hintText,
           hintStyle: const TextStyle(
-            color: Color(0xff272626),
+            color: Color(0xff495057),
             fontSize: 14,
             fontFamily: "Montserrat",
             fontWeight: FontWeight.w500,
@@ -86,13 +87,13 @@ class _MySearchBarState extends State<MySearchBar> {
                 )
               : null,
           border: InputBorder.none,
-          suffixIcon: widget.suffixIcon != null
-              ? Image.asset(
-                  widget.suffixIcon!,
-                  width: 1,
-                  height: 1,
-                )
-              : null,
+          // suffixIcon: widget.suffixIcon != null
+          //     ? Image.asset(
+          //         widget.suffixIcon!,
+          //         width: 1,
+          //         height: 1,
+          //       )
+          //     : null,
         ),
       ),
     );

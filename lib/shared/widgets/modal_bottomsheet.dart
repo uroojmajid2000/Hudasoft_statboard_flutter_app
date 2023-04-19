@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/button.dart';
 
 class CustomModalBottomSheet {
@@ -23,21 +24,9 @@ class CustomModalBottomSheet {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 90,
-                  height: 90,
-                  decoration: BoxDecoration(
-                    color: Color(0xff00a22d),
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Icon(
-                    Icons.check,
-                    size: 60,
-                    color: Colors.white,
-                  ),
-                ),
+                SvgPicture.asset('assets/images/sucessfully.svg'),
                 SizedBox(
-                  height: 12,
+                  height: 18,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +45,7 @@ class CustomModalBottomSheet {
                   ],
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 28,
                 ),
                 Button(
                   child: Text(

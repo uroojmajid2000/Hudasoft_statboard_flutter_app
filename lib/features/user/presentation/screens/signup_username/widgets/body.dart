@@ -102,14 +102,14 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 40),
                       MyTextField(
                         controller: _emailController,
-                        hintText: 'Elijah Michael',
+                        hintText: 'Enter Name',
                         prefixIcon: 'assets/icons/emailperson_icon.png',
                         onChange: (value) {},
                       ),
                       const SizedBox(height: 18),
                       MySearchBar(
                         controller: _phonenumberController,
-                        hintText: 'elijah0581',
+                        hintText: 'Confirm Name',
                         prefixIcon: 'assets/icons/emailperson_icon.png',
                         suffixIcon: 'assets/icons/tick.png',
                         onChange: (value) {},

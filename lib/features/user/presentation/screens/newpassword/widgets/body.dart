@@ -33,7 +33,7 @@ class _BodyState extends State<Body> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                        GestureDetector(
+                          GestureDetector(
                             onTap: () => Navigator.pop(context),
                             child: SvgPicture.asset(
                               'assets/icons/backicon.svg',
@@ -72,7 +72,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 50),
                       MyTextField(
                         controller: _passwordController,
-                        hintText: 'password123',
+                        hintText: 'Enter Password',
                         prefixIcon: 'assets/icons/password_icon.png',
                         obscureText: true,
                         onChange: (value) {},
@@ -110,27 +110,9 @@ void _settingModalBottomSheet(context) {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 90,
-                  height: 90,
-                  decoration: BoxDecoration(
-                    color: Color(0xff00a22d),
-                    shape: BoxShape.circle,
-                  ),
-                  child:
-                      //  SvgPicture.asset(
-                      //   'assets/icons/alert_dialog_check.svg',
-
-                      // ),
-
-                      const Icon(
-                    Icons.check,
-                    size: 60,
-                    color: Colors.white,
-                  ),
-                ),
+                SvgPicture.asset('assets/images/sucessfully.svg'),
                 SizedBox(
-                  height: 12,
+                  height: 18,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -149,7 +131,7 @@ void _settingModalBottomSheet(context) {
                   ],
                 ),
                 SizedBox(
-                  height: 25,
+                  height: 28,
                 ),
                 Button(
                     child: Text(

@@ -1,3 +1,3 @@
-// abstract class Mapper<E, M> {
-//   E mapModeltoEntity(M model);
-// }
+abstract class Mapper<E, M> {
+  E mapModeltoEntity(M model);
+}

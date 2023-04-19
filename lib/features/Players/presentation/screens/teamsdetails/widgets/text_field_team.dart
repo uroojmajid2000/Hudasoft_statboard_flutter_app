@@ -37,6 +37,7 @@ class _MyTextFieldTeamState extends State<MyTextFieldTeam> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 54,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
         boxShadow: [

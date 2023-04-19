@@ -81,13 +81,13 @@ class _BodyState extends State<Body> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          MyText.labelText("Email Address or Phone Number"),
+                          MyText.labelText("Email Address"),
                         ],
                       ),
                       const SizedBox(height: 13),
                       MyTextField(
                         controller: _emailController,
-                        hintText: 'statboarduser@gmail.com',
+                        hintText: 'Enter Email Address',
                         prefixIcon: 'assets/icons/emailperson_icon.png',
                         onChange: (value) {},
                       ),
@@ -101,7 +101,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 13),
                       MyTextField(
                         controller: _passwordController,
-                        hintText: 'password123',
+                        hintText: 'Enter Password',
                         prefixIcon: 'assets/icons/password_icon.png',
                         obscureText: true,
                         onChange: (value) {},
@@ -116,7 +116,7 @@ class _BodyState extends State<Body> {
                               child: MyText.forgetPassword("Forgot Password?")),
                         ],
                       ),
-                      const SizedBox(height: 25),
+                      const SizedBox(height: 28),
 
                       // Button(
                       //   child: context.watch<UserCubit>().state.status ==
@@ -134,7 +134,7 @@ class _BodyState extends State<Body> {
                           onPressed: () => {
                                 Navigate.next(context, OverviewScreen.id),
                               }),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 25),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -146,7 +146,7 @@ class _BodyState extends State<Body> {
                           SvgPicture.asset('assets/icons/face_id.svg')
                         ],
                       ),
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 25),
                       OutlineButtonCustom(
                           onPressed: () => {
                                 CustomCreateAccountModal.show(

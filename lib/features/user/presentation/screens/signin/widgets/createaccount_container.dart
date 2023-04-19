@@ -33,7 +33,7 @@ class _CreatAccountContainerState extends State<CreatAccountContainer> {
         children: [
           Container(
             // width: 170,
-            width: double.infinity,
+            // width: double.infinity,
             height: 100,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),

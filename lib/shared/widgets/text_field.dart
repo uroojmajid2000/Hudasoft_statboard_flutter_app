@@ -36,99 +36,102 @@ class _MyTextFieldState extends State<MyTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          // boxShadow: [
-          //   BoxShadow(
-          //     color: Color(0x26000000),
-          //     blurRadius: 6,
-          //     offset: Offset(0, 0),
-          //   ),
-          // ],
+    return Container(
+      height: 54,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: Color(0x26000000),
+        //     blurRadius: 6,
+        //     offset: Offset(0, 0),
+        //   ),
+        // ],
 
-          boxShadow: [
-            BoxShadow(
-              color: Color(0x26000000),
-              blurRadius: 6,
-              offset: Offset(0, 0),
-              // spreadRadius: 6,
-            ),
-          ],
+        boxShadow: [
+          BoxShadow(
+            // color: Color(0x26000000),
+            color: Color.fromRGBO(0, 0, 0, 0.15),
+            blurRadius: 4,
 
-          color: Colors.white,
+            offset: Offset(0, 0),
+            // spreadRadius: 6,
+          ),
+        ],
+
+        color: Colors.white,
+      ),
+      child: TextFormField(
+        controller: widget.controller,
+        enabled: true,
+        autofocus: widget.autofocus,
+        obscureText: widget.obscureText ? show : false,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
+        onChanged: (String value) => widget.onChange(value),
+        keyboardType: widget.keyboardType,
+        style: TextStyle(
+          color: Color(0xff272626),
+          fontSize: 16,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w500,
         ),
-        child: TextFormField(
-          controller: widget.controller,
-          enabled: true,
-          autofocus: widget.autofocus,
-          obscureText: widget.obscureText ? show : false,
-          autovalidateMode: AutovalidateMode.onUserInteraction,
-          onChanged: (String value) => widget.onChange(value),
-          keyboardType: widget.keyboardType,
-          style: TextStyle(
-            color: Color(0xff272626),
-            fontSize: 16,
+        textAlign: widget.textCenter ? TextAlign.center : TextAlign.start,
+        inputFormatters: widget.length != 0
+            ? [
+                LengthLimitingTextInputFormatter(widget.length),
+                FilteringTextInputFormatter.digitsOnly,
+              ]
+            : null,
+        decoration: InputDecoration(
+          hintText: widget.hintText,
+          hintStyle: const TextStyle(
+            color: Color(0xff495057),
+            fontSize: 14,
             fontFamily: "Montserrat",
             fontWeight: FontWeight.w500,
           ),
-          textAlign: widget.textCenter ? TextAlign.center : TextAlign.start,
-          inputFormatters: widget.length != 0
-              ? [
-                  LengthLimitingTextInputFormatter(widget.length),
-                  FilteringTextInputFormatter.digitsOnly,
-                ]
+          prefixIcon: widget.prefixIcon != null
+              ?
+              //  SvgPicture.asset(
+              //   widget.prefixIcon!,
+              // )
+              Image.asset(
+                  widget.prefixIcon!,
+                  width: 1,
+                  height: 1,
+                )
               : null,
-          decoration: InputDecoration(
-            hintText: widget.hintText,
-            hintStyle: const TextStyle(
-              color: Color(0xff272626),
-              fontSize: 14,
-              fontFamily: "Montserrat",
-              fontWeight: FontWeight.w500,
-            ),
-            prefixIcon: widget.prefixIcon != null
-                ?
-                //  SvgPicture.asset(
-                //   widget.prefixIcon!,
-                // )
-                Image.asset(
-                    widget.prefixIcon!,
-                    width: 1,
-                    height: 1,
-                  )
-                : null,
 
-            border: InputBorder.none,
+          border: InputBorder.none,
 
-            // focusedBorder: InputBorder.none,
-            // errorBorder: InputBorder.none,
-            // disabledBorder: InputBorder.none,
+          // focusedBorder: InputBorder.none,
+          // errorBorder: InputBorder.none,
+          // disabledBorder: InputBorder.none,
+          contentPadding: EdgeInsets.symmetric(
+              vertical: 14), // Set vertical padding as needed
 
-            suffixIcon: widget.obscureText
-                ? (show
-                    ? IconButton(
-                        icon: const Icon(Icons.visibility_off,
-                            color: Color(0xff858484)),
-                        onPressed: () => setState(() => show = false))
-                    : IconButton(
-                        icon: const Icon(
-                          Icons.visibility,
-                          color: Color(0xff858484),
-                        ),
-                        onPressed: () => setState(() => show = true)))
-                : null,
-          ),
-          // validator: widget.required
-          //     ? (value) {
-          //         if (value!.isEmpty) {
-          //           return 'This field is required';
-          //         }
-          //         return null;
-          //       }
-          //     : null,
+          suffixIcon: widget.obscureText
+              ? (show
+                  ? IconButton(
+                      icon: const Icon(Icons.visibility_off,
+                          color: Color(0xff858484)),
+                      onPressed: () => setState(() => show = false))
+                  : IconButton(
+                      icon: const Icon(
+                        Icons.visibility,
+                        color: Color(0xff858484),
+                      ),
+                      onPressed: () => setState(() => show = true)))
+              : null,
         ),
+        // validator: widget.required
+        //     ? (value) {
+        //         if (value!.isEmpty) {
+        //           return 'This field is required';
+        //         }
+        //         return null;
+        //       }
+        //     : null,
       ),
     );
   }

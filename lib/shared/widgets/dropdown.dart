@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class MyDropdown extends StatelessWidget {
@@ -16,6 +15,7 @@ class MyDropdown extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 54,
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -29,12 +29,11 @@ class MyDropdown extends StatelessWidget {
       ),
       child: DropdownButtonFormField(
         decoration: InputDecoration(
-          border: InputBorder.none,
-          // prefixIcon: Icon(Icons.arrow_drop_down),
-          
-          filled: true,
-          fillColor: Colors.white,
-        ),
+            border: InputBorder.none,
+            // prefixIcon: Icon(Icons.arrow_drop_down),
+            filled: true,
+            fillColor: Colors.white,
+            contentPadding: EdgeInsets.fromLTRB(8, 14, 8, 14)),
         items: items
             .map(
               (item) => DropdownMenuItem<String>(

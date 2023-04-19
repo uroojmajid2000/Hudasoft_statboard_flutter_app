@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/features/Business/Presentation/screens/subscription/subscription_screen.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/overview/overview_screen.dart';
 import 'package:statboard_flutter_app/features/user/presentation/screens/signup/signup_screen.dart';
@@ -29,11 +30,12 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 500,
+      height: 518,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               height: 13,
@@ -48,23 +50,21 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                   )),
                 ),
                 GestureDetector(
-                  child: MyText.x(
-                    'X',
-                  ),
+                  child: SvgPicture.asset('assets/icons/cuticon.svg'),
                   onTap: () => Navigator.pop(context),
                 ),
               ],
             ),
             SizedBox(
-              height: 10,
+              height: 20,
             ),
-            Expanded(
-              child: GridView.count(
-                crossAxisCount: 2,
-                crossAxisSpacing: 7,
-                mainAxisSpacing: 0,
-                children: [
-                  CreatAccountContainer(
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  width: 170,
+                  child: CreatAccountContainer(
                     text: "PLAYER",
                     contentText: "You want to host an event",
                     isSelected: _selectedIndex == 0,
@@ -73,31 +73,78 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                       // Navigate.to(context, OverviewScreen.id);
                     },
                   ),
-                  CreatAccountContainer(
+                ),
+                // SizedBox(
+                //   width: 10,
+                // ),
+                SizedBox(
+                  width: 170,
+                  child: CreatAccountContainer(
                     text: 'BUSINESS',
-                    contentText: "You want to join an event",
+                    contentText: "You want to host an event",
                     isSelected: _selectedIndex == 1,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 1 : -1);
                       // Navigate.to(context, SubscriptionScreen.id);
                     },
                   ),
-                  CreatAccountContainer(
-                    text: 'SCOUT',
-                    contentText: "You want to organize an event",
-                    isSelected: _selectedIndex == 2,
-                    onSelect: (isSelected) {
-                      _handleSelect(isSelected ? 2 : -1);
-                    },
-                  ),
-                ],
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 8,
+            ),
+
+            SizedBox(
+              width: 170,
+              child: CreatAccountContainer(
+                text: 'SCOUT',
+                contentText: "You are searching for talent",
+                isSelected: _selectedIndex == 2,
+                onSelect: (isSelected) {
+                  _handleSelect(isSelected ? 2 : -1);
+                },
               ),
             ),
-            // Button(
-            //   child: MyText.buttonText('Continue'),
-            //   onPressed: widget.onPressed,
-            // ),
 
+            // Expanded(
+            //   child: GridView.count(
+            //     crossAxisCount: 2,
+            //     crossAxisSpacing: 7,
+            //     mainAxisSpacing: 0,
+            //     children: [
+            //       CreatAccountContainer(
+            //         text: "PLAYER",
+            //         contentText: "You want to host an event",
+            //         isSelected: _selectedIndex == 0,
+            //         onSelect: (isSelected) {
+            //           _handleSelect(isSelected ? 0 : -1);
+            //           // Navigate.to(context, OverviewScreen.id);
+            //         },
+            //       ),
+            //       CreatAccountContainer(
+            //         text: 'BUSINESS',
+            //         contentText: "You want to join an event",
+            //         isSelected: _selectedIndex == 1,
+            //         onSelect: (isSelected) {
+            //           _handleSelect(isSelected ? 1 : -1);
+            //           // Navigate.to(context, SubscriptionScreen.id);
+            //         },
+            //       ),
+            //       CreatAccountContainer(
+            //         text: 'SCOUT',
+            //         contentText: "You want to organize an event",
+            //         isSelected: _selectedIndex == 2,
+            //         onSelect: (isSelected) {
+            //           _handleSelect(isSelected ? 2 : -1);
+            //         },
+            //       ),
+            //     ],
+            //   ),
+            // ),
+            SizedBox(
+              height: 8,
+            ),
             Button(
               child: MyText.buttonText('Continue'),
               onPressed: () {
@@ -117,7 +164,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
               },
             ),
             SizedBox(
-              height: 12,
+              height: 5,
             ),
           ],
         ),

@@ -74,7 +74,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 50),
                       MyTextField(
                         controller: _emailController,
-                        hintText: 'statboarduser@gmail.com',
+                        hintText: 'Enter Email',
                         prefixIcon: 'assets/icons/emailperson_icon.png',
                         onChange: (value) {},
                       ),

@@ -15,20 +15,20 @@ class MyText {
         text,
         style: TextStyle(
           color: Colors.white,
-         fontSize: 13,
-        fontFamily: "Montserrat",
-        fontWeight: FontWeight.w600,
+          fontSize: 13,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w600,
         ),
       );
   //fontsize 16 w600
   static Widget businesssubscription(String text) => Text(
         text,
-           style: TextStyle(
-            color: Color(0xff6f6f6f),
-            fontSize: 16,
-            fontFamily: "Montserrat",
-            fontWeight: FontWeight.w600,
-          ),
+        style: TextStyle(
+          color: Color(0xff6f6f6f),
+          fontSize: 16,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w600,
+        ),
       );
 
   //fontsize 13 w600
@@ -65,11 +65,11 @@ class MyText {
   static Widget simpleblueText(String text) => Text(
         text,
         style: TextStyle(
-                    color: Color(0xff00b0f0),
-                    fontSize: 12,
-                    fontFamily: "Montserrat",
-                    fontWeight: FontWeight.w600,
-                  ),
+          color: Color(0xff00b0f0),
+          fontSize: 12,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w600,
+        ),
       );
 
   //fontsize 10 w600
@@ -86,12 +86,12 @@ class MyText {
   //fontsize 12 w600
   static Widget simpleText(String text) => Text(
         text,
-         style: TextStyle(
-        color: Colors.black,
-        fontSize: 12,
-        fontFamily: "Montserrat",
-        fontWeight: FontWeight.w600,
-    ),
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 12,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w600,
+        ),
       );
 
   static Widget buttonText(String text) => Text(
@@ -136,53 +136,50 @@ class MyText {
           fontWeight: FontWeight.w700,
         ),
       );
-      //tournament heading
+  //tournament heading
   static Widget TournamentHeadingText(String text) => Text(
         text,
-       style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontFamily: "Montserrat",
-                          fontWeight: FontWeight.w700,
-                        ),
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 20,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w700,
+        ),
       );
   static Widget tableHeading(String text) => Text(
-
-   text,
-    style: TextStyle(
-        color: Colors.black,
-        fontSize: 13,
-        fontFamily: "Montserrat",
-        fontWeight: FontWeight.w700,
-    ),
-  );
+        text,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 13,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w700,
+        ),
+      );
   static Widget tableRow(String text) => Text(
-
-   text,
-    style: TextStyle(
-        color: Colors.black,
-        fontSize: 13,
-        fontFamily: "Montserrat",
-        fontWeight: FontWeight.w600,
-    ),
-  );
+        text,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 13,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w600,
+        ),
+      );
   static Widget selectRole(String text) => Text(
-
-   text,
-     style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 20,
-                            fontFamily: "Montserrat",
-                            fontWeight: FontWeight.w600,
-                          ),);
+        text,
+        style: TextStyle(
+          color: Colors.black,
+          fontSize: 20,
+          fontFamily: "Montserrat",
+          fontWeight: FontWeight.w600,
+        ),
+      );
   static Widget x(String text) => Text(
-
-   text,
-    textAlign: TextAlign.end,
-                        style: TextStyle(
-                          fontSize: 20,
-                          color: Color(0xff535353),
-                          fontWeight: FontWeight.bold,
-                        ),
-  );
+        text,
+        textAlign: TextAlign.end,
+        style: TextStyle(
+          fontSize: 20,
+          color: Color(0xff535353),
+          fontWeight: FontWeight.bold,
+        ),
+      );
 }

@@ -102,14 +102,14 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 40),
                       MyTextField(
                         controller: _emailController,
-                        hintText: 'statboarduser@gmail.com',
+                        hintText: 'Enter Email Address',
                         prefixIcon: 'assets/icons/playeremail.png',
                         onChange: (value) {},
                       ),
                       const SizedBox(height: 18),
                       MyTextField(
                         controller: _phonenumberController,
-                        hintText: '09530313131131',
+                        hintText: 'Enter Password',
                         prefixIcon: 'assets/icons/playerphone.png',
                         onChange: (value) {},
                       ),
