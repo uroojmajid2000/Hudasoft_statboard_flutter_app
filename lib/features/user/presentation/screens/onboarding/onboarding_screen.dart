@@ -72,10 +72,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
             ),
           ),
+          SizedBox(
+            height: 15,
+          ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 14),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 14,
+            ),
             child: Button(
-                child: Text(
+                child:
+
+                    // Text('Sign Up'),
+
+                    Text(
                   "Sign Up",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -112,7 +121,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 )),
           ),
           SizedBox(
-            height: 60,
+            height: 45,
           ),
         ],
       ),
@@ -210,6 +219,27 @@ class onboardingContainer extends StatelessWidget {
             ),
           ),
         ]),
+
+        // Align(
+        //   alignment: Alignment.centerRight,
+        //   child: Image.asset(
+        //     image,
+        //     height: 350,
+        //   ),
+        // ),
+
+        // Image.network(
+        //     'https://cdn.pixabay.com/animation/2022/12/05/15/23/15-23-06-837_512.gif',
+        //     width: 300,
+        //     height: 500),
+        // CircleAvatar(
+        //   backgroundColor: Colors.white,
+        //   radius: 40,
+        //   child: SvgPicture.asset(
+        //     'assets/logos/signinscreen_logo.svg',
+        //     width: 50,
+        //   ),
+        // ),
         SizedBox(
           height: 20,
         ),
