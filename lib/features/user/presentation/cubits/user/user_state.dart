@@ -11,22 +11,24 @@ class UserState extends Equatable {
   final UserStatus status;
   final User user;
 
-  final bool isOtpVerified;
+  // final bool isOtpVerified;
 
   const UserState({
     required this.status,
     required this.user,
-    required this.isOtpVerified,
+    // required this.isOtpVerified,
   });
 
   factory UserState.initial() => UserState(
         status: UserStatus.initial,
         user: User.initial(),
-        isOtpVerified: false,
+        // isOtpVerified: false,
       );
 
   @override
-  List<Object> get props => [status, user, isOtpVerified];
+  List<Object> get props => [status, user,
+  //  isOtpVerified
+   ];
 
   @override
   bool get stringify => true;
@@ -39,7 +41,7 @@ class UserState extends Equatable {
     return UserState(
       status: status ?? this.status,
       user: user ?? this.user,
-      isOtpVerified: isOtpVerified ?? this.isOtpVerified,
+      // isOtpVerified: isOtpVerified ?? this.isOtpVerified,
     );
   }
 
@@ -59,7 +61,7 @@ class UserState extends Equatable {
     return UserState(
       status: UserStatus.loaded,
       user: User.fromJson(map['user']),
-      isOtpVerified: map['isOtpVerified'] as bool,
+      // isOtpVerified: map['isOtpVerified'] as bool,
     );
   }
 

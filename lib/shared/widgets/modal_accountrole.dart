@@ -30,7 +30,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 518,
+      height: 650,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14),
         child: Column(
@@ -56,64 +56,15 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
               ],
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 170,
-                  child: CreatAccountContainer(
-                    text: "PLAYER",
-                    contentText: "You want to host an event",
-                    isSelected: _selectedIndex == 0,
-                    onSelect: (isSelected) {
-                      _handleSelect(isSelected ? 0 : -1);
-                      // Navigate.to(context, OverviewScreen.id);
-                    },
-                  ),
-                ),
-                // SizedBox(
-                //   width: 10,
-                // ),
-                SizedBox(
-                  width: 170,
-                  child: CreatAccountContainer(
-                    text: 'BUSINESS',
-                    contentText: "You want to host an event",
-                    isSelected: _selectedIndex == 1,
-                    onSelect: (isSelected) {
-                      _handleSelect(isSelected ? 1 : -1);
-                      // Navigate.to(context, SubscriptionScreen.id);
-                    },
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 8,
-            ),
-
-            SizedBox(
-              width: 170,
-              child: CreatAccountContainer(
-                text: 'SCOUT',
-                contentText: "You are searching for talent",
-                isSelected: _selectedIndex == 2,
-                onSelect: (isSelected) {
-                  _handleSelect(isSelected ? 2 : -1);
-                },
-              ),
-            ),
-
-            // Expanded(
-            //   child: GridView.count(
-            //     crossAxisCount: 2,
-            //     crossAxisSpacing: 7,
-            //     mainAxisSpacing: 0,
-            //     children: [
-            //       CreatAccountContainer(
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   children: [
+            //     SizedBox(
+            //       width: 170,
+            //       child: CreatAccountContainer(
             //         text: "PLAYER",
             //         contentText: "You want to host an event",
             //         isSelected: _selectedIndex == 0,
@@ -122,26 +73,76 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
             //           // Navigate.to(context, OverviewScreen.id);
             //         },
             //       ),
-            //       CreatAccountContainer(
+            //     ),
+            //     // SizedBox(
+            //     //   width: 10,
+            //     // ),
+            //     SizedBox(
+            //       width: 170,
+            //       child: CreatAccountContainer(
             //         text: 'BUSINESS',
-            //         contentText: "You want to join an event",
+            //         contentText: "You want to host an event",
             //         isSelected: _selectedIndex == 1,
             //         onSelect: (isSelected) {
             //           _handleSelect(isSelected ? 1 : -1);
             //           // Navigate.to(context, SubscriptionScreen.id);
             //         },
             //       ),
-            //       CreatAccountContainer(
-            //         text: 'SCOUT',
-            //         contentText: "You want to organize an event",
-            //         isSelected: _selectedIndex == 2,
-            //         onSelect: (isSelected) {
-            //           _handleSelect(isSelected ? 2 : -1);
-            //         },
-            //       ),
-            //     ],
+            //     ),
+            //   ],
+            // ),
+            // SizedBox(
+            //   height: 8,
+            // ),
+
+            // SizedBox(
+            //   width: 170,
+            //   child: CreatAccountContainer(
+            //     text: 'SCOUT',
+            //     contentText: "You are searching for talent",
+            //     isSelected: _selectedIndex == 2,
+            //     onSelect: (isSelected) {
+            //       _handleSelect(isSelected ? 2 : -1);
+            //     },
             //   ),
             // ),
+
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 0,
+                children: [
+                  CreatAccountContainer(
+                    text: "PLAYER",
+                    contentText: "You want to host an event",
+                    isSelected: _selectedIndex == 0,
+                    onSelect: (isSelected) {
+                      _handleSelect(isSelected ? 0 : -1);
+                      // Navigate.to(context, OverviewScreen.id);
+                    },
+                  ),
+                  CreatAccountContainer(
+                    text: 'BUSINESS',
+                    contentText: "You want to join an event",
+                    isSelected: _selectedIndex == 1,
+                    onSelect: (isSelected) {
+                      _handleSelect(isSelected ? 1 : -1);
+                      // Navigate.to(context, SubscriptionScreen.id);
+                    },
+                  ),
+                  CreatAccountContainer(
+                    text: 'SCOUT',
+                    contentText: "You want to organize an event",
+                    isSelected: _selectedIndex == 2,
+                    onSelect: (isSelected) {
+                      _handleSelect(isSelected ? 2 : -1);
+                    },
+                  ),
+                ],
+              ),
+            ),
+
             SizedBox(
               height: 8,
             ),
@@ -164,7 +165,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
               },
             ),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
           ],
         ),

@@ -49,13 +49,13 @@ class UserCubit extends Cubit<UserState> with HydratedMixin {
     emit(state.copyWith(
       status: UserStatus.initial,
       user: User.initial(),
-      isOtpVerified: false,
+      // isOtpVerified: false,
     ));
   }
 
-  bool isLoggedIn() {
-    return state.isOtpVerified;
-  }
+  // bool isLoggedIn() {
+    // return state.isOtpVerified;
+  // }
 
   void verifyOtp() {
     emit(state.copyWith(isOtpVerified: true));

@@ -12,39 +12,7 @@ class _BodyState extends State<Body> {
   final _passwordController = TextEditingController();
   //  final _idController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  void _onSuccess() => Navigate.next(context, OverviewScreen.id);
-
-  void _onSubmit(VoidCallback onSuccess) async {
-    final form = _formKey.currentState;
-
-    if (form!.validate()) {
-      FocusManager.instance.primaryFocus?.unfocus();
-      if (_emailController.text != '' && _passwordController.text != '') {
-        await context
-            .read<UserCubit>()
-            .login(_emailController.text, _passwordController.text);
-      
-        if (context.read<UserCubit>().state.status == UserStatus.error) {
-          _emailController.clear();
-          _passwordController.clear();
-          showDialog(
-            context: context,
-            builder: (BuildContext context) {
-              return const Alert(
-                heading: 'Login Failed!',
-                body: 'Employee ID is incorrect',
-              );
-            },
-          );
-        } else {
-          onSuccess.call();
-        }
-        form.save();
-      }
-    } else {}
-  }
-
-  // void _onSuccess() => Navigate.to(context, OverviewScreen.id);
+  // void _onSuccess() => Navigate.next(context, OverviewScreen.id);
 
   // void _onSubmit(VoidCallback onSuccess) async {
   //   final form = _formKey.currentState;
@@ -55,6 +23,7 @@ class _BodyState extends State<Body> {
   //       await context
   //           .read<UserCubit>()
   //           .login(_emailController.text, _passwordController.text);
+
   //       if (context.read<UserCubit>().state.status == UserStatus.error) {
   //         _emailController.clear();
   //         _passwordController.clear();
@@ -63,7 +32,7 @@ class _BodyState extends State<Body> {
   //           builder: (BuildContext context) {
   //             return const Alert(
   //               heading: 'Login Failed!',
-  //               body: 'incorrect username password',
+  //               body: 'Employee ID is incorrect',
   //             );
   //           },
   //         );
@@ -172,23 +141,23 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 28),
 
-                      // Button(
-                      //     child: MyText.buttonText('Sign In'),
-                      //     onPressed: () => {
-                      //           Navigate.next(context, OverviewScreen.id),
-                      //         }),
-                      // const SizedBox(height: 25),
-
                       Button(
-                        child: context.watch<UserCubit>().state.status ==
-                                UserStatus.loading
-                            ? const CircularProgressIndicator(
-                                color: Colors.white,
-                              )
-                            : const Text('Login',
-                                style: TextStyle(fontSize: 18)),
-                        onPressed: () => _onSubmit(_onSuccess),
-                      ),
+                          child: MyText.buttonText('Sign In'),
+                          onPressed: () => {
+                                Navigate.next(context, OverviewScreen.id),
+                              }),
+                      const SizedBox(height: 25),
+
+                      // Button(
+                      //   child: context.watch<UserCubit>().state.status ==
+                      //           UserStatus.loading
+                      //       ? const CircularProgressIndicator(
+                      //           color: Colors.white,
+                      //         )
+                      //       : const Text('Login',
+                      //           style: TextStyle(fontSize: 18)),
+                      //   onPressed: () => _onSubmit(_onSuccess),
+                      // ),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

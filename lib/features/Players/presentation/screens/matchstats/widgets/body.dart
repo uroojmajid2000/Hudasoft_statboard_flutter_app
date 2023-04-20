@@ -83,8 +83,7 @@ class _BodyState extends State<Body> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 14),
-                child: Expanded(
-                    child: SingleChildScrollView(
+                child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: SizedBox(
                     // height: 300,
@@ -213,7 +212,7 @@ class _BodyState extends State<Body> {
                               ))
                         ]),
                   ),
-                )),
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -228,8 +227,7 @@ class _BodyState extends State<Body> {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 14),
-                child: Expanded(
-                    child: SingleChildScrollView(
+                child: SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: SizedBox(
                     // height: 300,
@@ -356,7 +354,7 @@ class _BodyState extends State<Body> {
                               ))
                         ]),
                   ),
-                )),
+                ),
               ),
             ]),
           SizedBox(
