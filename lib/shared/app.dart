@@ -18,28 +18,28 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitDown,
     ]);
 
-    return MaterialApp(
-      title: 'Statboard',
-      debugShowCheckedModeBanner: false,
-      theme: AppTheme.themeData(),
-      initialRoute: SplashScreen.id,
-      routes: Routes.routes,
-      navigatorObservers: [routeObserver],
-    );
-
-    // return MultiRepositoryProvider(
-    //   providers: RepositoryProviders.providers,
-    //   child: MultiBlocProvider(
-    //     providers: BlocProviders.providers,
-    //     child: MaterialApp(
-    //       title: 'Statboard',
-    //       debugShowCheckedModeBanner: false,
-    //       theme: AppTheme.themeData(),
-    //       initialRoute: SplashScreen.id,
-    //       routes: Routes.routes,
-    //       navigatorObservers: [routeObserver],
-    //     ),
-    //   ),
+    // return MaterialApp(
+    //   title: 'Statboard',
+    //   debugShowCheckedModeBanner: false,
+    //   theme: AppTheme.themeData(),
+    //   initialRoute: SplashScreen.id,
+    //   routes: Routes.routes,
+    //   navigatorObservers: [routeObserver],
     // );
+
+    return MultiRepositoryProvider(
+      providers: RepositoryProviders.providers,
+      child: MultiBlocProvider(
+        providers: BlocProviders.providers,
+        child: MaterialApp(
+          title: 'Statboard',
+          debugShowCheckedModeBanner: false,
+          theme: AppTheme.themeData(),
+          initialRoute: SplashScreen.id,
+          routes: Routes.routes,
+          navigatorObservers: [routeObserver],
+        ),
+      ),
+    );
   }
 }

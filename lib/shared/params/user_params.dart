@@ -1,9 +1,9 @@
 class UserParams {
-  final String empId;
-  final String pass;
+  final String email;
+  final String password;
 
   const UserParams({
-    this.empId = '',
-    this.pass = '',
+    this.email = '',
+    this.password = '',
   });
 }
