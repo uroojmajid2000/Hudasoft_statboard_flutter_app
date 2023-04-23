@@ -10,7 +10,7 @@ class UserRemoteDataSource {
       "email": email,
       "password": password,
       // "application_tag": "BLX-ERP-MOB",
-      "device_id": deviceId.toString(),
+      // "device_id": deviceId.toString(),
     };
 
     try {
@@ -21,6 +21,7 @@ class UserRemoteDataSource {
       );
 
       UserModel user = UserModel.fromJson(res);
+      // print("data");
       print(user);
       return user;
     } catch (e) {

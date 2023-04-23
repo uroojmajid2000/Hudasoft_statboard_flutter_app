@@ -24,8 +24,7 @@ class UserCubit extends Cubit<UserState> with HydratedMixin {
 
     Either<Failure, User> user =
         await loginUseCase.call(UserParams(email: email, password: password));
-
-    user.fold(
+   user.fold(
       (Failure failure) {
         emit(state.copyWith(
           status: UserStatus.error,
@@ -38,28 +37,28 @@ class UserCubit extends Cubit<UserState> with HydratedMixin {
           // isOtpVerified: false,
         ));
         // await preferences.setString(
-        // "token",
-        // user.token,
+        //   "token",
+        //   user.token,
         // );
       },
     );
   }
 
-  void logout() {
-    emit(state.copyWith(
-      status: UserStatus.initial,
-      user: User.initial(),
-      // isOtpVerified: false,
-    ));
-  }
-
-  // bool isLoggedIn() {
-    // return state.isOtpVerified;
+  // void logout() {
+  //   emit(state.copyWith(
+  //     status: UserStatus.initial,
+  //     user: User.initial(),
+  //     // isOtpVerified: false,
+  //   ));
   // }
 
-  void verifyOtp() {
-    emit(state.copyWith(isOtpVerified: true));
-  }
+  // bool isLoggedIn() {
+  // return state.isOtpVerified;
+  // }
+
+  // void verifyOtp() {
+  //   emit(state.copyWith(isOtpVerified: true));
+  // }
 
   @override
   UserState? fromJson(Map<String, dynamic> json) {

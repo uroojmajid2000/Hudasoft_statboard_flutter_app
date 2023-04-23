@@ -21,9 +21,14 @@ class NetworkHelper {
     http.StreamedResponse response = await request.send();
 
     var res = await response.stream.bytesToString().then((value) {
+      print("res value: ");
+      print(value);
       return jsonDecode(value);
     });
 
+    print("response: ");
+
+    print(response.statusCode);
     if (response.statusCode == 200 || response.statusCode == 201) {
       print("Network success");
       return res;
@@ -31,5 +36,6 @@ class NetworkHelper {
       print("Network error");
       throw Exception(res['message']);
     }
+
   }
 }
