@@ -25,9 +25,12 @@ class UpcomingTournaments extends StatelessWidget {
       required this.endDateTime,
       required this.statkeeperImage,
       required this.activityIcon,
-      required this.status, required this.teamCapacity, required this.createdBy})
+      required this.status,
+      required this.teamCapacity,
+      required this.createdBy})
       : super(key: key);
 
+ 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
