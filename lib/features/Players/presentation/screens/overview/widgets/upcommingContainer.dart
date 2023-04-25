@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class UpcommingContainer extends StatelessWidget {
+    final String activityIcon;
+  final String status;
   const UpcommingContainer({
-    super.key,
+    super.key, required this.activityIcon, required this.status,
   });
 
   @override
@@ -23,9 +25,15 @@ class UpcommingContainer extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          SvgPicture.asset('assets/icons/arrow.svg'),
+          SvgPicture.asset(
+            
+            // 'assets/icons/arrow.svg'
+        activityIcon
+            
+            ),
           Text(
-            "Upcoming",
+            // "Upcoming",
+             status,
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color(0xffffc035),

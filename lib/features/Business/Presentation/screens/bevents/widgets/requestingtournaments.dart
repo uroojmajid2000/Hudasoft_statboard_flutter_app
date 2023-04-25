@@ -123,7 +123,8 @@ class RequestingTournaments extends StatelessWidget {
                     ),
                   ),
        
-                  UpcommingContainer(),
+                  UpcommingContainer( activityIcon: 'assets/icons/arrow.svg',
+              status: "Upcoming",),
                 ],
               ),
             ],

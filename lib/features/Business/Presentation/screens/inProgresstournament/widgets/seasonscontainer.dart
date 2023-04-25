@@ -82,7 +82,8 @@ class SeasonsContainer extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [UpcommingContainer()],
+                  children: [UpcommingContainer( activityIcon: 'assets/icons/arrow.svg',
+              status: "Upcoming",)],
                 ),
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,

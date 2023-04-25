@@ -7,7 +7,26 @@ import '../../../../../../shared/routes/navigate.dart';
 import '../../tournament/tournament_screen.dart';
 
 class UpcomingTournaments extends StatelessWidget {
-  UpcomingTournaments({Key? key}) : super(key: key);
+  final String name;
+  final String branchName;
+  final String startDateTime;
+  final String endDateTime;
+  final String teamCapacity;
+  final String statkeeperImage;
+  final String createdBy;
+  final String activityIcon;
+  final String status;
+
+  UpcomingTournaments(
+      {Key? key,
+      required this.name,
+      required this.branchName,
+      required this.startDateTime,
+      required this.endDateTime,
+      required this.statkeeperImage,
+      required this.activityIcon,
+      required this.status, required this.teamCapacity, required this.createdBy})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,10 +68,11 @@ class UpcomingTournaments extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             MyText.simpleblackText(
-                                "California Gym Premier League"),
-                            MyText.simplegreyText(
-                              "California Stadium",
-                            ),
+                                // "California Gym Premier League"
+                                name),
+                            MyText.simplegreyText(branchName
+                                // "California Stadium",
+                                ),
                           ]),
                     ),
                   ),
@@ -67,8 +87,8 @@ class UpcomingTournaments extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         MyText.simpleblackText(
-                          "25 Sep 2022",
-                        ),
+                            // "25 Sep 2022",
+                            startDateTime),
                         MyText.simplegreyText(
                           "Start Date",
                         ),
@@ -78,10 +98,10 @@ class UpcomingTournaments extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         MyText.simpleblackText(
-                          "25 Sep 2022",
-                        ),
+                            // "25 Sep 2022",
+                            endDateTime),
                         MyText.simplegreyText(
-                          "Start Date",
+                          "End Date",
                         ),
                       ]),
                   Column(
@@ -89,8 +109,8 @@ class UpcomingTournaments extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         MyText.simpleblackText(
-                          "16",
-                        ),
+                            // "16",
+                            teamCapacity),
                         MyText.simplegreyText(
                           "Teams Capacity",
                         ),
@@ -104,7 +124,8 @@ class UpcomingTournaments extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Image.asset(
-                    'assets/images/manimage.png',
+                    // 'assets/images/manimage.png',
+                    statkeeperImage,
                     width: 30,
                     height: 30,
                   ),
@@ -119,12 +140,17 @@ class UpcomingTournaments extends StatelessWidget {
                               "Created by",
                             ),
                             MyText.simpleblackText(
-                              "Elijah Oliver",
-                            )
+                                // "Elijah Oliver",
+                                createdBy)
                           ]),
                     ),
                   ),
-                  UpcommingContainer()
+                  UpcommingContainer(
+                    activityIcon: activityIcon,
+                    //  'assets/icons/arrow.svg',
+                    status: status,
+                    // "Upcoming",
+                  )
                 ],
               ),
             ],
