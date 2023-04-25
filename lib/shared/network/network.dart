@@ -4,6 +4,8 @@ import 'dart:convert';
 import 'package:statboard_flutter_app/resources/constants.dart';
 
 class NetworkHelper {
+  static int loginStatus = 0;
+
   static Future request({
     required String url,
     Map<String, dynamic>? data,
@@ -21,21 +23,22 @@ class NetworkHelper {
     http.StreamedResponse response = await request.send();
 
     var res = await response.stream.bytesToString().then((value) {
-      print("res value: ");
-      print(value);
+      // print("res value: ");
+      // print(value);
       return jsonDecode(value);
     });
 
-    print("response: ");
+    // print("response: ");
 
-    print(response.statusCode);
+    // print(response.statusCode);
+    loginStatus = response.statusCode;
+
     if (response.statusCode == 200 || response.statusCode == 201) {
-      print("Network success");
+      // print("Network success");
       return res;
     } else {
-      print("Network error");
+      // print("Network error");
       throw Exception(res['message']);
     }
-
   }
 }

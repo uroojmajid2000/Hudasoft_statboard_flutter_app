@@ -24,13 +24,15 @@ class UserCubit extends Cubit<UserState> with HydratedMixin {
 
     Either<Failure, User> user =
         await loginUseCase.call(UserParams(email: email, password: password));
-   user.fold(
+    user.fold(
       (Failure failure) {
         emit(state.copyWith(
           status: UserStatus.error,
         ));
       },
       (User user) async {
+        print("user");
+        print(user);
         emit(state.copyWith(
           status: UserStatus.loaded,
           user: user,

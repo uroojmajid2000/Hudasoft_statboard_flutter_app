@@ -23,14 +23,17 @@ class _BodyState extends State<Body> {
         await context
             .read<UserCubit>()
             .login(_emailController.text, _passwordController.text);
-        print("context");
-        print(context.read<UserCubit>().state);
+
         print("------------------------------------------");
-        if (context.read<UserCubit>().state.status == UserStatus.error) {
-          // print('cubit status');
-          // print(context.read<UserCubit>().state);
-          // print(context.read<UserCubit>().state.status);
-          // print("------------------------------------------");
+        print(NetworkHelper.loginStatus);
+        // var value = NetworkHelper.loginStatus;
+        print("------------------------------------------");
+        if (NetworkHelper.loginStatus != 400 &&
+            NetworkHelper.loginStatus != "400") {
+          print("login successfull");
+          onSuccess.call();
+        } else {
+          print("login failes");
           _emailController.clear();
           _passwordController.clear();
           showDialog(
@@ -42,8 +45,6 @@ class _BodyState extends State<Body> {
               );
             },
           );
-        } else {
-          onSuccess.call();
         }
         form.save();
       }
