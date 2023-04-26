@@ -33,7 +33,7 @@ class _BodyState extends State<Body> {
           print("login successfull");
           onSuccess.call();
         } else {
-          print("login failes");
+          print("login failed");
           _emailController.clear();
           _passwordController.clear();
           showDialog(
@@ -41,7 +41,7 @@ class _BodyState extends State<Body> {
             builder: (BuildContext context) {
               return const Alert(
                 heading: 'Login Failed!',
-                body: 'Employee ID is incorrect',
+                body: 'Invalid Credential',
               );
             },
           );
