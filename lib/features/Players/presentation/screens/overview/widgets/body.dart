@@ -82,7 +82,12 @@ class _BodyState extends State<Body> {
             SizedBox(
               height: 10,
             ),
-            GalleryList()
+            GalleryList(),
+
+
+              SizedBox(
+              height: 10,
+            ),
           ],
         ),
       ),

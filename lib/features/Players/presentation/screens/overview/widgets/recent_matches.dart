@@ -7,7 +7,23 @@ import 'package:statboard_flutter_app/shared/widgets/text.dart';
 import '../../matchstats/matchstats_screen.dart';
 
 class RecentMatches extends StatelessWidget {
-  const RecentMatches({super.key});
+  final String startTime;
+  final String currentActivity;
+  final String branchName;
+  final String statkeeperImage;
+  final String statskeeperName;
+  final String status;
+  final String statusIcon;
+
+  const RecentMatches(
+      {super.key,
+      required this.startTime,
+      required this.currentActivity,
+      required this.branchName,
+      required this.statkeeperImage,
+      required this.statskeeperName,
+      required this.status,
+      required this.statusIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -43,22 +59,28 @@ class RecentMatches extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           MyText.simplegreyText(
-                            "25 SEP 10 AM",
+                            // "25 SEP 10 AM",
+                            startTime,
                           ),
                           MyText.simpleblackText(
-                            "Football",
+                            // "Football",
+                            currentActivity,
                           ),
                         ]),
                   ),
                 ),
                 Column(
                   children: [
-                    SvgPicture.asset('assets/icons/award.svg'),
+                    SvgPicture.asset(
+                      // 'assets/icons/award.svg'
+                      statusIcon,
+                    ),
                     SizedBox(
                       height: 2,
                     ),
                     Text(
-                      "WIN",
+                      // "WIN",
+                      status,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Color(0xff00a22d),
@@ -89,7 +111,8 @@ class RecentMatches extends StatelessWidget {
                         width: 3,
                       ),
                       Text(
-                        "California Stadium",
+                        // "California Stadium",
+                        branchName,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,
@@ -110,7 +133,8 @@ class RecentMatches extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(
-                  'assets/images/michel.png',
+                  // 'assets/images/michel.png',
+                  statkeeperImage,
                   width: 30,
                   height: 30,
                 ),
@@ -125,8 +149,8 @@ class RecentMatches extends StatelessWidget {
                             "Statskeeper",
                           ),
                           MyText.simpleblackText(
-                            "Michael John",
-                          ),
+                              // "Michael John",
+                              statskeeperName),
                         ]),
                   ),
                 ),
