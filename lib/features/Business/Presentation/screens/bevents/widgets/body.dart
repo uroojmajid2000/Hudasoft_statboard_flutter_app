@@ -29,7 +29,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               child: MySearchBar(
-                hintText: 'Search teams',
+                hintText: 'Search ',
                 onChange: (value) {},
                 prefixIcon: 'assets/icons/search.png',
                 suffixIcon: 'assets/icons/filter.png',

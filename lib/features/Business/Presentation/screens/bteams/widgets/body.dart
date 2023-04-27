@@ -40,7 +40,7 @@ class _BodyState extends State<Body> {
         children: [
           const SizedBox(height: 25),
           MySearchBar(
-            hintText: 'Search teams',
+            hintText: 'Search',
             onChange: (value) {},
             prefixIcon: 'assets/icons/search.png',
             suffixIcon: 'assets/icons/filter.png',

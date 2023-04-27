@@ -44,7 +44,7 @@ class _BodyState extends State<Body> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               child: MySearchBar(
-                hintText: 'Search gallery',
+                hintText: 'Search ',
                 onChange: (value) {},
                 prefixIcon: 'assets/icons/search.png',
                 suffixIcon: 'assets/icons/filter.png',

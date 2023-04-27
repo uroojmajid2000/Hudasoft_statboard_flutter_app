@@ -32,7 +32,7 @@ class _BuildBottomAppBarState extends State<BuildBottomAppBar> {
           NavigationButton(
             onPressed: () => Navigate.to(context, VenuesScreen.id),
             icon: 'assets/icons/home.svg',
-            text: 'venues',
+            text: 'Branch',
             tab: 0,
             isDisabled: false,
             currentTab: widget.currentTab,

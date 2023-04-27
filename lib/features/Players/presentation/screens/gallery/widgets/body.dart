@@ -19,8 +19,7 @@ class _BodyState extends State<Body> {
           //   child:
           FloatingActionButton(
         backgroundColor: kPrimaryColor,
-      
-          child: SvgPicture.asset(
+        child: SvgPicture.asset(
           'assets/icons/plusicon.svg',
           width: 20,
           height: 20,
@@ -41,7 +40,7 @@ class _BodyState extends State<Body> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               child: MySearchBar(
-                hintText: 'Search gallery',
+                hintText: 'Search ',
                 onChange: (value) {},
                 prefixIcon: 'assets/icons/search.png',
                 suffixIcon: 'assets/icons/filter.png',
