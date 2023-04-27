@@ -89,8 +89,19 @@ class _BodyState extends State<Body> {
                         ],
                       ),
                       const SizedBox(height: 28),
+                      // Text(
+                      //   'Welcome',
+                      //   textAlign: TextAlign.center,
+                      //   style: TextStyle(
+                      //     color: Color(0xff454545),
+                      //     fontSize: 16,
+                      //     fontFamily: "Montserrat",
+                      //     fontWeight: FontWeight.w700,
+                      //   ),
+                      // ),
+                      const SizedBox(height: 5),
                       Text(
-                        'Welcome. Please enter Email address and Phone Number',
+                        'Please enter email address',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xff454545),

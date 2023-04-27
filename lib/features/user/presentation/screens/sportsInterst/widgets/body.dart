@@ -41,11 +41,11 @@ class _BodyState extends State<Body> {
                 ),
                 const SizedBox(height: 20),
                 Text(
-                  'Please select your sports interests and preferred \nlocation. This will notify you the upcoming \ntournaments in that area.',
+                  'Please select your sports interests and preferred locations so that you can be notified of upcoming events',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 13,
+                    fontSize: 14,
                     fontFamily: "Montserrat",
                     fontWeight: FontWeight.w600,
                   ),

@@ -59,19 +59,19 @@ class _BodyState extends State<Body> {
                   const SizedBox(height: 60),
                   Content(
                       text:
-                          'Free access to all the venues and branches anywhere'),
+                          'Free access to all the venues and branches anywhere.'),
                   SizedBox(height: 10),
-                  Content(text: 'Join any events and play tournaments easily'),
-                  SizedBox(height: 10),
-                  Content(
-                      text:
-                          'More than 20+ Matches to play and enjoy with friends'),
+                  Content(text: 'Join any events and play tournaments easily.'),
                   SizedBox(height: 10),
                   Content(
                       text:
-                          'Invite your friends to Team and play Matches with them '),
+                          'More than 20+ Matches to play and enjoy with friends.'),
                   SizedBox(height: 10),
-                  Content(text: 'Get contacted and hired by the hunters'),
+                  Content(
+                      text:
+                          'Invite your friends to Team and play Matches with them.'),
+                  SizedBox(height: 10),
+                  Content(text: 'Get contacted and hired by the hunters.'),
                   SizedBox(height: 170),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 14),

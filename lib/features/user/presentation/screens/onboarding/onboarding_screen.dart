@@ -20,7 +20,7 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   late PageController _pageController;
   int _pageIndex = 0;
-  final int _delaySeconds = 3;
+  final int _delaySeconds = 5;
   late Timer _timer;
 
   @override
@@ -45,7 +45,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         _pageController.jumpToPage(0);
       } else {
         _pageController.nextPage(
-            duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+            duration: Duration(milliseconds: 500), curve: Curves.easeInOut);
       }
     });
   }
@@ -167,9 +167,9 @@ final List<Onboard> demo_data = [
           "Players can access unlimited venues to \nplay and create custom Teams"),
   Onboard(
       image: 'assets/images/onboarding_image.png',
-      title: "Events organization for business",
+      title: "Organize events as business",
       description:
-          "Business profiles can add their venue or \nbranch and organize Matches or \ntournaments"),
+          "Business profiles can add their venue or \nbranch and organize events"),
   Onboard(
       image: 'assets/images/onboarding_image.png',
       title: "Talent hunt for scouts",

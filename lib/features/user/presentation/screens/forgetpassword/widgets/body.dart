@@ -62,7 +62,7 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 25),
                       Text(
-                        'Please enter email or phone number to recover your password',
+                        'Please enter email to recover \nyour password',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xff454545),

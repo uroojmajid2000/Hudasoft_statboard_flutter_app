@@ -90,7 +90,7 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 28),
                       Text(
-                        'Thanks. Please enter your full name and username',
+                        'Please enter full name',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xff454545),
@@ -109,7 +109,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 18),
                       MySearchBar(
                         controller: _phonenumberController,
-                        hintText: 'Confirm Name',
+                        hintText: 'Re-enter Name',
                         prefixIcon: 'assets/icons/emailperson_icon.png',
                         suffixIcon: 'assets/icons/tick.png',
                         onChange: (value) {},

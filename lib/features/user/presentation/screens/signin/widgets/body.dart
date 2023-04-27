@@ -153,7 +153,6 @@ class _BodyState extends State<Body> {
                       //     onPressed: () => {
                       //           Navigate.next(context, OverviewScreen.id),
                       //         }),
-                      // const SizedBox(height: 25),
 
                       Button(
                         child: context.watch<UserCubit>().state.status ==
@@ -161,11 +160,11 @@ class _BodyState extends State<Body> {
                             ? const CircularProgressIndicator(
                                 color: Colors.white,
                               )
-                            : const Text('Login',
+                            : const Text('Sign In',
                                 style: TextStyle(fontSize: 18)),
                         onPressed: () => _onSubmit(_onSuccess),
                       ),
-
+                      const SizedBox(height: 25),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [

@@ -115,7 +115,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                 children: [
                   CreatAccountContainer(
                     text: "PLAYER",
-                    contentText: "You want to host an event",
+                    contentText: "You want to participate in event",
                     isSelected: _selectedIndex == 0,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 0 : -1);
@@ -124,7 +124,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                   ),
                   CreatAccountContainer(
                     text: 'BUSINESS',
-                    contentText: "You want to join an event",
+                    contentText: "You want to organize an event",
                     isSelected: _selectedIndex == 1,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 1 : -1);
@@ -133,7 +133,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
                   ),
                   CreatAccountContainer(
                     text: 'SCOUT',
-                    contentText: "You want to organize an event",
+                    contentText: "You want to hire team or player",
                     isSelected: _selectedIndex == 2,
                     onSelect: (isSelected) {
                       _handleSelect(isSelected ? 2 : -1);
@@ -165,7 +165,7 @@ class _CreateAccountModalState extends State<CreateAccountModal> {
               },
             ),
             SizedBox(
-              height: 10,
+              height: 15,
             ),
           ],
         ),

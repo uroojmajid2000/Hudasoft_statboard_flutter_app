@@ -90,7 +90,7 @@ class _BodyState extends State<Body> {
                       ),
                       const SizedBox(height: 28),
                       Text(
-                        'Good. Please enter a password to secure your account',
+                        'Please enter a password to secure your account',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xff454545),
@@ -110,7 +110,7 @@ class _BodyState extends State<Body> {
                       const SizedBox(height: 18),
                       MyTextField(
                         controller: _passwordnewController,
-                        hintText: 'ReEnter password',
+                        hintText: 'Re-enter password',
                         prefixIcon: 'assets/icons/password_icon.png',
                         obscureText: true,
                         onChange: (value) {},
