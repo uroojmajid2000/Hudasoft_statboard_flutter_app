@@ -3,7 +3,18 @@ import 'package:flutter_svg/svg.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
 class RecentVenues extends StatelessWidget {
-  const RecentVenues({super.key});
+  final String branchName;
+  final String venueName;
+  final String currentActivity;
+  final String statskeeperName;
+  final String activePlayers;
+  const RecentVenues(
+      {super.key,
+      required this.branchName,
+      required this.venueName,
+      required this.currentActivity,
+      required this.statskeeperName,
+      required this.activePlayers});
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +49,13 @@ class RecentVenues extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          MyText.simpleblueText("California Stadium"),
+                          MyText.simpleblueText(
+
+                              // "California Stadium"
+                              branchName),
                           MyText.simplegreyText(
-                            "12th Street",
-                          ),
+                              // "12th Street",
+                              venueName),
                         ]),
                   ),
                 ),
@@ -51,7 +65,10 @@ class RecentVenues extends StatelessWidget {
                     SizedBox(
                       width: 3,
                     ),
-                    MyText.simpleblueText("15"),
+                    MyText.simpleblueText(
+
+                        // "15"
+                        activePlayers),
                   ],
                 )
               ],
@@ -62,8 +79,8 @@ class RecentVenues extends StatelessWidget {
                 SvgPicture.asset('assets/icons/venue.svg'),
                 SizedBox(width: 8),
                 MyText.simpleblueText(
-                  "Football",
-                ),
+                    // "Football",
+                    currentActivity),
               ],
             ),
             SizedBox(
@@ -88,8 +105,8 @@ class RecentVenues extends StatelessWidget {
                             "Statskeeper",
                           ),
                           MyText.simpleblackText(
-                            "Michael John",
-                          ),
+                              // "Michael John",
+                              statskeeperName),
                         ]),
                   ),
                 ),

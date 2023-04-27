@@ -16,7 +16,13 @@ class RecentVenuesList extends StatelessWidget {
             padding: EdgeInsets.only(right: 8.0),
             child: GestureDetector(
                 onTap: () => Navigate.to(context, RecentVenuesScreen.id),
-                child: RecentVenues()),
+                child: RecentVenues(
+                  branchName: 'Vengas01',
+                  venueName: 'ViewLake',
+                  currentActivity: "Regulation Basketball",
+                  statskeeperName: "mToufiq",
+                  activePlayers: '5',
+                )),
           );
         },
       ),
