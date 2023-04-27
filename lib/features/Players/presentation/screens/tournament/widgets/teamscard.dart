@@ -38,8 +38,8 @@ class _TeamsCardState extends State<TeamsCard> {
         widget.onSelect(true);
       },
       child: Container(
-        width: 150,
-        height: 70,
+        // width: 150,
+        // height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           boxShadow: [

@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/venuesTournament/venues_tournament_screen.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/venuesTournament/widgets/venues_tournamentcontainer.dart';
 import '../../viewallTournament/widgets/viewall_tournaments.dart';
 
 class TournamentsView extends StatelessWidget {
@@ -24,7 +26,7 @@ class TournamentsView extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 23),
-                  child: ViewallTournaments(),
+                  child: VenuesTournamentsContainer(),
                 );
               },
             ),

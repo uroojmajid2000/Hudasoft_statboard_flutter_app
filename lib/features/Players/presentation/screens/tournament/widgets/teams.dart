@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/allteams/all_teams.dart';
 import 'package:statboard_flutter_app/features/Players/presentation/screens/tournament/widgets/teamscard.dart';
+import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 
 class Teams extends StatefulWidget {
   const Teams({Key? key});
@@ -32,6 +34,7 @@ class _TeamsState extends State<Teams> {
           isSelected: _selectedIndex == 0,
           onSelect: (isSelected) {
             _handleSelect(isSelected ? 0 : -1);
+            Navigate.to(context, AllTeams.id);
           },
         ),
         TeamsCard(
@@ -41,6 +44,7 @@ class _TeamsState extends State<Teams> {
           isSelected: _selectedIndex == 1,
           onSelect: (isSelected) {
             _handleSelect(isSelected ? 1 : -1);
+            Navigate.to(context, AllTeams.id);
           },
         ),
         TeamsCard(
@@ -50,6 +54,7 @@ class _TeamsState extends State<Teams> {
           isSelected: _selectedIndex == 2,
           onSelect: (isSelected) {
             _handleSelect(isSelected ? 2 : -1);
+            Navigate.to(context, AllTeams.id);
           },
         ),
         TeamsCard(
@@ -59,6 +64,7 @@ class _TeamsState extends State<Teams> {
           isSelected: _selectedIndex == 3,
           onSelect: (isSelected) {
             _handleSelect(isSelected ? 3 : -1);
+            Navigate.to(context, AllTeams.id);
           },
         ),
         TeamsCard(
@@ -68,6 +74,7 @@ class _TeamsState extends State<Teams> {
           isSelected: _selectedIndex == 4,
           onSelect: (isSelected) {
             _handleSelect(isSelected ? 4 : -1);
+            Navigate.to(context, AllTeams.id);
           },
         ),
         TeamsCard(
@@ -77,11 +84,12 @@ class _TeamsState extends State<Teams> {
           isSelected: _selectedIndex == 5,
           onSelect: (isSelected) {
             _handleSelect(isSelected ? 5 : -1);
+            Navigate.to(context, AllTeams.id);
           },
         ),
-        SizedBox(
-          height: 10,
-        )
+        // SizedBox(
+        //   height: 2,
+        // )
       ],
     );
   }

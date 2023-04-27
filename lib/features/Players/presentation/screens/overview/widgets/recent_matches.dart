@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/stats/stats_screen.dart';
 import 'package:statboard_flutter_app/shared/routes/navigate.dart';
 import 'package:statboard_flutter_app/shared/widgets/text.dart';
 
@@ -136,7 +137,7 @@ class RecentMatches extends StatelessWidget {
                     // onTap: () => Navigate.to(context, MatchStatsScreen.id),
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigate.to(context, MatchStatsScreen.id);
+                        Navigate.to(context, StatsScreen.id);
                       },
                       style: ButtonStyle(
                         elevation: MaterialStateProperty.all(0),

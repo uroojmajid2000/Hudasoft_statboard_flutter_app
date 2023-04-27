@@ -66,15 +66,7 @@ class _InfoState extends State<Info> {
               location: "10 Players per Team",
             ),
             SizedBox(
-              height: 18,
-            ),
-            InfoCard(
-              imageIcon: 'assets/icons/teamsblue.svg',
-              stadium: "Maximum Players",
-              location: "10 Players per Team",
-            ),
-            SizedBox(
-              height: 18,
+              height: 50,
             ),
           ],
         ),

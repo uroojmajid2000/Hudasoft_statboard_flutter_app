@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:statboard_flutter_app/features/Players/presentation/screens/venuesTournament/venues_tournament_screen.dart';
 
 import '../../../features/Players/presentation/screens/Teams/teams_screen.dart';
 import '../../../features/Players/presentation/screens/addteams/addteams_screen.dart';
@@ -62,6 +63,7 @@ class PlayersRoutes {
 
     //Notification
     NotificationScreen.id: (context) => const NotificationScreen(),
+    VenueTornamentScreen.id: (context) => const VenueTornamentScreen(),
 
 
     //profile

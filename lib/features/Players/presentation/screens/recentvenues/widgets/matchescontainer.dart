@@ -80,7 +80,7 @@ class TornadoVsStalion extends StatelessWidget {
         ),
         Container(
             child: Text(
-          "5",
+          "-",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20,
@@ -90,7 +90,7 @@ class TornadoVsStalion extends StatelessWidget {
         )),
         Container(
             child: Text(
-          "-",
+          ":",
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 30,
@@ -100,7 +100,7 @@ class TornadoVsStalion extends StatelessWidget {
         )),
         Container(
           child: Text(
-            " 2",
+            " -",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 20,
