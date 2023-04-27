@@ -30,6 +30,7 @@ class RecentMatchList extends StatefulWidget {
 
 class _RecentMatchListState extends State<RecentMatchList> {
   List<dynamic> recentmatchList = [];
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -57,6 +58,7 @@ class _RecentMatchListState extends State<RecentMatchList> {
       String data = await response.stream.bytesToString();
       setState(() {
         recentmatchList = json.decode(data)['data'];
+        isLoading = false;
       });
     } else {
       print("response failds:");
@@ -68,32 +70,40 @@ class _RecentMatchListState extends State<RecentMatchList> {
   Widget build(BuildContext context) {
     return Container(
       height: 157.75,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: recentmatchList.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsets.only(right: 8.0),
-            child: RecentMatches(
-              branchName: recentmatchList[index]['branchName'],
-              startTime: recentmatchList[index]['startTime'].substring(0, 10),
-              currentActivity: recentmatchList[index]['currentActivity'],
-              statkeeperImage:
-                  (recentmatchList[index]['statkeeperImage'].toString() == '')
-                      ? 'assets/images/manimage.png'
-                      : recentmatchList[index]['statkeeperImage'].toString(),
-              statskeeperName:
-                  (recentmatchList[index]['statskeeperName'].toString() ==
-                          'null')
-                      ? 'Michael John'
-                      : recentmatchList[index]['statskeeperName'].toString(),
-              status: recentmatchList[index]['status'],
-              statusIcon: 'assets/icons/award.svg',
-              // recentmatchList[index]['branchName'],
+      child: isLoading
+          ? Center(
+              child: CircularProgressIndicator(
+                color: Colors.blue,
+              ),
+            )
+          : ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: recentmatchList.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: EdgeInsets.only(right: 8.0),
+                  child: RecentMatches(
+                    branchName: recentmatchList[index]['branchName'],
+                    startTime:
+                        recentmatchList[index]['startTime'].substring(0, 10),
+                    currentActivity: recentmatchList[index]['currentActivity'],
+                    statkeeperImage: (recentmatchList[index]['statkeeperImage']
+                                .toString() ==
+                            '')
+                        ? 'assets/images/manimage.png'
+                        : recentmatchList[index]['statkeeperImage'].toString(),
+                    statskeeperName: (recentmatchList[index]['statskeeperName']
+                                .toString() ==
+                            'null')
+                        ? 'Michael John'
+                        : recentmatchList[index]['statskeeperName'].toString(),
+                    status: recentmatchList[index]['status'],
+                    statusIcon: 'assets/icons/award.svg',
+                    // recentmatchList[index]['branchName'],
+                  ),
+                );
+              },
             ),
-          );
-        },
-      ),
     );
   }
 }

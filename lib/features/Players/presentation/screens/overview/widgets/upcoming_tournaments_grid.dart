@@ -88,6 +88,7 @@ class UpcomingTournamentsList extends StatefulWidget {
 
 class _UpcomingTournamentsListState extends State<UpcomingTournamentsList> {
   List<dynamic> tournamentList = [];
+  bool isLoading = true;
 
   @override
   void initState() {
@@ -115,64 +116,58 @@ class _UpcomingTournamentsListState extends State<UpcomingTournamentsList> {
       String data = await response.stream.bytesToString();
       setState(() {
         tournamentList = json.decode(data)['data'];
+        isLoading = false;
       });
     } else {
+      throw Exception('Failed to load tournaments');
       print("response failds:");
       print(response.reasonPhrase);
     }
   }
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return Container(
-  //     height: 157.75,
-  //     child: ListView.builder(
-  //       itemCount: tournamentList.length,
-  //       itemBuilder: (BuildContext context, int index) {
-  //         return Column(
-  //           children: [
-  //             Text(tournamentList[index]['name']),
-  //             Text(tournamentList[index]['branchName']),
-  //           ],
-  //         );
-  //       },
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 173,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: tournamentList.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsets.only(right: 8.0),
-            child: UpcomingTournaments(
-              name: tournamentList[index]['name'],
-              branchName: tournamentList[index]['branchName'],
-              startDateTime:
-                  tournamentList[index]['startDateTime'].substring(0, 10),
-              endDateTime:
-                  tournamentList[index]['endDateTime'].substring(0, 10),
-              teamCapacity: tournamentList[index]['teamCapacity'].toString(),
-              statkeeperImage:
-                  (tournamentList[index]['statkeeperImage'].toString() ==
-                          'null')
-                      ? 'assets/images/manimage.png'
-                      : tournamentList[index]['statkeeperImage'].toString(),
-              createdBy: tournamentList[index]['createdBy'],
-              activityIcon:
-                  (tournamentList[index]['activityIcon'].toString() == 'null')
-                      ? 'assets/icons/arrow.svg'
-                      : tournamentList[index]['activityIcon'].toString(),
-              status: tournamentList[index]['status'],
+      child: isLoading
+          ? Center(
+              child: CircularProgressIndicator(
+                color: Colors.blue,
+              ),
+            )
+          :
+
+          ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: tournamentList.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: EdgeInsets.only(right: 8.0),
+                  child: UpcomingTournaments(
+                    name: tournamentList[index]['name'],
+                    branchName: tournamentList[index]['branchName'],
+                    startDateTime:
+                        tournamentList[index]['startDateTime'].substring(0, 10),
+                    endDateTime:
+                        tournamentList[index]['endDateTime'].substring(0, 10),
+                    teamCapacity:
+                        tournamentList[index]['teamCapacity'].toString(),
+                    statkeeperImage: (tournamentList[index]['statkeeperImage']
+                                .toString() ==
+                            'null')
+                        ? 'assets/images/manimage.png'
+                        : tournamentList[index]['statkeeperImage'].toString(),
+                    createdBy: tournamentList[index]['createdBy'],
+                    activityIcon:
+                        (tournamentList[index]['activityIcon'].toString() ==
+                                'null')
+                            ? 'assets/icons/arrow.svg'
+                            : tournamentList[index]['activityIcon'].toString(),
+                    status: tournamentList[index]['status'],
+                  ),
+                );
+              },
             ),
-          );
-        },
-      ),
     );
   }
 }

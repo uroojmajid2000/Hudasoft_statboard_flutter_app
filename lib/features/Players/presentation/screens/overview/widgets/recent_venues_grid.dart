@@ -45,7 +45,7 @@ class RecentVenuesList extends StatefulWidget {
 
 class _RecentVenuesListState extends State<RecentVenuesList> {
   List<dynamic> recentvenuesList = [];
-
+  bool isLoading = true;
   @override
   void initState() {
     super.initState();
@@ -72,8 +72,10 @@ class _RecentVenuesListState extends State<RecentVenuesList> {
       String data = await response.stream.bytesToString();
       setState(() {
         recentvenuesList = json.decode(data)['data'];
+        isLoading = false;
       });
     } else {
+      throw Exception('Failed to load tournaments');
       print("response failds:");
       print(response.reasonPhrase);
     }
@@ -83,27 +85,37 @@ class _RecentVenuesListState extends State<RecentVenuesList> {
   Widget build(BuildContext context) {
     return Container(
       height: 157.75,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        itemCount: recentvenuesList.length,
-        itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsets.only(right: 8.0),
-            child: GestureDetector(
-                onTap: () => Navigate.to(context, RecentVenuesScreen.id),
-                child: RecentVenues(
-                  branchName: recentvenuesList[index]['branchName'].toString(),
-                  venueName: recentvenuesList[index]['venueName'].toString(),
-                  currentActivity:
-                      recentvenuesList[index]['currentActivity'].toString(),
-                  statskeeperName:
-                      recentvenuesList[index]['statskeeperName'].toString(),
-                  activePlayers:
-                      recentvenuesList[index]['activePlayers'].toString(),
-                )),
-          );
-        },
-      ),
+      child: isLoading
+          ? Center(
+              child: CircularProgressIndicator(
+                color: Colors.blue,
+              ),
+            )
+          : ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: recentvenuesList.length,
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: EdgeInsets.only(right: 8.0),
+                  child: GestureDetector(
+                      onTap: () => Navigate.to(context, RecentVenuesScreen.id),
+                      child: RecentVenues(
+                        branchName:
+                            recentvenuesList[index]['branchName'].toString(),
+                        venueName:
+                            recentvenuesList[index]['venueName'].toString(),
+                        currentActivity: recentvenuesList[index]
+                                ['currentActivity']
+                            .toString(),
+                        statskeeperName: recentvenuesList[index]
+                                ['statskeeperName']
+                            .toString(),
+                        activePlayers:
+                            recentvenuesList[index]['activePlayers'].toString(),
+                      )),
+                );
+              },
+            ),
     );
   }
 }
