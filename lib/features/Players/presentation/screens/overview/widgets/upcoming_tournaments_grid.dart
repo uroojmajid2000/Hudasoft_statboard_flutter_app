@@ -106,7 +106,7 @@ class _UpcomingTournamentsListState extends State<UpcomingTournamentsList> {
         'GET',
         Uri.parse(
             'http://ec2-3-12-238-2.us-east-2.compute.amazonaws.com:8002/api/Tournament/GetAllTournament'));
-    request.body = json.encode({"pageNumber": "1", "pageSize": "10"});
+    request.body = json.encode({"pageNumber": "1", "pageSize": "4"});
     request.headers.addAll(headers);
 
     http.StreamedResponse response = await request.send();
@@ -135,9 +135,7 @@ class _UpcomingTournamentsListState extends State<UpcomingTournamentsList> {
                 color: Colors.blue,
               ),
             )
-          :
-
-          ListView.builder(
+          : ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: tournamentList.length,
               itemBuilder: (context, index) {
@@ -146,10 +144,18 @@ class _UpcomingTournamentsListState extends State<UpcomingTournamentsList> {
                   child: UpcomingTournaments(
                     name: tournamentList[index]['name'],
                     branchName: tournamentList[index]['branchName'],
-                    startDateTime:
-                        tournamentList[index]['startDateTime'].substring(0, 10),
-                    endDateTime:
-                        tournamentList[index]['endDateTime'].substring(0, 10),
+                    startDateTime: tournamentList[index]['startDateTime']
+                        .toString()
+                        .substring(0, 10)
+                        .split("-")
+                        .reversed
+                        .join("-"),
+                    endDateTime: tournamentList[index]['endDateTime']
+                        .toString()
+                        .substring(0, 10)
+                        .split("-")
+                        .reversed
+                        .join("-"),
                     teamCapacity:
                         tournamentList[index]['teamCapacity'].toString(),
                     statkeeperImage: (tournamentList[index]['statkeeperImage']

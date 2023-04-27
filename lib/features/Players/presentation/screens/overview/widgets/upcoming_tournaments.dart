@@ -11,6 +11,7 @@ class UpcomingTournaments extends StatelessWidget {
   final String branchName;
   final String startDateTime;
   final String endDateTime;
+
   final String teamCapacity;
   final String statkeeperImage;
   final String createdBy;
@@ -30,7 +31,6 @@ class UpcomingTournaments extends StatelessWidget {
       required this.createdBy})
       : super(key: key);
 
- 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -102,7 +102,7 @@ class UpcomingTournaments extends StatelessWidget {
                       children: [
                         MyText.simpleblackText(
                             // "25 Sep 2022",
-                            endDateTime),
+                            endDateTime as String),
                         MyText.simplegreyText(
                           "End Date",
                         ),

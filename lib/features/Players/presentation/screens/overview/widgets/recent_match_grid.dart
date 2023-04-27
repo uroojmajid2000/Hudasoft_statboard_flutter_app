@@ -84,19 +84,20 @@ class _RecentMatchListState extends State<RecentMatchList> {
                   padding: EdgeInsets.only(right: 8.0),
                   child: RecentMatches(
                     branchName: recentmatchList[index]['branchName'],
-                    startTime:
-                        recentmatchList[index]['startTime'].substring(0, 10),
+                    startTime: recentmatchList[index]['startTime']
+                        .toString()
+                        .substring(0, 10)
+                        .split("-")
+                        .reversed
+                        .join("-"),
                     currentActivity: recentmatchList[index]['currentActivity'],
                     statkeeperImage: (recentmatchList[index]['statkeeperImage']
                                 .toString() ==
                             '')
                         ? 'assets/images/manimage.png'
                         : recentmatchList[index]['statkeeperImage'].toString(),
-                    statskeeperName: (recentmatchList[index]['statskeeperName']
-                                .toString() ==
-                            'null')
-                        ? 'Michael John'
-                        : recentmatchList[index]['statskeeperName'].toString(),
+                    statskeeperName:
+                        recentmatchList[index]['statskeeperName'].toString(),
                     status: recentmatchList[index]['status'],
                     statusIcon: 'assets/icons/award.svg',
                     // recentmatchList[index]['branchName'],
