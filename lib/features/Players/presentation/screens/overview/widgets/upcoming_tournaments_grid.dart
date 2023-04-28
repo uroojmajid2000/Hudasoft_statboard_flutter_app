@@ -137,7 +137,7 @@ class _UpcomingTournamentsListState extends State<UpcomingTournamentsList> {
             )
           : ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: tournamentList.length,
+              itemCount: 4,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(right: 8.0),

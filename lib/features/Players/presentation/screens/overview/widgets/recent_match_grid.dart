@@ -78,7 +78,7 @@ class _RecentMatchListState extends State<RecentMatchList> {
             )
           : ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: recentmatchList.length,
+              itemCount: 4,
               itemBuilder: (context, index) {
                 return Padding(
                   padding: EdgeInsets.only(right: 8.0),
